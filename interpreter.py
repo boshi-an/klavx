@@ -118,6 +118,18 @@ class TextInterpreter :
 			funcParaPair[0](*funcParaPair[1])
 			return "One interpretation found!"
 
+pReserve = Pattern()
+pQuery = Pattern()
+pIam = Pattern()
+pTime = Pattern()
+pDate = Pattern()
+pClock = Pattern()
+pNumber = Pattern()
+pLocation = Pattern()
+
+def initPatterns() :
+	pass
+
 if __name__ == '__main__' :
 
 	def m1(para) :
