@@ -14,11 +14,11 @@ from http.client import BAD_REQUEST
 from flask import Flask, request, abort, g
 from flask_sqlalchemy import SQLAlchemy
 from flask_script import Manager
-from flask_migrate import Migrate, MigrateCommand
 from flask_admin import Admin
 from flask_admin.contrib.sqla import ModelView
 from sqlalchemy.exc import IntegrityError
 
+import interpreter
 import patterns
 import music
 from utils import currentDate, toDatetime
@@ -29,6 +29,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['PROPAGATE_EXCEPTIONS'] = True
 
+# 微信段设置的token，用于验证服务器是否正确运行
 wxToken = 'bigchord'
 # SQLAlchemy是一个数据库的ORM框架,即通过构建类的形式来操作数据库,不需要写sql语句
 # 在SQLAlchemy中,表格以类的形式存在,数据项以对象的形式存在,增删查改均通过构建对话session来进行
@@ -107,22 +108,6 @@ class Course(db.Model):
 				self.startTime.hour, self.startTime.minute,
 				self.endTime.hour, self.endTime.minute)
 
-# 演奏者的信息,该功能已弃用
-class Show(db.Model):
-	id = db.Column(db.Integer(), primary_key=True)
-	performerId = db.Column(db.Integer(), db.ForeignKey('user.id'), nullable=False)
-	performer = db.relation('User', backref=db.backref('shows', lazy='dynamic'))
-	def __repr__(self):
-		return '<Show {}>'.format(self.performer)
-
-# 推荐音乐的信息,该功能已弃用
-class OnlineMusic(db.Model):
-	id = db.Column(db.Integer(), primary_key=True)
-	title = db.Column(db.String(), nullable=True)
-	url = db.Column(db.String(), nullable=False, unique=True)
-	def __repr__(self):
-		return '<OnlineMusic {} {}>'.format(self.title, self.url)
-
 admin = Admin(app)
 admin.add_view(ModelView(OnlineMusic, db.session))
 admin.add_view(ModelView(Show, db.session))
@@ -133,27 +118,21 @@ admin.add_view(ModelView(Registration, db.session))
 admin.add_view(ModelView(User, db.session))
 admin.add_view(ModelView(Message, db.session))
 
-appPath = '/papuwx/' # if __name__=='__main__' else '/'
+appPath = '/flask/'
 
 '''Flask的回调接口？'''
 @app.route(appPath, methods=['GET', 'POST'])
 def index():
-	for func in processes:
-		# $processes 是待处理项
-		result = func()
-		if result is not None:
-			return result
+	
+	authenticateMessage()
+	if checkEcho() :
+		return request.args['echostr']
+
 	return ''
 
 
-processes = []
-def process(func):
-	processes.append(func)
-
-
-@process
+# 验证是否是从微信服务器发来的请求
 def authenticateMessage():
-	'验证是否是从微信服务器发来的请求'
 	try:
 		s = ''.join(sorted([wxToken, request.args['timestamp'], request.args['nonce']]))
 		if hashlib.sha1(s.encode('ascii')).hexdigest() == request.args['signature']:
@@ -164,14 +143,13 @@ def authenticateMessage():
 	abort(BAD_REQUEST)
 
 
-@process
+# 响应微信公众号配置页面发起的验证服务器请求
 def checkEcho():
-	'响应微信公众号配置页面发起的验证服务器请求'
 	if 'echostr' in request.args:
-		return request.args['echostr']
+		return True
+	return False
 
 # 处理后台接受到的信息
-@process
 def processMessage():
 	print(request.data)
 	try: e = etree.fromstring(request.data)#etree: html解析工具
