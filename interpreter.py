@@ -239,16 +239,24 @@ def initPatterns() :
 		lambda x,y,z : None if haveNone(x,y,z) else (datetime.datetime.strptime(str(y[0])+':'+str(30)+' AM', '%I:%M %p').time(), )
 	)
 	pClock.appendSubPatternSeq(
-		[r'上午|早', pNumber],
-		lambda x,y : None if haveNone(x,y) else (datetime.datetime.strptime(str(y[0])+':'+str(0)+' AM', '%I:%M %p').time(), )
+		[r'上午|早', pNumber, r'^点'],
+		lambda x,y,_ : None if haveNone(x,y,_) else (datetime.datetime.strptime(str(y[0])+':'+str(0)+' AM', '%I:%M %p').time(), )
 	)
 	pClock.appendSubPatternSeq(
 		[r'下午|晚', pNumber, r'^点半'],
 		lambda x,y,z : None if haveNone(x,y,z) else (datetime.datetime.strptime(str(y[0])+':'+str(30)+' PM', '%I:%M %p').time(), )
 	)
 	pClock.appendSubPatternSeq(
-		[r'下午|晚', pNumber],
-		lambda x,y : None if haveNone(x,y) else (datetime.datetime.strptime(str(y[0])+':'+str(0)+' PM', '%I:%M %p').time(), )
+		[r'下午|晚', pNumber, r'^点'],
+		lambda x,y,_ : None if haveNone(x,y,_) else (datetime.datetime.strptime(str(y[0])+':'+str(0)+' PM', '%I:%M %p').time(), )
+	)
+	pClock.appendSubPatternSeq(
+		[pNumber_adj, r'^点半'],
+		lambda x,_ : None if haveNone(x,_) else (datetime.datetime.strptime(str(x[0])+':'+str(30), '%H:%M').time(), )
+	)
+	pClock.appendSubPatternSeq(
+		[pNumber_adj, r'^点'],
+		lambda x,_ : None if haveNone(x,_) else (datetime.datetime.strptime(str(x[0])+':'+str(0), '%H:%M').time(), )
 	)
 
 	# Defining location
@@ -279,6 +287,39 @@ def initPatterns() :
 		lambda x,y : None if haveNone(x,y) else (*y, None)
 	)
 
+	# Defining Query
+	# query = when and where
+	pQuery.appendSubPatternSeq(
+		['^查询', pTime, pLocation],
+		lambda x,y,z : None if haveNone(x,y,z) else (*y, *z)
+	)
+	pQuery.appendSubPatternSeq(
+		['^查询', pTime],
+		lambda x,y : None if haveNone(x,y) else (*y, None)
+	)
+	pQuery.appendSubPatternSeq(
+		['^查询', pDate, pLocation],
+		lambda x,y,z : None if haveNone(x,y,z) else (y[0], y[0]+datetime.timedelta(days=1), *z)
+	)
+	pQuery.appendSubPatternSeq(
+		['^查询', pDate],
+		lambda x,y : None if haveNone(x,y) else (y[0], y[0]+datetime.timedelta(days=1), None)
+	)
+	pQuery.appendSubPatternSeq(
+		['^查询', pLocation],
+		lambda x,y : None if haveNone(x,y) else (None, None, *y)
+	)
+	pQuery.appendSubPatternSeq(
+		['^查询'],
+		lambda x : None if x==None else (None, None, None)
+	)
+
+	# Defining I am
+	pIam.appendSubPatternSeq(
+		['^我是', '.*'],
+		lambda x,y : None if haveNone(x,y) else (y,)
+	)
+
 	print(pDate.match('大后天'))
 	print(pNumber.match('1982'))
 	print(pNumber.match('三十'))
@@ -297,6 +338,12 @@ def initPatterns() :
 	print(pLocation.match('252'))
 	print(pLocation.match('B252'))
 	print(pReserve.match('预约2021.9.1 8:40am到晚上七点半的B252'))
+	print(pReserve.match('预约明天上午8:00到九点半'))
+	print(pQuery.match('查询'))
+	print(pQuery.match('查询252'))
+	print(pQuery.match('查询明天'))
+	print(pQuery.match('查询2020.6.4 252'))
+	print(pIam.match('我是李云迪'))
 	pass
 
 if __name__ == '__main__' :
