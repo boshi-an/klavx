@@ -29,23 +29,6 @@ class Pattern :
 		self.subResults = []
 		self.combiners = []
 		
-		pass
-	
-	@classmethod
-	def createPrefixPattern() :
-
-		pass
-	
-	@classmethod
-	def createSelectivePattern() :
-
-		pass
-
-	@classmethod
-	def createSuffixPattern() :
-
-		pass
-	
 	# I used wrapper to view patterns and regxprs the same way
 	# pattern(string) = ((l,r), (res1, res2, ...))
 	def appendSubPatternSeq(self, subpattern, combiner) :
@@ -89,12 +72,20 @@ class TextInterpreter :
 
 	# when there are 0 or more than 1 matches
 	# call function whenNone and whenMultiple 
-	def __init__(self, whenNone=None, whenMultiple=None) :
+	def __init__(self) :
 
 		self.patternFuncSeq = []
-		self.whenNone = whenNone
-		self.whenMultiple = whenMultiple
+		self.whenNone = None
+		self.whenMultiple = None
 		pass
+
+	def registerNoneFunction(self, func) :
+
+		self.whenNone = func
+
+	def registerMultipleFunction(self, func) :
+
+		self.whenMultiple = func
 
 	def appendPattern(self, pat, recall) :
 
@@ -113,15 +104,16 @@ class TextInterpreter :
 				successNum += 1
 		if successNum == 0 :
 			if self.whenNone != None :
-				self.whenNone()
-			return "No interpretation found!"
+				return self.whenNone()
+			else :
+				return "No interpretation found!"
 		elif successNum >= 2 :
 			if self.whenMultiple != None :
-				self.whenMultiple()
-			return "Multiple interpretation found!"
+				return self.whenMultiple()
+			else :
+				return "Multiple interpretation found!"
 		else :
-			funcParaPair[0](*funcParaPair[1])
-			return "One interpretation found!"
+			return funcParaPair[0](*funcParaPair[1])
 
 pReserve = Pattern()
 pQuery = Pattern()
@@ -320,6 +312,7 @@ def initPatterns() :
 		lambda x,y : None if haveNone(x,y) else (y,)
 	)
 
+	print('下面一长串时测试代码，如果其中有一个为None请小心')
 	print(pDate.match('大后天'))
 	print(pNumber.match('1982'))
 	print(pNumber.match('三十'))

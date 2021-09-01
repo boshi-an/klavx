@@ -18,103 +18,37 @@ from flask_admin import Admin
 from flask_admin.contrib.sqla import ModelView
 from sqlalchemy.exc import IntegrityError
 
-import interpreter
-import utils
-
 # 使用Flask构建web对象app
 app = Flask(__name__)
+# 激活app环境(with app_context()也行)
+app.app_context().push()
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['PROPAGATE_EXCEPTIONS'] = True
 
+import interpreter
+import utils
+import functions as func
+import database as db
+
+# 定义自定义解释器：“自主意识自然语言人工智能集群”，简称“AI”
+# 该解释器初始化后可以理解部分微信消息
+# 可以向该解释器注册函数，解释器将按照理解调用你的函数
+interpreter.initPatterns()
+AI = interpreter.TextInterpreter()
+# 向AI注册在没有匹配项时采用的函数
+AI.registerNoneFunction(func.randomEmoji)
+AI.registerMultipleFunction(func.randomEmoji)
+
 # 微信段设置的token，用于验证服务器是否正确运行
 wxToken = 'bigchord'
+
 # SQLAlchemy是一个数据库的ORM框架,即通过构建类的形式来操作数据库,不需要写sql语句
 # 在SQLAlchemy中,表格以类的形式存在,数据项以对象的形式存在,增删查改均通过构建对话session来进行
 # 了解数据库基本知识和SQLAlchemy的基本语法,对通读代码有很大的帮助
-db = SQLAlchemy(app)
 
 class MyException(Exception):
 	pass
-
-# 存储所有收到的后台信息
-class Message(db.Model):
-	'timestamp 用来实现定期清除'
-	msgId = db.Column(db.Integer(), primary_key=True, autoincrement=False)
-	timestamp = db.Column(db.DateTime(), default=datetime.datetime.now, nullable=False)
-	def __repr__(self):
-		return '<Message {} at {}>'.format(self.msgId, self.timestamp)
-
-# 用户类, name是用户输入的名字
-class User(db.Model):
-	id = db.Column(db.Integer(), primary_key=True)
-	openId = db.Column(db.String(), unique=True, nullable=True) #null一般为手动录入但没登记的老师
-	name = db.Column(db.String(), nullable=False)
-	def __repr__(self):
-		return '<User {} {}>'.format(self.openId, self.name)
-
-# 登录信息
-class Registration(db.Model):
-	id = db.Column(db.Integer(), primary_key=True)
-	openId = db.Column(db.String(), unique=True, nullable=False)
-	name = db.Column(db.String(), nullable=False)
-	def __repr__(self):
-		return '<Registration {} {}>'.format(self.openId, self.name)
-
-# 琴房信息,name是琴房的名字,B250,B252,B253
-class Room(db.Model):
-	id = db.Column(db.Integer(), primary_key=True)
-	name = db.Column(db.String(collation='NOCASE'), unique=True, nullable=False)
-	def __repr__(self):
-		return '<Room {}>'.format(self.name)
-
-# 预订琴房的信息
-class Reservation(db.Model):
-	id = db.Column(db.Integer(), primary_key=True)
-	userId = db.Column(db.Integer(), db.ForeignKey('user.id'), nullable=False)
-	user = db.relationship('User', backref=db.backref('reservations', lazy='dynamic'))
-	roomId = db.Column(db.Integer(), db.ForeignKey('room.id'), nullable=False)
-	room = db.relation('Room', backref=db.backref('reservations', lazy='dynamic'))
-	start = db.Column(db.DateTime(), nullable=False)
-	end = db.Column(db.DateTime(), nullable=False)
-	def __repr__(self):
-		return '{} {}'.format(self.user.name, self.getDateRoom())
-
-	def getDateRoom(self):
-		return '{}年{}月{}日 {}:{:02}~{}:{:02} {}'.format(
-				self.start.year, self.start.month, self.start.day,
-				self.start.hour, self.start.minute,
-				self.end.hour, self.end.minute,
-				self.room.name)
-
-# 钢琴课的信息
-class Course(db.Model):
-	id = db.Column(db.Integer(), primary_key=True)
-	teacherId = db.Column(db.Integer(), db.ForeignKey('user.id'), nullable=False)
-	teacher = db.relation('User', backref=db.backref('courses', lazy='dynamic'))
-	roomId = db.Column(db.Integer(), db.ForeignKey('room.id'), nullable=False)
-	room = db.relation('Room', backref=db.backref('courses', lazy='dynamic'))
-	weekday = db.Column(db.Integer(), nullable=False)
-	startDate = db.Column(db.Date(), nullable=False)
-	endDate = db.Column(db.Date(), nullable=False)
-	startTime = db.Column(db.Time(), nullable=False)
-	endTime = db.Column(db.Time(), nullable=False)
-	def __repr__(self):
-		return '<Course {} {}月{}日~{}月{}日 {} {}:{:02}~{}:{:02}>'.format(
-				self.teacher.name,
-				self.startDate.month, self.startDate.day,
-				self.endDate.month, self.endDate.day,
-				'周一 周二 周三 周四 周五 周六 周日'.split()[self.weekday],
-				self.startTime.hour, self.startTime.minute,
-				self.endTime.hour, self.endTime.minute)
-
-admin = Admin(app)
-admin.add_view(ModelView(Course, db.session))
-admin.add_view(ModelView(Reservation, db.session))
-admin.add_view(ModelView(Room, db.session))
-admin.add_view(ModelView(Registration, db.session))
-admin.add_view(ModelView(User, db.session))
-admin.add_view(ModelView(Message, db.session))
 
 appPath = '/papuwx/'
 
@@ -155,7 +89,7 @@ def processMessage():
 
 	msgReceived = {x:e.findtext(x) for x in
 					'ToUserName FromUserName CreateTime Content Recognition'.split()}
-	print("receive:",msgReceived)
+	utils.printDict("receive", msgReceived)
 
 	if e.findtext('MsgType').lower()=='event' and e.findtext('Event').lower()=='subscribe':
 		replyDict = dict(ToUserName=e.findtext('FromUserName'),
@@ -167,23 +101,14 @@ def processMessage():
 		return
 
 	try:
-		db.session.add(Message(msgId=int(e.findtext('MsgId'))))
-		db.session.commit()
+		db.db.session.add(db.Message(msgId=int(e.findtext('MsgId'))))
+		db.db.session.commit()
 	except IntegrityError:
 		#消息已处理，或者不存在MsgId
 		return ''
 
 	return processText(**msgReceived)
 
-
-# 返回一个随机的表情
-def randomEmoji():
-	available = [(0x1f31a,0x1f31e), (0x1f646,0x1f64f)]
-	pos = random.randrange(sum(x[1]-x[0]+1 for x in available))
-	for x in available:
-		if pos < x[1]-x[0]+1:
-			return chr(x[0]+pos)
-		pos -= x[1]-x[0]+1
 
 # Mark,昨天看代码看到这里
 def toEtree(d, name='xml'):
@@ -202,8 +127,9 @@ def toEtree(d, name='xml'):
 def processText(ToUserName, FromUserName, CreateTime, Content, Recognition):
 	g.openId = FromUserName
 	Content = Content or Recognition
+	
 	try:
-		replyDict = dict(MsgType='text', Content=randomEmoji())
+		replyDict = dict(MsgType='text', Content=AI.doInterprete(Content))
 	except MyException as e:
 		replyDict = dict(MsgType='text', Content=e.args[0])
 
@@ -211,7 +137,7 @@ def processText(ToUserName, FromUserName, CreateTime, Content, Recognition):
 	for k,v in replyDict.items():
 		reply.append(toEtree(v, name=k))
 	result = etree.tostring(reply, encoding='utf8')
-	print("reply:", replyDict)
+	utils.printDict("reply", replyDict)
 	return result
 
 if __name__=='__main__':
