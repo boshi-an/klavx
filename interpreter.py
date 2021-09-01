@@ -274,6 +274,10 @@ def initPatterns() :
 		['^预约', pTime, pLocation],
 		lambda x,y,z : None if haveNone(x,y,z) else (*y, *z)
 	)
+	pReserve.appendSubPatternSeq(
+		['^预约', pTime],
+		lambda x,y : None if haveNone(x,y) else (*y, None)
+	)
 
 	print(pDate.match('大后天'))
 	print(pNumber.match('1982'))
