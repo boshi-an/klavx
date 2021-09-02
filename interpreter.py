@@ -321,12 +321,12 @@ def initPatterns() :
 		lambda x,y : None if haveNone(x,y) else (*y, None)
 	)
 	pQuery.appendSubPatternSeq(
-		['^查询', pDate, pDate, pLocation],
-		lambda _,x,y,z : None if haveNone(_,x,y,z) else (utils.toDatetime(*x), utils.toDatetime(*y), *z)
+		['^查询', pDate, '到|至|-', pDate, pLocation],
+		lambda _,x,__,y,z : None if haveNone(_,x,__,y,z) else (utils.toDatetime(*x), utils.toDatetime(*y), *z)
 	)
 	pQuery.appendSubPatternSeq(
-		['^查询', pDate, pDate],
-		lambda _,x,y : None if haveNone(_,x,y) else (utils.toDatetime(*x), utils.toDatetime(*y), None)
+		['^查询', pDate, '到|至|-', pDate],
+		lambda _,x,__,y : None if haveNone(_,x,__,y) else (utils.toDatetime(*x), utils.toDatetime(*y), None)
 	)
 	pQuery.appendSubPatternSeq(
 		['^查询', pDate, pLocation],

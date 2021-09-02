@@ -1074,3 +1074,8 @@ gateway "uWSGI http 1" has been buried (pid: 41761)
 worker 1 buried after 1 seconds
 worker 2 buried after 1 seconds
 goodbye to uWSGI.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 45384)
+spawned uWSGI worker 1 (pid: 45385, cores: 1)
+spawned uWSGI worker 2 (pid: 45386, cores: 1)
+spawned uWSGI http 1 (pid: 45387)
