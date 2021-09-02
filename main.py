@@ -43,6 +43,7 @@ AI.registerNoneFunction(func.randomEmoji)
 AI.registerMultipleFunction(func.vagueRequest)
 AI.registerPattern(interpreter.pIam, func.processIam)
 AI.registerPattern(interpreter.pReserve, func.processReservation)
+AI.registerPattern(interpreter.pCancel, func.processCancel)
 
 # 微信段设置的token，用于验证服务器是否正确运行
 wxToken = 'bigchord'

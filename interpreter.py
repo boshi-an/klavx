@@ -116,15 +116,16 @@ class TextInterpreter :
 			return funcParaPair[0](*funcParaPair[1])
 
 pReserve = Pattern()
+pCancel = Pattern()
 pQuery = Pattern()
 pIam = Pattern()
 pTime = Pattern()
 pDate = Pattern()
-pSparseTime = Pattern()
 pClock = Pattern()
 pNumber = Pattern()
-pNumber_adj = Pattern()	# numbers that have no preceeding letters
 pLocation = Pattern()
+pNumber_adj = Pattern()	# numbers that have no preceeding letters
+pSparseTime = Pattern()
 
 def initPatterns() :
 
@@ -260,8 +261,16 @@ def initPatterns() :
 		lambda x,y,z1,_,z2 : None if haveNone(x,y,z1,_,z2) else (datetime.datetime.combine(*x,moveTime(*z1,*y)), datetime.datetime.combine(*x,moveTime(*z2,*y)))
 	)
 	pTime.appendSubPatternSeq(
+		[pDate, pSparseTime, pClock],
+		lambda x,y,z : None if haveNone(x,y,z) else (datetime.datetime.combine(*x,moveTime(*z,*y)), None)
+	)
+	pTime.appendSubPatternSeq(
 		[pDate, pClock, r'到|至|\-', pClock],
 		lambda x,y,_,z : None if haveNone(x,y,_,z) else (datetime.datetime.combine(*x,*y), datetime.datetime.combine(*x,*z))
+	)
+	pTime.appendSubPatternSeq(
+		[pDate, pClock],
+		lambda x,y : None if haveNone(x,y) else (datetime.datetime.combine(*x,*y), None)
 	)
 
 	# Defining reserve
@@ -300,6 +309,20 @@ def initPatterns() :
 	pQuery.appendSubPatternSeq(
 		['^查询'],
 		lambda x : None if x==None else (None, None, None)
+	)
+
+	# Defining cancellation
+	pCancel.appendSubPatternSeq(
+		['^取消', pTime, pLocation],
+		lambda _,x,y : None if haveNone(_,x,y) else (*x, *y)
+	)
+	pCancel.appendSubPatternSeq(
+		['^取消', pTime],
+		lambda _,x : None if haveNone(_,x) else (*x, None)
+	)
+	pCancel.appendSubPatternSeq(
+		['^取消', pLocation],
+		lambda _,x : None if haveNone(_,x) else (None, None, *x)
 	)
 
 	# Defining I am

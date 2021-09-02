@@ -42,7 +42,9 @@
 - Time
 	- Date + SparseTime + Clock + '到|至' + SparseTime + Clock
 	- Date + SparseTime + Clock + '到|至' + Clock
+	- Date + SparseTime + Clock
 	- Date + Clock + '到|至' + Clock
+	- Date + Clock
 - Location
 	- 'B|b' + Number_adj
 	- Number

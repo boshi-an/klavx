@@ -87,7 +87,11 @@ def processIam(name) :
 @authenticated
 def processReservation(start, end, roomName):
 
-	print(start, end, roomName)
+	result = ''
+
+	if end is None :
+		result += '由于您没有给定结束时间，默认您的预约时常为1小时\n'
+		end = start + datetime.timedelta(hours=1)
 	# ???
 	if (start.month,start.day)==(6,4):
 		return randomEmoji()
@@ -137,11 +141,37 @@ def processReservation(start, end, roomName):
 				db.session.commit()
 				break
 	else:
-		if room is None: return '此时段预约已满'
-		else: return '此时段的 {} 预约已满'.format(room.name)
+		if room is None:
+			return '此时段预约已满'
+		else:
+			return '此时段的 {} 预约已满'.format(room.name)
 
-	result = '您已预约 {}'.format(reservation.getDateRoom())
+	result += '您已预约 {}'.format(reservation.getDateRoom())
 	t1,t2 = datetime.time(hour=8), datetime.time(hour=22, minute=30)
 	if not (t1<=reservation.start.time()<=t2 and t1<=reservation.end.time()<=t2):
 		result += '\n警告：此时段琴房可能不开'
 	return result
+
+@authenticated
+def processCancel(begin, end, location):
+	print(begin, end, location)
+	query = Reservation.query.filter_by(user=g.user)
+	if location is not None:
+		query = query.filter_by(room=getRoom(location))
+	if begin is not None and end is not None :
+		query = query.filter(db.and_(begin<=Reservation.start, Reservation.end<=end))
+	elif begin is not None and end is None :
+		query = query.filter(db.and_(Reservation.start<=begin, Reservation.end>=begin))
+	resultList = [r.getDateRoom() for r in query]
+	if len(resultList)==0:
+		if begin is not None and end is not None :
+			return '您没有{}到{} '.format(begin, end, location) + (location if location is not None else '') + '的预约'
+		elif begin is not None and end is None :
+			return '您没有包含{} '.format(begin, location) + (location if location is not None else '') + '的预约'
+	query.delete()
+	db.session.commit()
+	return '您已取消{}{}'.format('\n'*(len(resultList)>1), '\n'.join(resultList))
+
+@authenticated
+def processQuery() :
+	pass
