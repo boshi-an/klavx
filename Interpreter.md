@@ -54,6 +54,8 @@
 - Query
 	- '^查询' + Time + Location
 	- '^查询' + Time
+	- '^查询' + Date + Date + Location
+	- '^查询' + Date + Date
 	- '^查询' + Date + Location
 	- '^查询' + Date
 	- '^查询' + Location

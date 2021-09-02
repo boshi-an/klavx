@@ -2,6 +2,7 @@
 
 import re
 import datetime
+import utils
 from typing import SupportsBytes
 
 def givenPattern(pat) :
@@ -94,25 +95,34 @@ class TextInterpreter :
 	# doing interpretation and calling corresponding functions
 	def doInterprete(self, string) :
 
+		print('\033[1;34;40mRecieved message:', string, ', interpreting \033[0m\n')
+
 		successNum = 0
 		funcParaPair = None
 		for pattern,func in self.patternFuncSeq :
-			tmp = pattern.match(string)
+			try :
+				tmp = pattern.match(string)
+			except ValueError as e:
+				print('\033[1;31;40mValue error occured!\033[0m\n')
+				return e
 			if tmp != None :
 				_,res = tmp
 				funcParaPair = (func, res)
 				successNum += 1
 		if successNum == 0 :
+			print('\033[1;34;40mInterpretation result:', 'Can\'t understand!', '\033[0m\n')
 			if self.whenNone != None :
 				return self.whenNone()
 			else :
 				return "No interpretation found!"
 		elif successNum >= 2 :
+			print('\033[1;34;40mInterpretation result:', 'Multiple answers!', '\033[0m\n')
 			if self.whenMultiple != None :
 				return self.whenMultiple()
 			else :
 				return "Multiple interpretation found!"
 		else :
+			print('\033[1;34;40mInterpretation result:', funcParaPair[1], '\033[0m\n')
 			return funcParaPair[0](*funcParaPair[1])
 
 pReserve = Pattern()
@@ -126,6 +136,9 @@ pNumber = Pattern()
 pLocation = Pattern()
 pNumber_adj = Pattern()	# numbers that have no preceeding letters
 pSparseTime = Pattern()
+pEasterEgg = Pattern()
+pAbout = Pattern()
+pHelp = Pattern()
 
 def initPatterns() :
 
@@ -169,11 +182,11 @@ def initPatterns() :
 
 	# Defining numbers
 	pNumber.appendSubPatternSeq(
-		[r'[零一二三四五六七八九十0-9日天]+'],
+		[r'[零一二三四五六七八九十0-9日]+'],
 		lambda x : None if x==None else (readChinese(x),)
 	)
 	pNumber_adj.appendSubPatternSeq(
-		[r'^[零一二三四五六七八九十0-9日天]+'],
+		[r'^[零一二三四五六七八九十0-9日]+'],
 		lambda x : None if x==None else (readChinese(x),)
 	)
 
@@ -295,12 +308,20 @@ def initPatterns() :
 		lambda x,y : None if haveNone(x,y) else (*y, None)
 	)
 	pQuery.appendSubPatternSeq(
+		['^查询', pDate, pDate, pLocation],
+		lambda _,x,y,z : None if haveNone(_,x,y,z) else (utils.toDatetime(*x), utils.toDatetime(*y), *z)
+	)
+	pQuery.appendSubPatternSeq(
+		['^查询', pDate, pDate],
+		lambda _,x,y : None if haveNone(_,x,y) else (utils.toDatetime(*x), utils.toDatetime(*y), None)
+	)
+	pQuery.appendSubPatternSeq(
 		['^查询', pDate, pLocation],
-		lambda x,y,z : None if haveNone(x,y,z) else (y[0], y[0]+datetime.timedelta(days=1), *z)
+		lambda x,y,z : None if haveNone(x,y,z) else (utils.toDatetime(*y), None, *z)
 	)
 	pQuery.appendSubPatternSeq(
 		['^查询', pDate],
-		lambda x,y : None if haveNone(x,y) else (y[0], y[0]+datetime.timedelta(days=1), None)
+		lambda x,y : None if haveNone(x,y) else (utils.toDatetime(*y), None, None)
 	)
 	pQuery.appendSubPatternSeq(
 		['^查询', pLocation],
@@ -331,7 +352,23 @@ def initPatterns() :
 		lambda x,y : None if haveNone(x,y) else (y,)
 	)
 
-	print('下面一长串时测试代码，如果其中有一个为None请小心')
+	# Defining a lot of things
+	pAbout.appendSubPatternSeq(
+		['^关于|^你是|^你好'],
+		lambda x : None if x==None else []
+	)
+	pEasterEgg.appendSubPatternSeq(
+		['^彩蛋|^练琴'],
+		lambda x : None if x==None else []
+	)
+	pHelp.appendSubPatternSeq(
+		['^帮助|^help|^Help|^HELP'],
+		lambda x : None if x==None else []
+	)
+
+
+
+	print('下面一长串是测试代码，如果其中有一行为None请小心')
 	print(pDate.match('大后天'))
 	print(pNumber.match('1982'))
 	print(pNumber.match('三十'))

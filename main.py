@@ -27,6 +27,7 @@ app.app_context().push()
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['PROPAGATE_EXCEPTIONS'] = True
+app.logger.setLevel('ERROR')
 
 import database as db
 import functions as func
@@ -44,6 +45,10 @@ AI.registerMultipleFunction(func.vagueRequest)
 AI.registerPattern(interpreter.pIam, func.processIam)
 AI.registerPattern(interpreter.pReserve, func.processReservation)
 AI.registerPattern(interpreter.pCancel, func.processCancel)
+AI.registerPattern(interpreter.pQuery, func.processQuery)
+AI.registerPattern(interpreter.pAbout, func.about)
+AI.registerPattern(interpreter.pEasterEgg, func.easterEgg)
+AI.registerPattern(interpreter.pHelp, func.help)
 
 # 微信段设置的token，用于验证服务器是否正确运行
 wxToken = 'bigchord'
@@ -143,4 +148,12 @@ def processText(ToUserName, FromUserName, CreateTime, Content, Recognition):
 	return result
 
 if __name__=='__main__':
-	Manager(app).run()
+	# 刷新钢琴课命令的入口
+	if len(sys.argv)==2 and sys.argv[1]=='refreshcourses':
+		if input("Old courses will be deleted. Are you sure? ") in ['Y','y','YES','Yes','yes']:
+			function.refreshCourses()
+			print('done')
+		else:
+			print('aborted')
+	else :
+		Manager(app).run()

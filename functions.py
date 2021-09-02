@@ -1,13 +1,12 @@
 import datetime
 import random
+from re import match
+import utils
 
 from flask import g
 
 from exception import MyException
 from database import Course, Reservation, Room, Registration, User, Message, db
-
-def isEmpty(query) :
-	return len(query[:1])==0
 
 def authenticated(func):
 	def newFunc(*args, **kwargs):
@@ -19,28 +18,71 @@ def authenticated(func):
 	return newFunc
 
 def getRoom(roomName):
+	if roomName is None :
+		return None
 	room = Room.query.filter_by(name=roomName).first()
-	if room is None:
+	if room is None :
 		raise MyException('没有找到 {} 琴房'.format(roomName))
 	return room
 
 def overlayedReservation(start, end, room=None) :
 	query = Reservation.query if room is None else room.reservations
-	return query.filter(db.or_(
-		db.and_(Reservation.start<start, Reservation.end>start), # ( [ )
-		db.and_(Reservation.start>=start, Reservation.start<end)) # [ ( ]
-	)
+	if end is not None :
+		return query.filter(db.or_(
+			db.and_(Reservation.start<start, Reservation.end>start), # ( [ )
+			db.and_(Reservation.start>=start, Reservation.start<end)) # [ ( ]
+		)
+	else :
+		return query.filter(
+			db.and_(Reservation.start<=start, Reservation.end>=start)
+		)
 
-def overlayedCourse(start, end):
-	end -= datetime.timedelta(microseconds=1)
-	assert start.date() == end.date()
+def overlayedCourse(start, end, room=None):
+	query = Course.query if room is None else room.courses
+	if end is not None :
+		end -= datetime.timedelta(microseconds=1)
+		assert start.date() == end.date()
 
-	return (Course.query.filter_by(weekday=start.weekday())
-			.filter(db.and_(Course.startDate<=start.date(),
-				Course.endDate>=start.date()))
-			.filter(db.or_(
-				db.and_(Course.startTime<start.time(), Course.endTime>start.time()),
-				db.and_(Course.startTime>=start.time(), Course.startTime<=end.time()))))
+		return (query.filter_by(weekday=start.weekday())
+				.filter(db.and_(Course.startDate<=start.date(),
+					Course.endDate>=start.date()))
+				.filter(db.or_(
+					db.and_(Course.startTime<start.time(), Course.endTime>start.time()),
+					db.and_(Course.startTime>=start.time(), Course.startTime<=end.time()))))
+	else :
+		return (query.filter_by(weekday=start.weekday())
+				.filter(db.and_(Course.startDate<=start.date(),
+					Course.endDate>=start.date(), Course.startTime<=start.time(), Course.endTime>=start.time())))
+
+def queryOccupations(start, end, room):
+	reservations = [dict(
+		room = x.room.id,
+		start = x.start.time(),
+		end = x.end.time(),
+		repr = '{:02}:{:02}~{:02}:{:02} {}'.format(x.start.hour, x.start.minute,
+			x.end.hour, x.end.minute, x.user.name),
+		) for x in overlayedReservation(start, end, room)]
+
+	courses = [dict(
+		room = x.room.id,
+		start = x.startTime,
+		end = x.endTime,
+		repr = '{:02}:{:02}~{:02}:{:02} {} (*)'.format(x.startTime.hour, x.startTime.minute,
+			x.endTime.hour, x.endTime.minute, x.teacher.name)
+		) for x in overlayedCourse(start, end, room)]
+
+	return (reservations, courses)
+
+def formatOccupation(date, reservations, courses):
+	dateRepr = utils.formatDate(date)
+	resultList = reservations + courses
+	resultList.sort(key=lambda x:(x['room'], x['start'], x['end']))
+	resultRepr = '{}：'.format(dateRepr)
+	for i,x in enumerate(resultList):
+		if i==0 or x['room']!=resultList[i-1]['room']:
+			resultRepr += '\n'*(i>0) + '\n[{}]'.format(Room.query.get(x['room']).name)
+		resultRepr += '\n{}'.format(x['repr'])
+	return resultRepr
 
 # 返回一个随机的表情
 def randomEmoji() :
@@ -87,6 +129,8 @@ def processIam(name) :
 @authenticated
 def processReservation(start, end, roomName):
 
+	print('\033[1;32;40mProcessing <Reservation>:', start, end, roomName, '\033[0m\n')
+
 	result = ''
 
 	if end is None :
@@ -115,7 +159,7 @@ def processReservation(start, end, roomName):
 
 		for practiceRoom in practiceRooms:
 			if room is None or room==practiceRoom:
-				isIdle = isEmpty(overlayedReservation(start, end, practiceRoom))
+				isIdle = utils.isEmpty(overlayedReservation(start, end, practiceRoom))
 				if isIdle:
 					reservation = Reservation(user=g.user, room=practiceRoom, start=start, end=end)
 					db.session.add(reservation)
@@ -126,14 +170,14 @@ def processReservation(start, end, roomName):
 
 		if room is None or room==classRoom:
 			#在本学期有课还没上完的时候，只有老师可以预约两天之后的classRoom
-			if not ((not isEmpty(g.user.courses) #是老师
+			if not ((not utils.isEmpty(g.user.courses) #是老师
 				or (start.date()-datetime.datetime.now().date()).days <= 2)):
 				return '抱歉，只有教课的老师可以预约超过 2 天之后的 {}'.format(classRoom.name)
 
 			#没有课
-			isIdle = isEmpty(overlayedCourse(start,end))
+			isIdle = utils.isEmpty(overlayedCourse(start,end))
 			#没有预约
-			isIdle = isIdle and isEmpty(overlayedReservation(start,end,classRoom))
+			isIdle = isIdle and utils.isEmpty(overlayedReservation(start,end,classRoom))
 
 			if isIdle:
 				reservation = Reservation(user=g.user, room=classRoom, start=start, end=end)
@@ -153,25 +197,107 @@ def processReservation(start, end, roomName):
 	return result
 
 @authenticated
-def processCancel(begin, end, location):
-	print(begin, end, location)
+def processCancel(start, end, roomName):
+
+	print('\033[1;32;40mProcessing <Cancellation>:', start, end, roomName, '\033[0m\n')
 	query = Reservation.query.filter_by(user=g.user)
-	if location is not None:
-		query = query.filter_by(room=getRoom(location))
-	if begin is not None and end is not None :
-		query = query.filter(db.and_(begin<=Reservation.start, Reservation.end<=end))
-	elif begin is not None and end is None :
-		query = query.filter(db.and_(Reservation.start<=begin, Reservation.end>=begin))
+	if roomName is not None:
+		query = query.filter_by(room=getRoom(roomName))
+	if start is not None and end is not None :
+		query = query.filter(db.and_(start<=Reservation.start, Reservation.end<=end))
+	elif start is not None and end is None :
+		query = query.filter(db.and_(Reservation.start<=start, Reservation.end>=start))
 	resultList = [r.getDateRoom() for r in query]
 	if len(resultList)==0:
-		if begin is not None and end is not None :
-			return '您没有{}到{} '.format(begin, end, location) + (location if location is not None else '') + '的预约'
-		elif begin is not None and end is None :
-			return '您没有包含{} '.format(begin, location) + (location if location is not None else '') + '的预约'
+		if start is not None and end is not None :
+			return '您没有{}到{} '.format(start, end, roomName) + (roomName if roomName is not None else '') + '的预约'
+		elif start is not None and end is None :
+			return '您没有包含{} '.format(start, roomName) + (roomName if roomName is not None else '') + '的预约'
 	query.delete()
 	db.session.commit()
 	return '您已取消{}{}'.format('\n'*(len(resultList)>1), '\n'.join(resultList))
 
 @authenticated
-def processQuery() :
-	pass
+def processQuery(start, end, roomName) :
+
+	print('\033[1;32;40mProcessing <Query>:', start, end, roomName, '\033[0m\n')
+	matches = []
+	timeRepr = ''
+	hasCourse = False
+
+	if end is not None and (end.date() - start.date()).days > 33 :
+		return '您查询的时间区间过长'
+
+	if start is not None and end is not None :
+		for i in range((end.date() - start.date()).days+1) :
+			date = (start + datetime.timedelta(days=i)).date()
+			tmpReserve, tmpCourses = queryOccupations(utils.toDatetime(date), utils.toDatetime(date+datetime.timedelta(days=1)), getRoom(roomName))
+			if len(tmpReserve) + len(tmpCourses) == 0 :
+				continue
+			matches.append(formatOccupation(date, tmpReserve, tmpCourses))
+			hasCourse = hasCourse or (len(tmpCourses)>0)
+		timeRepr = utils.formatDate(start) + '至' + utils.formatDate(end)
+	elif start is not None and end is None :
+		tmpReserve, tmpCourses = queryOccupations(start, None, getRoom(roomName))
+		hasCourse = len(tmpCourses)>0
+		timeRepr = utils.formatDatetime(start)
+	else :
+		start = datetime.datetime.now()
+		tmpReserve, tmpCourses = queryOccupations(start, None, getRoom(roomName))
+		hasCourse = len(tmpCourses)>0
+		timeRepr = utils.formatDatetime(start)
+
+	if roomName is not None :
+		timeRepr += '的' + roomName
+
+	if len(matches) == 0:
+		return '{}没有预约'.format(timeRepr)
+
+	if hasCourse :
+		matches.append('(*)钢琴课')
+
+	return '\n\n'.join(matches)
+
+def getCreateUser(name):
+	print('getting', name)
+	user = User.query.filter_by(name=name)
+	print(user)
+	user = user.first()
+	if user is None:
+		user = User(name=name)
+		db.session.add(user)
+		db.session.commit()
+	print('got', name, user)
+	return user
+
+def refreshCourses():
+	B252 = getRoom('B252')
+	B250 = getRoom('B250')
+	B253 = getRoom('B253')
+	Course.query.delete()
+	for line in open('courses.txt'):
+		weekday, startHour, endHour, teacherName = line.split()
+		print(weekday, startHour, endHour, teacherName)
+		weekday = '周一 周二 周三 周四 周五 周六 周日'.split().index(weekday)
+		startTime = datetime.time(hour=int(startHour))
+		endTime = datetime.time(hour=int(endHour))
+		startDate = datetime.date(year=2021, month=3, day=1)
+		endDate = datetime.date(year=2021, month=7, day=1)
+		teacher = getCreateUser(teacherName)
+		room = B250
+		course = Course(teacher=teacher, room=room, weekday=weekday,
+				startDate=startDate, endDate=endDate, startTime=startTime, endTime=endTime)
+		db.session.add(course)
+		db.session.commit()
+
+def about() :
+
+	return '这里是北京大学钢琴社,欢迎关注钢琴社公众号\n（づ￣3￣）づ╭❤～'
+
+def easterEgg() :
+
+	return '今天你练琴了吗'
+
+def help() :
+
+	return '你可以在这里留言（后台应该不会有人看到的），在这里预约琴房（仅供排练用哦，平时练琴不需要也不应该预约），也可以查询预约情况\n\n预约的格式为“预约+<时间起点>+到/至+<时间终点>+琴房名”，后面两项可以省略，默认预约一个小时\n\n查询的格式类似哦~'
