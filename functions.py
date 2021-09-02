@@ -203,8 +203,11 @@ def processCancel(start, end, roomName):
 
 	query = Reservation.query.filter_by(user=g.user)
 	
-	if type(start) is not type(datetime.datetime) :
+	if start is not None and type(start) is not type(datetime.datetime) :
 		end = start + datetime.timedelta(days=1)
+	
+	if start is None :
+		start = datetime.datetime.now()
 	
 	if roomName is not None:
 		query = query.filter_by(room=getRoom(roomName))
@@ -217,7 +220,9 @@ def processCancel(start, end, roomName):
 		if start is not None and end is not None :
 			return '您没有{}到{} '.format(start, end, roomName) + (roomName if roomName is not None else '') + '的预约'
 		elif start is not None and end is None :
-			return '您没有包含{} '.format(start, roomName) + (roomName if roomName is not None else '') + '的预约'
+			return '您没有包含{} '.format(start) + (roomName if roomName is not None else '') + '的预约'
+		elif roomName is not None :
+			 return '您没有{} '.format(roomName) + '的预约'
 	query.delete()
 	db.session.commit()
 	return '您已取消{}{}'.format('\n'*(len(resultList)>1), '\n'.join(resultList))
