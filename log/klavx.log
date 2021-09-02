@@ -36,3 +36,963 @@ reply :
 	 Content : 2021年9月2日23:18没有预约
 
 
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	 CreateTime : 1630595922
+	 Content : 预约今天下午1823点
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 预约今天下午1823点 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+reply :
+	 MsgType : text
+	 Content : time data '1823:0' does not match format '%H:%M'
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	 CreateTime : 1630595934
+	 Content : 查询
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 查询 , interpreting [0m
+
+[1;34;40mInterpretation result: (None, None, None) [0m
+
+[1;32;40mProcessing <Query>: None None None [0m
+
+reply :
+	 MsgType : text
+	 Content : 2021年9月2日23:18没有预约
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	 CreateTime : 1630595943
+	 Content : 查询今年
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 查询今年 , interpreting [0m
+
+[1;34;40mInterpretation result: (None, None, None) [0m
+
+[1;32;40mProcessing <Query>: None None None [0m
+
+reply :
+	 MsgType : text
+	 Content : 2021年9月2日23:19没有预约
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjuLmLuv1CuTqKzvGv2Hok0Q
+	 CreateTime : 1630596804
+	 Content : 预约明天晚上十点
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 预约明天晚上十点 , interpreting [0m
+
+[1;34;40mInterpretation result: (datetime.datetime(2021, 9, 3, 22, 0), None, None) [0m
+
+[1;32;40mProcessing <Reservation>: 2021-09-03 22:00:00 None None [0m
+
+reply :
+	 MsgType : text
+	 Content : 由于您没有给定结束时间，默认您的预约时常为1小时
+		您已预约 2021年9月3日 22:00~23:00 B252
+		警告：此时段琴房可能不开
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjuD_Ityf7XSI-9qi2ausckI
+	 CreateTime : 1630596830
+	 Content : 安博施是猪
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 安博施是猪 , interpreting [0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🙌
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjuD_Ityf7XSI-9qi2ausckI
+	 CreateTime : 1630596845
+	 Content : 就这，你写的ai也太菜了
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 就这，你写的ai也太菜了 , interpreting [0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🌜
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjuD_Ityf7XSI-9qi2ausckI
+	 CreateTime : 1630596853
+	 Content : 好好努力哇
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 好好努力哇 , interpreting [0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🙍
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjuD_Ityf7XSI-9qi2ausckI
+	 CreateTime : 1630596864
+	 Content : 教会你的ai骂人
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 教会你的ai骂人 , interpreting [0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🙇
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjg7Z8PIOdogiI4pB5x1Zof0
+	 CreateTime : 1630596909
+	 Content : hi
+	 Recognition : None
+
+
+[1;34;40mRecieved message: hi , interpreting [0m
+
+[1;34;40mInterpretation result: [] [0m
+
+reply :
+	 MsgType : text
+	 Content : 这里是北京大学钢琴社,欢迎关注钢琴社公众号
+		（づ￣3￣）づ╭❤～
+		
+		输入“帮助”可以获得操作指南
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjg7Z8PIOdogiI4pB5x1Zof0
+	 CreateTime : 1630596915
+	 Content : 帮助
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 帮助 , interpreting [0m
+
+[1;34;40mInterpretation result: [] [0m
+
+reply :
+	 MsgType : text
+	 Content : 你可以在这里留言（后台应该不会有人看到的），在这里预约琴房（仅供排练用哦，平时练琴不需要也不应该预约），也可以查询预约情况
+		
+		预约的格式为“预约+<时间起点>+到/至+<时间终点>+琴房名”，后面两项可以省略，默认预约一个小时
+		
+		查询的格式类似哦~
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjg7Z8PIOdogiI4pB5x1Zof0
+	 CreateTime : 1630596938
+	 Content : 你多大了(●°u°●)​ 」
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 你多大了(●°u°●)​ 」 , interpreting [0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🙇
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjg7Z8PIOdogiI4pB5x1Zof0
+	 CreateTime : 1630596944
+	 Content : /::*
+	 Recognition : None
+
+
+[1;34;40mRecieved message: /::* , interpreting [0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🙏
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjiJvfaE-6oW6HTNqGku2NaE
+	 CreateTime : 1630596967
+	 Content : hi
+	 Recognition : None
+
+
+[1;34;40mRecieved message: hi , interpreting [0m
+
+[1;34;40mInterpretation result: [] [0m
+
+reply :
+	 MsgType : text
+	 Content : 这里是北京大学钢琴社,欢迎关注钢琴社公众号
+		（づ￣3￣）づ╭❤～
+		
+		输入“帮助”可以获得操作指南
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjiJvfaE-6oW6HTNqGku2NaE
+	 CreateTime : 1630596971
+	 Content : whoami
+	 Recognition : None
+
+
+[1;34;40mRecieved message: whoami , interpreting [0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🌚
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjiJvfaE-6oW6HTNqGku2NaE
+	 CreateTime : 1630596978
+	 Content : 帮助
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 帮助 , interpreting [0m
+
+[1;34;40mInterpretation result: [] [0m
+
+reply :
+	 MsgType : text
+	 Content : 你可以在这里留言（后台应该不会有人看到的），在这里预约琴房（仅供排练用哦，平时练琴不需要也不应该预约），也可以查询预约情况
+		
+		预约的格式为“预约+<时间起点>+到/至+<时间终点>+琴房名”，后面两项可以省略，默认预约一个小时
+		
+		查询的格式类似哦~
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjiJvfaE-6oW6HTNqGku2NaE
+	 CreateTime : 1630596997
+	 Content : 查询
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 查询 , interpreting [0m
+
+[1;34;40mInterpretation result: (None, None, None) [0m
+
+[1;32;40mProcessing <Query>: None None None [0m
+
+reply :
+	 MsgType : text
+	 Content : 2021年9月2日23:36没有预约
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjiJvfaE-6oW6HTNqGku2NaE
+	 CreateTime : 1630597002
+	 Content : 查询 本周
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 查询 本周 , interpreting [0m
+
+[1;34;40mInterpretation result: (None, None, None) [0m
+
+[1;32;40mProcessing <Query>: None None None [0m
+
+reply :
+	 MsgType : text
+	 Content : 2021年9月2日23:36没有预约
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjiJvfaE-6oW6HTNqGku2NaE
+	 CreateTime : 1630597009
+	 Content : 查询 本周
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 查询 本周 , interpreting [0m
+
+[1;34;40mInterpretation result: (None, None, None) [0m
+
+[1;32;40mProcessing <Query>: None None None [0m
+
+reply :
+	 MsgType : text
+	 Content : 2021年9月2日23:36没有预约
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjiJvfaE-6oW6HTNqGku2NaE
+	 CreateTime : 1630597014
+	 Content : 查询 明天
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 查询 明天 , interpreting [0m
+
+[1;34;40mInterpretation result: (datetime.datetime(2021, 9, 3, 0, 0), None, None) [0m
+
+[1;32;40mProcessing <Query>: 2021-09-03 00:00:00 None None [0m
+
+reply :
+	 MsgType : text
+	 Content : 2021年9月3日0:00没有预约
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjiJvfaE-6oW6HTNqGku2NaE
+	 CreateTime : 1630597018
+	 Content : 查询 9/4
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 查询 9/4 , interpreting [0m
+
+[1;34;40mInterpretation result: (None, None, 'B9') [0m
+
+[1;32;40mProcessing <Query>: None None B9 [0m
+
+reply :
+	 MsgType : text
+	 Content : 没有找到 B9 琴房
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjiJvfaE-6oW6HTNqGku2NaE
+	 CreateTime : 1630597024
+	 Content : 查询 9/5
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 查询 9/5 , interpreting [0m
+
+[1;34;40mInterpretation result: (None, None, 'B9') [0m
+
+[1;32;40mProcessing <Query>: None None B9 [0m
+
+reply :
+	 MsgType : text
+	 Content : 没有找到 B9 琴房
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjiJvfaE-6oW6HTNqGku2NaE
+	 CreateTime : 1630597032
+	 Content : 查询 253
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 查询 253 , interpreting [0m
+
+[1;34;40mInterpretation result: (None, None, 'B253') [0m
+
+[1;32;40mProcessing <Query>: None None B253 [0m
+
+reply :
+	 MsgType : text
+	 Content : 2021年9月2日23:37的B253没有预约
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjiJvfaE-6oW6HTNqGku2NaE
+	 CreateTime : 1630597040
+	 Content : 查询 9月5日
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 查询 9月5日 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+reply :
+	 MsgType : text
+	 Content : substring not found
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjiJvfaE-6oW6HTNqGku2NaE
+	 CreateTime : 1630597055
+	 Content : 查询9月
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 查询9月 , interpreting [0m
+
+[1;34;40mInterpretation result: (None, None, 'B9') [0m
+
+[1;32;40mProcessing <Query>: None None B9 [0m
+
+reply :
+	 MsgType : text
+	 Content : 没有找到 B9 琴房
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjiJvfaE-6oW6HTNqGku2NaE
+	 CreateTime : 1630597060
+	 Content : 查询 九月
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 查询 九月 , interpreting [0m
+
+[1;34;40mInterpretation result: (None, None, 'B9') [0m
+
+[1;32;40mProcessing <Query>: None None B9 [0m
+
+reply :
+	 MsgType : text
+	 Content : 没有找到 B9 琴房
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjiJvfaE-6oW6HTNqGku2NaE
+	 CreateTime : 1630597069
+	 Content : 查询 明天
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 查询 明天 , interpreting [0m
+
+[1;34;40mInterpretation result: (datetime.datetime(2021, 9, 3, 0, 0), None, None) [0m
+
+[1;32;40mProcessing <Query>: 2021-09-03 00:00:00 None None [0m
+
+reply :
+	 MsgType : text
+	 Content : 2021年9月3日0:00没有预约
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjiJvfaE-6oW6HTNqGku2NaE
+	 CreateTime : 1630597074
+	 Content : 查询 后天
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 查询 后天 , interpreting [0m
+
+[1;34;40mInterpretation result: (datetime.datetime(2021, 9, 4, 0, 0), None, None) [0m
+
+[1;32;40mProcessing <Query>: 2021-09-04 00:00:00 None None [0m
+
+reply :
+	 MsgType : text
+	 Content : 2021年9月4日0:00没有预约
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjiJvfaE-6oW6HTNqGku2NaE
+	 CreateTime : 1630597078
+	 Content : 查询 大后天
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 查询 大后天 , interpreting [0m
+
+[1;34;40mInterpretation result: (datetime.datetime(2021, 9, 5, 0, 0), None, None) [0m
+
+[1;32;40mProcessing <Query>: 2021-09-05 00:00:00 None None [0m
+
+reply :
+	 MsgType : text
+	 Content : 2021年9月5日0:00没有预约
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjiJvfaE-6oW6HTNqGku2NaE
+	 CreateTime : 1630597089
+	 Content : 查询 大后天 14:00
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 查询 大后天 14:00 , interpreting [0m
+
+[1;34;40mInterpretation result: (datetime.datetime(2021, 9, 5, 14, 0), None, None) [0m
+
+[1;32;40mProcessing <Query>: 2021-09-05 14:00:00 None None [0m
+
+reply :
+	 MsgType : text
+	 Content : 2021年9月5日14:00没有预约
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjiJvfaE-6oW6HTNqGku2NaE
+	 CreateTime : 1630597095
+	 Content : 我是谁
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 我是谁 , interpreting [0m
+
+[1;34;40mInterpretation result: ('谁',) [0m
+
+reply :
+	 MsgType : text
+	 Content : 您已设置姓名为 wdw，不可更改
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjiJvfaE-6oW6HTNqGku2NaE
+	 CreateTime : 1630597101
+	 Content : 我是谁
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 我是谁 , interpreting [0m
+
+[1;34;40mInterpretation result: ('谁',) [0m
+
+reply :
+	 MsgType : text
+	 Content : 您已设置姓名为 wdw，不可更改
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjiJvfaE-6oW6HTNqGku2NaE
+	 CreateTime : 1630597126
+	 Content : cd ..
+	 Recognition : None
+
+
+[1;34;40mRecieved message: cd .. , interpreting [0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🌞
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjiJvfaE-6oW6HTNqGku2NaE
+	 CreateTime : 1630597130
+	 Content : hi
+	 Recognition : None
+
+
+[1;34;40mRecieved message: hi , interpreting [0m
+
+[1;34;40mInterpretation result: [] [0m
+
+reply :
+	 MsgType : text
+	 Content : 这里是北京大学钢琴社,欢迎关注钢琴社公众号
+		（づ￣3￣）づ╭❤～
+		
+		输入“帮助”可以获得操作指南
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjiJvfaE-6oW6HTNqGku2NaE
+	 CreateTime : 1630597135
+	 Content : 帮助
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 帮助 , interpreting [0m
+
+[1;34;40mInterpretation result: [] [0m
+
+reply :
+	 MsgType : text
+	 Content : 你可以在这里留言（后台应该不会有人看到的），在这里预约琴房（仅供排练用哦，平时练琴不需要也不应该预约），也可以查询预约情况
+		
+		预约的格式为“预约+<时间起点>+到/至+<时间终点>+琴房名”，后面两项可以省略，默认预约一个小时
+		
+		查询的格式类似哦~
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjiJvfaE-6oW6HTNqGku2NaE
+	 CreateTime : 1630597156
+	 Content : 查询 2201年
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 查询 2201年 , interpreting [0m
+
+[1;34;40mInterpretation result: (None, None, 'B2201') [0m
+
+[1;32;40mProcessing <Query>: None None B2201 [0m
+
+reply :
+	 MsgType : text
+	 Content : 没有找到 B2201 琴房
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjiJvfaE-6oW6HTNqGku2NaE
+	 CreateTime : 1630597168
+	 Content : 查询 9月6日
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 查询 9月6日 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+reply :
+	 MsgType : text
+	 Content : substring not found
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjiJvfaE-6oW6HTNqGku2NaE
+	 CreateTime : 1630597176
+	 Content : 查询本周
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 查询本周 , interpreting [0m
+
+[1;34;40mInterpretation result: (None, None, None) [0m
+
+[1;32;40mProcessing <Query>: None None None [0m
+
+reply :
+	 MsgType : text
+	 Content : 2021年9月2日23:39没有预约
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjiJvfaE-6oW6HTNqGku2NaE
+	 CreateTime : 1630597180
+	 Content : 查询下周
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 查询下周 , interpreting [0m
+
+[1;34;40mInterpretation result: (None, None, None) [0m
+
+[1;32;40mProcessing <Query>: None None None [0m
+
+reply :
+	 MsgType : text
+	 Content : 2021年9月2日23:39没有预约
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjpaD8pelAjptzcx8nBQjX84
+	 CreateTime : 1630597219
+	 Content : 求安利/:8*/:8*/:8*
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 求安利/:8*/:8*/:8* , interpreting [0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🙋
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjpaD8pelAjptzcx8nBQjX84
+	 CreateTime : 1630597230
+	 Content : 哇emoji系统还在
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 哇emoji系统还在 , interpreting [0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🙇
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjpaD8pelAjptzcx8nBQjX84
+	 CreateTime : 1630597234
+	 Content : hello
+	 Recognition : None
+
+
+[1;34;40mRecieved message: hello , interpreting [0m
+
+[1;34;40mInterpretation result: [] [0m
+
+reply :
+	 MsgType : text
+	 Content : 这里是北京大学钢琴社,欢迎关注钢琴社公众号
+		（づ￣3￣）づ╭❤～
+		
+		输入“帮助”可以获得操作指南
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjpaD8pelAjptzcx8nBQjX84
+	 CreateTime : 1630597250
+	 Content : 【收到不支持的消息类型，暂无法显示】
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 【收到不支持的消息类型，暂无法显示】 , interpreting [0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🌞
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	 CreateTime : 1630597283
+	 Content : 查询今天
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 查询今天 , interpreting [0m
+
+[1;34;40mInterpretation result: (datetime.datetime(2021, 9, 2, 0, 0), None, None) [0m
+
+[1;32;40mProcessing <Query>: 2021-09-02 00:00:00 None None [0m
+
+reply :
+	 MsgType : text
+	 Content : 2021年9月2日0:00没有预约
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	 CreateTime : 1630597291
+	 Content : 查询9月3日
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 查询9月3日 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+reply :
+	 MsgType : text
+	 Content : substring not found
+
+
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 18419)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 30010)
+spawned uWSGI worker 1 (pid: 30011, cores: 1)
+spawned uWSGI worker 2 (pid: 30012, cores: 1)
+spawned uWSGI http 1 (pid: 30013)
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	 CreateTime : 1630598599
+	 Content : 查询 9月6日
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 查询 9月6日 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: (datetime.datetime(2021, 9, 6, 0, 0), datetime.datetime(2021, 9, 7, 0, 0), None) [0m
+
+[1;32;40mProcessing <Query>: 2021-09-06 00:00:00 2021-09-07 00:00:00 None [0m
+
+reply :
+	 MsgType : text
+	 Content : 2021年9月6日至2021年9月7日没有预约
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	 CreateTime : 1630598609
+	 Content : 查询下下下下周
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 查询下下下下周 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: (datetime.datetime(2021, 9, 27, 0, 0), datetime.datetime(2021, 10, 4, 0, 0), None) [0m
+
+[1;32;40mProcessing <Query>: 2021-09-27 00:00:00 2021-10-04 00:00:00 None [0m
+
+reply :
+	 MsgType : text
+	 Content : 2021年9月27日至2021年10月4日没有预约
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	 CreateTime : 1630598618
+	 Content : 查询你爸爸
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 查询你爸爸 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: (None, None, None) [0m
+
+[1;32;40mProcessing <Query>: None None None [0m
+
+reply :
+	 MsgType : text
+	 Content : 2021年9月3日0:03没有预约
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	 CreateTime : 1630598656
+	 Content : 查询本周五
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 查询本周五 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: (datetime.datetime(2021, 9, 3, 0, 0), datetime.datetime(2021, 9, 4, 0, 0), None) [0m
+
+[1;32;40mProcessing <Query>: 2021-09-03 00:00:00 2021-09-04 00:00:00 None [0m
+
+reply :
+	 MsgType : text
+	 Content : 2021年9月3日至2021年9月4日
+		
+		2021年9月3日：
+		[B252]
+		22:00~23:00 张煜豪
+
+

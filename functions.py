@@ -261,7 +261,7 @@ def processQuery(start, end, roomName) :
 	if hasCourse :
 		matches.append('(*)钢琴课')
 
-	return '\n\n'.join(matches)
+	return timeRepr+'\n\n'+'\n\n'.join(matches)
 
 def getCreateUser(name):
 	print('getting', name)

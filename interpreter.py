@@ -104,9 +104,9 @@ class TextInterpreter :
 		for pattern,func in self.patternFuncSeq :
 			try :
 				tmp = pattern.match(string)
-			except ValueError as e:
+			#except ValueError as e:
 				print('\033[1;31;40mValue error occured!\033[0m\n')
-				return e
+			#	return e
 			except exception.MyException as e:
 				print('\033[1;31;40m', e, '\033[0m\n')
 				return e
@@ -191,11 +191,11 @@ def initPatterns() :
 
 	# Defining numbers
 	pNumber.appendSubPatternSeq(
-		[r'[零一二三四五六七八九十0-9日]+'],
+		[r'[零一二三四五六七八九十0-9]+'],
 		lambda x : None if x==None else (readChinese(x),)
 	)
 	pNumber_adj.appendSubPatternSeq(
-		[r'^[零一二三四五六七八九十0-9日]+'],
+		[r'^[零一二三四五六七八九十0-9]+'],
 		lambda x : None if x==None else (readChinese(x),)
 	)
 
@@ -217,7 +217,11 @@ def initPatterns() :
 		lambda x,y : None if haveNone(x,y) else (nextMonday() + datetime.timedelta(days=y[0]%7+x.count('下')*7-8),)
 	)
 	pDate.appendSubPatternSeq(
-		[pNumber, r'月', pNumber_adj, r'日*|号*'],
+		[r'下*个?(周日|星期日|星期天)'],
+		lambda x : None if haveNone(x) else (nextMonday() + datetime.timedelta(days=7+x.count('下')*7-8),)
+	)
+	pDate.appendSubPatternSeq(
+		[pNumber, r'^月', pNumber_adj, r'^日*|^号*'],
 		lambda x,_1,y,_2 : None if haveNone(x,_1,y,_2) else (datetime.date.today().replace(month=x[0], day=y[0]),)
 	)
 	pDate.appendSubPatternSeq(
@@ -330,14 +334,22 @@ def initPatterns() :
 	)
 	pQuery.appendSubPatternSeq(
 		['^查询', pDate],
-		lambda x,y : None if haveNone(x,y) else (utils.toDatetime(*y), None, None)
+		lambda x,y : None if haveNone(x,y) else (utils.toDatetime(*y), utils.toDatetime(*y)+datetime.timedelta(days=1), None)
 	)
 	pQuery.appendSubPatternSeq(
 		['^查询', pLocation],
 		lambda x,y : None if haveNone(x,y) else (None, None, *y)
 	)
 	pQuery.appendSubPatternSeq(
-		['^查询'],
+		['^查询本周'],
+		lambda x : None if x==None else (utils.toDatetime(nextMonday())-datetime.timedelta(days=7), utils.toDatetime(nextMonday()), None)
+	)
+	pQuery.appendSubPatternSeq(
+		['^查询下*周'],
+		lambda x : None if x==None else (utils.toDatetime(nextMonday())+datetime.timedelta(days=7*(len(x)-4)), utils.toDatetime(nextMonday())+datetime.timedelta(days=7*(len(x)-3)), None)
+	)
+	pQuery.appendSubPatternSeq(
+		['^查询$'],
 		lambda x : None if x==None else (None, None, None)
 	)
 
