@@ -9,6 +9,15 @@ from database import Course, Reservation, Room, Registration, User, Message, db
 def isEmpty(query) :
 	return len(query[:1])==0
 
+def authenticated(func):
+	def newFunc(*args, **kwargs):
+		user = User.query.filter_by(openId=g.openId).first()
+		if user is None:
+			raise MyException('抱歉，您还没有登记。请发送 我是xxx')
+		g.user = user
+		return func(*args, **kwargs)
+	return newFunc
+
 def getRoom(roomName):
 	room = Room.query.filter_by(name=roomName).first()
 	if room is None:
@@ -75,8 +84,10 @@ def processIam(name) :
 		db.session.commit()
 		return '您已设置姓名为 {}'.format(name)
 
+@authenticated
 def processReservation(start, end, roomName):
 
+	print(start, end, roomName)
 	# ???
 	if (start.month,start.day)==(6,4):
 		return randomEmoji()
