@@ -354,7 +354,7 @@ def initPatterns() :
 
 	# Defining a lot of things
 	pAbout.appendSubPatternSeq(
-		['^关于|^你是|^你好'],
+		['^关于|^你是|^你好|^hello|^Hello|^Hi|^hi'],
 		lambda x : None if x==None else []
 	)
 	pEasterEgg.appendSubPatternSeq(

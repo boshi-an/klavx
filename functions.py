@@ -292,7 +292,7 @@ def refreshCourses():
 
 def about() :
 
-	return '这里是北京大学钢琴社,欢迎关注钢琴社公众号\n（づ￣3￣）づ╭❤～'
+	return '这里是北京大学钢琴社,欢迎关注钢琴社公众号\n（づ￣3￣）づ╭❤～\n\n输入“帮助”可以获得操作指南'
 
 def easterEgg() :
 
