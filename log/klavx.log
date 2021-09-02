@@ -497,3 +497,580 @@ reply :
 	 Content : 🌛
 
 
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	 CreateTime : 1630601118
+	 Content : 查询本周
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 查询本周 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: (datetime.datetime(2021, 8, 30, 0, 0), datetime.datetime(2021, 9, 6, 0, 0), None) [0m
+
+[1;32;40mProcessing <Query>: 2021-08-30 00:00:00 2021-09-06 00:00:00 None [0m
+
+reply :
+	 MsgType : text
+	 Content : 2021年8月30日至2021年9月6日
+		
+		2021年8月31日：
+		[B252]
+		20:00~21:00 褚慈
+		
+		2021年9月3日：
+		[B252]
+		21:00~22:00 安博施
+		22:00~23:00 张煜豪
+		23:59~00:59 安博施
+		
+		2021年9月4日：
+		[B252]
+		23:59~00:59 安博施
+		
+		2021年9月5日：
+		[B252]
+		14:00~16:00 wdw
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	 CreateTime : 1630601128
+	 Content : 取消本周
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 取消本周 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🙋
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	 CreateTime : 1630601136
+	 Content : 取消9月4日
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 取消9月4日 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: (datetime.date(2021, 9, 4), None, None) [0m
+
+[1;32;40mProcessing <Cancellation>: 2021-09-04 None None [0m
+
+reply :
+	 MsgType : text
+	 Content : 您没有2021-09-04到2021-09-05 的预约
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	 CreateTime : 1630601149
+	 Content : 取消9月4日到9月5日
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 取消9月4日到9月5日 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: (datetime.date(2021, 9, 4), None, None) [0m
+
+[1;32;40mProcessing <Cancellation>: 2021-09-04 None None [0m
+
+reply :
+	 MsgType : text
+	 Content : 您没有2021-09-04到2021-09-05 的预约
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	 CreateTime : 1630601172
+	 Content : 取消9月5日0点
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 取消9月5日0点 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: (datetime.datetime(2021, 9, 5, 0, 0), None, None) [0m
+
+[1;32;40mProcessing <Cancellation>: 2021-09-05 00:00:00 None None [0m
+
+reply :
+	 MsgType : text
+	 Content : 您没有2021-09-05 00:00:00到2021-09-06 00:00:00 的预约
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	 CreateTime : 1630601196
+	 Content : 取消9月4日到9月6日
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 取消9月4日到9月6日 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: (datetime.date(2021, 9, 4), None, None) [0m
+
+[1;32;40mProcessing <Cancellation>: 2021-09-04 None None [0m
+
+reply :
+	 MsgType : text
+	 Content : 您没有2021-09-04到2021-09-05 的预约
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjjlncz6cnOdeUsGdUHu4Yyg
+	 CreateTime : 1630601230
+	 Content : 彩蛋
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 彩蛋 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: [] [0m
+
+reply :
+	 MsgType : text
+	 Content : 今天你练琴了吗
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjjlncz6cnOdeUsGdUHu4Yyg
+	 CreateTime : 1630601235
+	 Content : 蛋蛋
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 蛋蛋 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🌚
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjjlncz6cnOdeUsGdUHu4Yyg
+	 CreateTime : 1630601241
+	 Content : 白菜
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 白菜 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🌛
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjjlncz6cnOdeUsGdUHu4Yyg
+	 CreateTime : 1630601243
+	 Content : 【收到不支援的訊息類型，無法顯示】
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 【收到不支援的訊息類型，無法顯示】 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🙎
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjjlncz6cnOdeUsGdUHu4Yyg
+	 CreateTime : 1630601245
+	 Content : 【收到不支援的訊息類型，無法顯示】
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 【收到不支援的訊息類型，無法顯示】 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🙏
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjjlncz6cnOdeUsGdUHu4Yyg
+	 CreateTime : 1630601249
+	 Content : 【收到不支援的訊息類型，無法顯示】
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 【收到不支援的訊息類型，無法顯示】 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🙆
+
+
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 33149)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 41291)
+spawned uWSGI worker 1 (pid: 41292, cores: 1)
+spawned uWSGI worker 2 (pid: 41293, cores: 1)
+spawned uWSGI http 1 (pid: 41294)
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	 CreateTime : 1630601338
+	 Content : 取消9月4日到9月6日
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 取消9月4日到9月6日 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: (datetime.date(2021, 9, 4), None, None) [0m
+
+[1;32;40mProcessing <Cancellation>: 2021-09-04 None None [0m
+
+reply :
+	 MsgType : text
+	 Content : 您没有2021-09-04到2021-09-05 的预约
+
+
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 41294)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 41461)
+spawned uWSGI worker 1 (pid: 41462, cores: 1)
+spawned uWSGI worker 2 (pid: 41463, cores: 1)
+spawned uWSGI http 1 (pid: 41464)
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	 CreateTime : 1630601366
+	 Content : 取消9月4日到9月6诶
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 取消9月4日到9月6诶 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: (datetime.date(2021, 9, 4), None, None) [0m
+
+[1;32;40mProcessing <Cancellation>: 2021-09-04 None None [0m
+
+reply :
+	 MsgType : text
+	 Content : 您没有2021-09-04到2021-09-05 的预约
+
+
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 41464)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 41639)
+spawned uWSGI worker 1 (pid: 41640, cores: 1)
+spawned uWSGI worker 2 (pid: 41641, cores: 1)
+spawned uWSGI http 1 (pid: 41642)
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	 CreateTime : 1630601412
+	 Content : 取消9月4到9月6
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 取消9月4到9月6 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: (datetime.date(2021, 9, 4), datetime.date(2021, 9, 6), None) [0m
+
+[1;32;40mProcessing <Cancellation>: 2021-09-04 2021-09-06 None [0m
+
+reply :
+	 MsgType : text
+	 Content : 您没有2021-09-04到2021-09-05 的预约
+
+
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 41642)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 41758)
+spawned uWSGI worker 1 (pid: 41759, cores: 1)
+spawned uWSGI worker 2 (pid: 41760, cores: 1)
+spawned uWSGI http 1 (pid: 41761)
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	 CreateTime : 1630601433
+	 Content : 取消9月4日到9月6日
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 取消9月4日到9月6日 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: (datetime.date(2021, 9, 4), datetime.date(2021, 9, 6), None) [0m
+
+[1;32;40mProcessing <Cancellation>: 2021-09-04 2021-09-06 None [0m
+
+reply :
+	 MsgType : text
+	 Content : 您没有2021-09-04到2021-09-05 的预约
+
+
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 41761)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.

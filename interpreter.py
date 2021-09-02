@@ -104,9 +104,9 @@ class TextInterpreter :
 		for pattern,func in self.patternFuncSeq :
 			try :
 				tmp = pattern.match(string)
-			#except ValueError as e:
+			except ValueError as e:
 				print('\033[1;31;40mValue error occured!\033[0m\n')
-			#	return e
+				return e
 			except exception.MyException as e:
 				print('\033[1;31;40m', e, '\033[0m\n')
 				return e
@@ -225,11 +225,11 @@ def initPatterns() :
 		lambda x,_1,y,_2 : None if haveNone(x,_1,y,_2) else (datetime.date.today().replace(month=x[0], day=y[0]),)
 	)
 	pDate.appendSubPatternSeq(
-		[pNumber, r'\.', pNumber_adj, r'\.', pNumber_adj, r'[ ]|$'],
+		[pNumber, r'^\.', pNumber_adj, r'^\.', pNumber_adj, r'[ ]|$'],
 		lambda x,_1,y,_2,z,_3 : None if haveNone(x,_1,y,_2,z,_3) else (datetime.date.today().replace(year=x[0], month=y[0], day=z[0]),)
 	)
 	pDate.appendSubPatternSeq(
-		[pNumber, r'\.', pNumber_adj, r'[ ]|$'],
+		[pNumber, r'^\.', pNumber_adj, r'[ ]|$'],
 		lambda x,_1,y,_2 : None if haveNone(x,_1,y,_2) else (datetime.date.today().replace(month=x[0], day=y[0]),)
 	)
 
@@ -245,7 +245,7 @@ def initPatterns() :
 
 	# Defining clock
 	pClock.appendSubPatternSeq(
-		[pNumber, r'\:', pNumber_adj, r'am|pm|AM|PM|Am|Pm'],
+		[pNumber, r'^\:', pNumber_adj, r'am|pm|AM|PM|Am|Pm'],
 		lambda x,_,y,z : None if haveNone(x,_,y,z) else (datetime.datetime.strptime(str(x[0])+':'+str(y[0])+' '+z.lower(), '%I:%M %p').time(), )
 	)
 	pClock.appendSubPatternSeq(
@@ -361,6 +361,10 @@ def initPatterns() :
 	pCancel.appendSubPatternSeq(
 		['^取消', pTime],
 		lambda _,x : None if haveNone(_,x) else (*x, None)
+	)
+	pCancel.appendSubPatternSeq(
+		['^取消', pDate, '到', pDate],
+		lambda _,x,__,y : None if haveNone(_,x,__,y) else (*x, *y, None)
 	)
 	pCancel.appendSubPatternSeq(
 		['^取消', pDate, pClock],

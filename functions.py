@@ -203,11 +203,20 @@ def processCancel(start, end, roomName):
 
 	query = Reservation.query.filter_by(user=g.user)
 	
-	if start is not None and type(start) is not type(datetime.datetime) :
+	# 如果开始时间只是一个日期，并且没有结束时间，意味着取消这一天的预约
+	if type(start) is datetime.date and end is None :
+		start = utils.toDatetime(start)
 		end = start + datetime.timedelta(days=1)
-	
+
+	# 如果开始结束都是一个日期，意味着取消这几天的预约
+	if type(start) is datetime.date and type(end) is datetime.date :
+		start = utils.toDatetime(start)
+		end = utils.toDatetime(end + datetime.timedelta(days=1))
+
+	# 如果没有开始日期，意味着取消当前时间之后的预约
 	if start is None :
 		start = datetime.datetime.now()
+		end = start + datetime.timedelta(days=365)
 	
 	if roomName is not None:
 		query = query.filter_by(room=getRoom(roomName))
