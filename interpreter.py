@@ -1,9 +1,11 @@
 
 
-import re
 import datetime
+import re
+
+import exception
 import utils
-from typing import SupportsBytes
+
 
 def givenPattern(pat) :
 	def wrapped(string) :
@@ -105,6 +107,9 @@ class TextInterpreter :
 			except ValueError as e:
 				print('\033[1;31;40mValue error occured!\033[0m\n')
 				return e
+			except exception.MyException as e:
+				print('\033[1;31;40m', e, '\033[0m\n')
+				return e
 			if tmp != None :
 				_,res = tmp
 				funcParaPair = (func, res)
@@ -160,11 +165,12 @@ def initPatterns() :
 				if t[0] == 10 :
 					return t[1]+10
 				else :
-					assert(t[1] == 10)
+					if t[1] != 10 :
+						raise exception.MyException('Number '+s+' interpretation error!')
 					return t[0]*10
 			else :
-				assert(len(t) == 2)
-				assert(t[1] == 10)
+				if t[1] != 10 or len(s) != 3:
+						raise exception.MyException('Number '+s+' interpretation error!')
 				return t[0]*10 + t[2]
 
 	def nextMonday() :

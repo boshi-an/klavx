@@ -1,0 +1,5 @@
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 10425)
+spawned uWSGI worker 1 (pid: 10426, cores: 1)
+spawned uWSGI worker 2 (pid: 10427, cores: 1)
+spawned uWSGI http 1 (pid: 10428)
