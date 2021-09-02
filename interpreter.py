@@ -87,7 +87,7 @@ class TextInterpreter :
 
 		self.whenMultiple = func
 
-	def appendPattern(self, pat, recall) :
+	def registerPattern(self, pat, recall) :
 
 		self.patternFuncSeq.append((pat, recall))
 	
@@ -356,7 +356,7 @@ if __name__ == '__main__' :
 	
 	pat1 = Pattern()
 	pat1.appendSubPatternSeq([r'[0-9]+', r'\+', r'[0-9]+'], lambda a,b,c:None if a==None or b==None else (int(a)+int(c),))
-	inter.appendPattern(pat1, m1)
+	inter.registerPattern(pat1, m1)
 	inter.doInterprete(input())
 	'''
 	pass

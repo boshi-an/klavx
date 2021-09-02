@@ -1,22 +1,24 @@
 #!/usr/bin/python3
 # vim: set noet ts=4 sw=4 fileencoding=utf-8:
 
-import os
-import sys
-import re
-import random
-import hashlib
 import datetime
+import hashlib
+import os
+import random
+import re
 import sqlite3
-from lxml import etree
-
+import sys
 from http.client import BAD_REQUEST
-from flask import Flask, request, abort, g
-from flask_sqlalchemy import SQLAlchemy
-from flask_script import Manager
+
+from flask import Flask, abort, g, request
 from flask_admin import Admin
 from flask_admin.contrib.sqla import ModelView
+from flask_script import Manager
+from flask_sqlalchemy import SQLAlchemy
+from lxml import etree
 from sqlalchemy.exc import IntegrityError
+
+from exception import MyException
 
 # 使用Flask构建web对象app
 app = Flask(__name__)
@@ -26,10 +28,10 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['PROPAGATE_EXCEPTIONS'] = True
 
+import database as db
+import functions as func
 import interpreter
 import utils
-import functions as func
-import database as db
 
 # 定义自定义解释器：“自主意识自然语言人工智能集群”，简称“AI”
 # 该解释器初始化后可以理解部分微信消息
@@ -38,7 +40,8 @@ interpreter.initPatterns()
 AI = interpreter.TextInterpreter()
 # 向AI注册在没有匹配项时采用的函数
 AI.registerNoneFunction(func.randomEmoji)
-AI.registerMultipleFunction(func.randomEmoji)
+AI.registerMultipleFunction(func.vagueRequest)
+AI.registerPattern(interpreter.pIam, func.processIam)
 
 # 微信段设置的token，用于验证服务器是否正确运行
 wxToken = 'bigchord'
@@ -46,9 +49,6 @@ wxToken = 'bigchord'
 # SQLAlchemy是一个数据库的ORM框架,即通过构建类的形式来操作数据库,不需要写sql语句
 # 在SQLAlchemy中,表格以类的形式存在,数据项以对象的形式存在,增删查改均通过构建对话session来进行
 # 了解数据库基本知识和SQLAlchemy的基本语法,对通读代码有很大的帮助
-
-class MyException(Exception):
-	pass
 
 appPath = '/papuwx/'
 
