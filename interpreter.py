@@ -110,6 +110,9 @@ class TextInterpreter :
 			except exception.MyException as e:
 				print('\033[1;31;40m', e, '\033[0m\n')
 				return e
+			except OverflowError as e:
+				print('\033[1;31;40m', e, '\033[0m\n')
+				return e
 			if tmp != None :
 				_,res = tmp
 				funcParaPair = (func, res)
@@ -211,7 +214,7 @@ def initPatterns() :
 	)
 	pDate.appendSubPatternSeq(
 		[r'下*个?(周|星期)', pNumber_adj],
-		lambda x,y : None if haveNone(x,y) else (nextMonday() + datetime.timedelta(days=y[0]+x.count('下')*7-8),)
+		lambda x,y : None if haveNone(x,y) else (nextMonday() + datetime.timedelta(days=y[0]%7+x.count('下')*7-8),)
 	)
 	pDate.appendSubPatternSeq(
 		[pNumber, r'月', pNumber_adj, r'日*|号*'],
