@@ -342,6 +342,14 @@ def initPatterns() :
 		lambda _,x : None if haveNone(_,x) else (*x, None)
 	)
 	pCancel.appendSubPatternSeq(
+		['^取消', pDate, pClock],
+		lambda _,x,y : None if haveNone(_,x,y) else (datetime.datetime.combine(*x, *y), None, None)
+	)
+	pCancel.appendSubPatternSeq(
+		['^取消', pDate],
+		lambda _,x : None if haveNone(_,x) else (*x, None, None)
+	)
+	pCancel.appendSubPatternSeq(
 		['^取消', pLocation],
 		lambda _,x : None if haveNone(_,x) else (None, None, *x)
 	)

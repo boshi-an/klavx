@@ -200,7 +200,12 @@ def processReservation(start, end, roomName):
 def processCancel(start, end, roomName):
 
 	print('\033[1;32;40mProcessing <Cancellation>:', start, end, roomName, '\033[0m\n')
+
 	query = Reservation.query.filter_by(user=g.user)
+	
+	if type(start) is not type(datetime.datetime) :
+		end = start + datetime.timedelta(days=1)
+	
 	if roomName is not None:
 		query = query.filter_by(room=getRoom(roomName))
 	if start is not None and end is not None :
