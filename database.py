@@ -17,7 +17,8 @@ class Message(db.Model):
 	def __repr__(self):
 		return '<Message {} at {}>'.format(self.msgId, self.timestamp)
 
-# 用户类, name是用户输入的名字
+# 用户类, name是用户输入的名字, id是用户在数据库中的id，openID是用户作为微信使用者被腾讯赋予的ID
+# authorized: 演奏部成员为1，否则为0；鉴于过往的数据难以更新，于2021年秋季前注册的成员均为1
 class User(db.Model):
 	id = db.Column(db.Integer(), primary_key=True)
 	openId = db.Column(db.String(), unique=True, nullable=True) #null一般为手动录入但没登记的老师
