@@ -16,6 +16,7 @@ from flask_admin.contrib.sqla import ModelView
 from flask_script import Manager
 from flask_sqlalchemy import SQLAlchemy
 from lxml import etree
+from sqlalchemy import util
 from sqlalchemy.exc import IntegrityError
 
 from exception import MyException
@@ -40,7 +41,7 @@ import utils
 interpreter.initPatterns()
 AI = interpreter.TextInterpreter()
 # 向AI注册在没有匹配项时采用的函数
-AI.registerNoneFunction(func.randomEmoji)
+AI.registerNoneFunction(func.vagueRequest)
 AI.registerMultipleFunction(func.vagueRequest)
 AI.registerPattern(interpreter.pIam, func.processIam)
 AI.registerPattern(interpreter.pReserve, func.processReservation)
@@ -90,8 +91,6 @@ def checkEcho():
 	return False
 
 
-
-
 # 后台接受信息，对收到的xml进行解析后得到msgReceived，再将其转发给函数processText做进一步处理
 # 关于后台收到的消息的XML数据包结构，可以参考微信官方网页：
 # https://developers.weixin.qq.com/doc/offiaccount/Message_Management/Receiving_standard_messages.html
@@ -99,68 +98,48 @@ def processMessage():
 	try: e = etree.fromstring(request.data)#etree: html解析工具
 	except etree.XMLSyntaxError: abort(BAD_REQUEST)
 
+	g.openId = e.findtext('FromUserName')
 	msgReceived = {x:e.findtext(x) for x in
 					'ToUserName FromUserName CreateTime Content Recognition'.split()}
 	utils.printDict("receive", msgReceived)
 
+	replyDict = dict(ToUserName=e.findtext('FromUserName'),
+		FromUserName=e.findtext('ToUserName'),
+		CreateTime=e.findtext('CreateTime'),
+		MsgType='text')
+
 	# MsgType为event表示服务器收到事件推送，如果event的值为subscribe，即有用户关注了北大钢琴社的
 	# 公众号，则生成replyDict，将其转换为相应的xml格式并返回
 	if e.findtext('MsgType').lower()=='event' and e.findtext('Event').lower()=='subscribe':
-		replyDict = dict(ToUserName=e.findtext('FromUserName'),
-			FromUserName=e.findtext('ToUserName'),
-			CreateTime=e.findtext('CreateTime'))
-		return etree.tostring(toEtree(replyDict), encoding='utf8')
-
-	# 用户发来的消息不是文本也不是语音（比如图片），就根据微信的要求来返回空串
-	if e.findtext('MsgType') not in ('text','voice'):
-		return ""
-
+		replyDict['Content'] = '感谢关注钢琴社公众号~'
 	
-	try:
-		db.db.session.add(db.Message(msgId=int(e.findtext('MsgId'))))
-		db.db.session.commit()
-	except IntegrityError:
-		#消息已处理，或者不存在MsgId
-		return ''
+	# 用户发来的消息不是文本也不是语音（比如图片），就根据微信的要求来返回错误提示
+	elif e.findtext('MsgType') not in ('text','voice'):
+		replyDict['Content'] = '小AI暂时无法理解这类信息呢~'
 
-	return processText(**msgReceived)
+	# 用户发来的是文本或语音
+	else :
+		try:
+			db.db.session.add(db.Message(msgId=int(e.findtext('MsgId'))))
+			db.db.session.commit()
+		except IntegrityError:
+			#消息已处理，或者不存在MsgId
+			replyDict['Content'] = 'IntegrityError: 消息已处理，或者不存在MsgId'
+		else :
+			replyDict['Content'] = processText(e.findtext('Content'))
+	utils.printDict('reply', replyDict)
+	return etree.tostring(utils.toEtree(replyDict), encoding='utf8')
 
-
-# toEtree的作用是将传入的参数d转换为一个数据包结构并返回，默认转换为'xml'类型
-# 如果d是列表/元组/字典，对d中的每一个键值对，递归调用toEtree
-def toEtree(d, name='xml'):
-	e = etree.Element(name)
-	if isinstance(d, dict):
-		for k,v in d.items():
-			e.append(toEtree(v, name=k))
-	elif isinstance(d, tuple) or isinstance(d, list):
-		for k,v in d:
-			e.append(toEtree(v, name=k))
-	else:
-		e.text = str(d)
-	return e
-
-
-def processText(ToUserName, FromUserName, CreateTime, Content, Recognition):
-	g.openId = FromUserName
-	Content = Content or Recognition
+def processText(Content):
+	reply = None
 	
-	# 调用AI.doInterprete来处理内容，转换为相应的字典replyDict
+	# 调用AI.doInterprete来处理内容，转换为相应的etree:reply
 	try:
-		replyDict = dict(MsgType='text', Content=AI.doInterprete(Content))
+		reply = AI.doInterprete(Content)
 	except MyException as e:
-		replyDict = dict(MsgType='text', Content=e.args[0])
+		reply = e.args
 
-	reply = toEtree(dict(FromUserName=ToUserName, ToUserName=FromUserName, CreateTime=CreateTime))
-	
-	# 将replyDict中的数据加入ElementTree
-	for k,v in replyDict.items():
-		reply.append(toEtree(v, name=k))
-	
-	# 生成回复的xml并返回
-	result = etree.tostring(reply, encoding='utf8')
-	utils.printDict("reply", replyDict)
-	return result
+	return reply
 
 if __name__=='__main__':
 

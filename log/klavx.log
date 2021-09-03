@@ -2469,3 +2469,375 @@ gateway "uWSGI http 1" has been buried (pid: 45387)
 worker 1 buried after 1 seconds
 worker 2 buried after 1 seconds
 goodbye to uWSGI.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 220207)
+spawned uWSGI worker 1 (pid: 220208, cores: 1)
+spawned uWSGI worker 2 (pid: 220209, cores: 1)
+spawned uWSGI http 1 (pid: 220210)
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	 CreateTime : 1630671325
+	 Content : asd
+	 Recognition : None
+
+
+[1;34;40mRecieved message: asd , interpreting [0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 嘤嘤嘤，你说的话有点模糊呢，小AI不太理解
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	 CreateTime : 1630671330
+	 Content : [Unsupported Message]
+	 Recognition : None
+
+
+[1;34;40mRecieved message: [Unsupported Message] , interpreting [0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 嘤嘤嘤，你说的话有点模糊呢，小AI不太理解
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	 CreateTime : 1630671471
+	 Content : None
+	 Recognition : None
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjubOPIz7zawnRR80Tr7mHeg
+	 CreateTime : 1630671474
+	 Content : None
+	 Recognition : None
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjubOPIz7zawnRR80Tr7mHeg
+	 CreateTime : 1630671489
+	 Content : 皮
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 皮 , interpreting [0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 嘤嘤嘤，你说的话有点模糊呢，小AI不太理解
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjubOPIz7zawnRR80Tr7mHeg
+	 CreateTime : 1630671503
+	 Content : 查询本周
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 查询本周 , interpreting [0m
+
+[1;34;40mInterpretation result: (datetime.datetime(2021, 8, 30, 0, 0), datetime.datetime(2021, 9, 6, 0, 0), None) [0m
+
+[1;32;40mProcessing <Query>: 2021-08-30 00:00:00 2021-09-06 00:00:00 None [0m
+
+reply :
+	 MsgType : text
+	 Content : 2021年8月30日至2021年9月6日
+		
+		2021年8月31日：
+		[B252]
+		20:00~21:00 褚慈
+		
+		2021年9月3日：
+		[B252]
+		09:00~10:00 安博施
+		22:00~23:00 张煜豪
+		23:59~00:59 安博施
+		
+		2021年9月4日：
+		[B252]
+		23:59~00:59 安博施
+		
+		2021年9月5日：
+		[B252]
+		14:00~16:00 wdw
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	 CreateTime : 1630671588
+	 Content : 查询本周
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 查询本周 , interpreting [0m
+
+[1;34;40mInterpretation result: (datetime.datetime(2021, 8, 30, 0, 0), datetime.datetime(2021, 9, 6, 0, 0), None) [0m
+
+[1;32;40mProcessing <Query>: 2021-08-30 00:00:00 2021-09-06 00:00:00 None [0m
+
+reply :
+	 MsgType : text
+	 Content : 2021年8月30日至2021年9月6日
+		
+		2021年8月31日：
+		[B252]
+		20:00~21:00 褚慈
+		
+		2021年9月3日：
+		[B252]
+		09:00~10:00 安博施
+		22:00~23:00 张煜豪
+		23:59~00:59 安博施
+		
+		2021年9月4日：
+		[B252]
+		23:59~00:59 安博施
+		
+		2021年9月5日：
+		[B252]
+		14:00~16:00 wdw
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjiJvfaE-6oW6HTNqGku2NaE
+	 CreateTime : 1630672026
+	 Content : a
+	 Recognition : None
+
+
+[1;34;40mRecieved message: a , interpreting [0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 嘤嘤嘤，你说的话有点模糊呢，小AI不太理解
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjiJvfaE-6oW6HTNqGku2NaE
+	 CreateTime : 1630672033
+	 Content : AI
+	 Recognition : None
+
+
+[1;34;40mRecieved message: AI , interpreting [0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 嘤嘤嘤，你说的话有点模糊呢，小AI不太理解
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjiJvfaE-6oW6HTNqGku2NaE
+	 CreateTime : 1630672036
+	 Content : whoami
+	 Recognition : None
+
+
+[1;34;40mRecieved message: whoami , interpreting [0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 嘤嘤嘤，你说的话有点模糊呢，小AI不太理解
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjiJvfaE-6oW6HTNqGku2NaE
+	 CreateTime : 1630672046
+	 Content : where 你听我说
+	 Recognition : None
+
+
+[1;34;40mRecieved message: where 你听我说 , interpreting [0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 嘤嘤嘤，你说的话有点模糊呢，小AI不太理解
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjiJvfaE-6oW6HTNqGku2NaE
+	 CreateTime : 1630672050
+	 Content : 你听我说
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 你听我说 , interpreting [0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 嘤嘤嘤，你说的话有点模糊呢，小AI不太理解
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjiJvfaE-6oW6HTNqGku2NaE
+	 CreateTime : 1630672054
+	 Content : 音乐推荐
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 音乐推荐 , interpreting [0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 嘤嘤嘤，你说的话有点模糊呢，小AI不太理解
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjiJvfaE-6oW6HTNqGku2NaE
+	 CreateTime : 1630672080
+	 Content : 推荐
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 推荐 , interpreting [0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 嘤嘤嘤，你说的话有点模糊呢，小AI不太理解
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjiJvfaE-6oW6HTNqGku2NaE
+	 CreateTime : 1630672083
+	 Content : 查询
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 查询 , interpreting [0m
+
+[1;34;40mInterpretation result: (None, None, None) [0m
+
+[1;32;40mProcessing <Query>: None None None [0m
+
+reply :
+	 MsgType : text
+	 Content : 2021年9月3日20:28没有预约
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjiJvfaE-6oW6HTNqGku2NaE
+	 CreateTime : 1630672088
+	 Content : 查询 后天
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 查询 后天 , interpreting [0m
+
+[1;34;40mInterpretation result: (datetime.datetime(2021, 9, 5, 0, 0), datetime.datetime(2021, 9, 6, 0, 0), None) [0m
+
+[1;32;40mProcessing <Query>: 2021-09-05 00:00:00 2021-09-06 00:00:00 None [0m
+
+reply :
+	 MsgType : text
+	 Content : 2021年9月5日至2021年9月6日
+		
+		2021年9月5日：
+		[B252]
+		14:00~16:00 wdw
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjiJvfaE-6oW6HTNqGku2NaE
+	 CreateTime : 1630672096
+	 Content : 查询 253
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 查询 253 , interpreting [0m
+
+[1;34;40mInterpretation result: (None, None, 'B253') [0m
+
+[1;32;40mProcessing <Query>: None None B253 [0m
+
+reply :
+	 MsgType : text
+	 Content : 2021年9月3日20:28的B253没有预约
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjiJvfaE-6oW6HTNqGku2NaE
+	 CreateTime : 1630672102
+	 Content : 查询 27
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 查询 27 , interpreting [0m
+
+[1;34;40mInterpretation result: (None, None, 'B27') [0m
+
+[1;32;40mProcessing <Query>: None None B27 [0m
+
+reply :
+	 MsgType : text
+	 Content : 没有找到 B27 琴房
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjiJvfaE-6oW6HTNqGku2NaE
+	 CreateTime : 1630672119
+	 Content : cd ～
+	 Recognition : None
+
+
+[1;34;40mRecieved message: cd ～ , interpreting [0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 嘤嘤嘤，你说的话有点模糊呢，小AI不太理解
+
+
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 220210)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 229891)
+spawned uWSGI worker 1 (pid: 229892, cores: 1)
+spawned uWSGI worker 2 (pid: 229893, cores: 1)
+spawned uWSGI http 1 (pid: 229894)
