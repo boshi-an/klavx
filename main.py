@@ -164,7 +164,7 @@ def processText(ToUserName, FromUserName, CreateTime, Content, Recognition):
 
 if __name__=='__main__':
 
-	# 刷新钢琴课命令: 进入命令行输入`sudo python3 main.py refreshcourses`
+	# 刷新钢琴课命令: 进入命令行输入`sudo python main.py refreshcourses`
 	if len(sys.argv)==2 and sys.argv[1]=='refreshcourses' :
 		if input("Old courses will be deleted. Are you sure? ") in ['Y','y','YES','Yes','yes'] :
 			function.refreshCourses()
@@ -172,6 +172,7 @@ if __name__=='__main__':
 		else:
 			print('aborted')
 
+	# 添加演奏部成员：`sudo python main.py authorize <filename>`
 	elif len(sys.argv)==3 and sys.argv[1]=='authorize' :
 		with open(sys.argv[2], 'r') as file:
 			while True:

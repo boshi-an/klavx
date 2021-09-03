@@ -8,6 +8,7 @@ from flask import g
 from exception import MyException
 from database import Course, Reservation, Room, Registration, User, Message, db
 
+
 def authenticated(func):
 	def newFunc(*args, **kwargs):
 		user = User.query.filter_by(openId=g.openId).first()
@@ -17,6 +18,7 @@ def authenticated(func):
 		return func(*args, **kwargs)
 	return newFunc
 
+
 def getRoom(roomName):
 	if roomName is None :
 		return None
@@ -24,6 +26,7 @@ def getRoom(roomName):
 	if room is None :
 		raise MyException('没有找到 {} 琴房'.format(roomName))
 	return room
+
 
 def overlayedReservation(start, end, room=None) :
 	query = Reservation.query if room is None else room.reservations
@@ -285,6 +288,7 @@ def processQuery(start, end, roomName) :
 
 	return timeRepr+'\n\n'+'\n\n'.join(matches)
 
+# 从User表中取出某一个名字对应的用户项，如果不存在，则新建一个用户项
 def getCreateUser(name):
 	print('getting', name)
 	user = User.query.filter_by(name=name)
