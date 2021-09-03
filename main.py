@@ -149,11 +149,18 @@ def processText(ToUserName, FromUserName, CreateTime, Content, Recognition):
 
 if __name__=='__main__':
 	# 刷新钢琴课命令的入口
-	if len(sys.argv)==2 and sys.argv[1]=='refreshcourses':
-		if input("Old courses will be deleted. Are you sure? ") in ['Y','y','YES','Yes','yes']:
+	if len(sys.argv)==2 and sys.argv[1]=='refreshcourses' :
+		if input("Old courses will be deleted. Are you sure? ") in ['Y','y','YES','Yes','yes'] :
 			function.refreshCourses()
 			print('done')
 		else:
 			print('aborted')
+	elif len(sys.argv)==3 and sys.argv[1]=='authorize' :
+		with open(sys.argv[2], 'r') as file:
+			while True:
+				line = file.readline()
+				if not line :
+					break
+				func.authorizeUsers(line)
 	else :
 		Manager(app).run()

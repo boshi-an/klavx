@@ -131,6 +131,14 @@ def processReservation(start, end, roomName):
 
 	print('\033[1;32;40mProcessing <Reservation>:', start, end, roomName, '\033[0m\n')
 
+	curUser = User.query.filter_by(openId=g.openId).all()
+	print('current user:', curUser)
+	if len(curUser) == 0 or curUser[0].authorized != 1 :
+		return '抱歉，只有经过认证的演奏部成员可以预约'
+	if len(curUser) > 1 :
+		return '发现重名openID，请联系技术部负责人！'
+
+
 	result = ''
 
 	if end is None :
@@ -280,9 +288,10 @@ def processQuery(start, end, roomName) :
 def getCreateUser(name):
 	print('getting', name)
 	user = User.query.filter_by(name=name)
-	print(user)
+	#print(user)
 	user = user.first()
 	if user is None:
+		print(name, 'doesn\'t exist!', 'Creating')
 		user = User(name=name)
 		db.session.add(user)
 		db.session.commit()
@@ -308,6 +317,11 @@ def refreshCourses():
 				startDate=startDate, endDate=endDate, startTime=startTime, endTime=endTime)
 		db.session.add(course)
 		db.session.commit()
+
+def authorizeUsers(name) :
+	user = getCreateUser(name)
+	print('authorizing', user)
+	user.authorized = 1
 
 def about() :
 

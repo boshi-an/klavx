@@ -399,8 +399,7 @@ def initPatterns() :
 		lambda x : None if x==None else []
 	)
 
-
-
+	return
 	print('下面一长串是测试代码，如果其中有一行为None请小心')
 	print(pDate.match('大后天'))
 	print(pNumber.match('1982'))

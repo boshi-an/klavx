@@ -1,13 +1,35 @@
-from sqlalchemy.exc import IntegrityError
-from flask_sqlalchemy import SQLAlchemy
-from flask_script import Manager
+
+import datetime
+import hashlib
+import os
+import random
+import re
+import sqlite3
+import sys
+from http.client import BAD_REQUEST
+
+from flask import Flask, abort, g, request
 from flask_admin import Admin
 from flask_admin.contrib.sqla import ModelView
-from flask import current_app
-import datetime
+from flask_script import Manager
+from flask_sqlalchemy import SQLAlchemy
+from lxml import etree
+from sqlalchemy.exc import IntegrityError
 
-db = SQLAlchemy(current_app)
-admin = Admin(current_app)
+from exception import MyException
+
+# 使用Flask构建web对象app
+app = Flask(__name__)
+# 激活app环境(with app_context()也行)
+app.app_context().push()
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['PROPAGATE_EXCEPTIONS'] = True
+app.logger.setLevel('ERROR')
+
+
+db = SQLAlchemy(app)
+admin = Admin(app)
 
 # 存储所有收到的后台信息
 class Message(db.Model):
@@ -87,4 +109,8 @@ admin.add_view(ModelView(Room, db.session))
 admin.add_view(ModelView(Registration, db.session))
 admin.add_view(ModelView(User, db.session))
 admin.add_view(ModelView(Message, db.session))
-	
+
+if __name__ == '__main__' :
+	u = User.query
+	for r in u :
+		print(r)
