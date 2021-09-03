@@ -9,7 +9,7 @@ Tutorial by boshi
 
 后台本体由单个文件夹组成：
 
-- papuwx/
+- klavx/
   - whls/
     - requirements.txt
   - log/
