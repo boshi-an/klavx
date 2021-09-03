@@ -58,6 +58,17 @@ Tutorial by boshi
 | 腾讯云注册邮箱 | pkupiano_public@126.com            |
 | 腾讯云密码     | ??????（邮箱密码也是这个） |
 
+
+| 服务器供应商   | 腾讯云                             |
+| 服务器配置     | 1core+2G+50G+1Mbps                 |
+| 服务器操作系统 | ubuntu server 18.04                |
+| 服务器公网ip   | 82.157.114.38                      |
+| 服务器到期时间 | 2022-08-30 12:16:21                |
+| 服务器登陆账号 | ubuntu                             |
+| 服务器登陆密码 | ilovepiano123!                     |
+| 腾讯云注册邮箱 | pkupiano_public@126.com            |
+| 腾讯云密码     | ilovepiano123!（邮箱密码也是这个） |
+
 ## 和服务器互相认识
 
 ### 认识服务器
@@ -170,7 +181,7 @@ sudo adduser 新用户名
    在旧的服务器终端输入：
 
    ```bash
-   scp -r /var/www/papuwx/ ubuntu@新服务器地址:/var/www/papuwx/
+   scp -r /var/www/klavx/ ubuntu@新服务器地址:/var/www/klavx/
    ```
 
    于是整个公众号后台都被迁移过来了。
@@ -184,28 +195,28 @@ sudo adduser 新用户名
 4. 删除原有的python虚拟环境
 
    ```bash
-   sudo rm -r /var/www/papuwx/papuwx_venv
+   sudo rm -r /var/www/klavx/venv
    ```
 
 5. 创建新的python虚拟环境
 
    ```bash
-   cd /var/www/papuwx
-   python3 -m venv papuwx_venv
+   cd /var/www/klavx
+   python3 -m venv venv
    ```
 
 6. 激活新的python虚拟环境
 
    ```bash
-   source papuwx_venv/bin/activate
+   source venv/bin/activate
    ```
 
 7. 安装依赖库
 
-   对于不同版本的ubuntu server可能需要安装不同版本的依赖
+   对于不同版本的ubuntu server可能需要安装不同的依赖，若按照下面的方法搞不定的话可以用pip手动安装一些库
 
    ```bash
-   pip install -r ./whls/requirements_你的服务器版本号.txt
+   pip install -r ./whls/requirements.txt
    ```
 
 8. 配置nginx
@@ -229,20 +240,20 @@ sudo adduser 新用户名
    后面追加：
 
    ```bash
-   	# papuwx
-   	location = /papuwx {rewrite ^ /papuwx/;}
-   	location /papuwx/ {
+   	# klavx
+   	location = /klavx {rewrite ^ /klavx/;}
+   	location /klavx/ {
    		include uwsgi_params;
-   		proxy_pass http://127.0.0.1:5000/papuwx/;
+   		proxy_pass http://127.0.0.1:5000/klavx/;
    	}
    ```
 
 9. 至此为止，服务器上的配置工作基本完工，先尝试**在虚拟环境内**运行后台：
 
-   确保自己在`papuwx_venv`的虚拟环境内（执行`source papuwx_venv/bin/activate`进入虚拟环境，`deactivate`退出）
+   确保自己在`venv`的虚拟环境内（执行`source venv/bin/activate`进入虚拟环境，`deactivate`退出）
 
    ```bash
-   cd /var/www/papuwx/
+   cd /var/www/klavx/
    python main.py runserver
    ```
 
@@ -254,36 +265,43 @@ sudo adduser 新用户名
 
     进入公众号管理平台 https://mp.weixin.qq.com/
 
-    将“设置与开发”栏目的“基本配置”中的“服务器配置(已启用)”下的“服务器地址”改成`http://新服务器地址/papuwx/`
+    将“设置与开发”栏目的“基本配置”中的“服务器配置(已启用)”下的“服务器地址”改成`http://新服务器地址/klavx/`
 
     如果成功修改，那么恭喜你，公众号后台上线了，快去发消息调戏
 
     如果不能成功修改，请自行解决或联系上一届技术部成员寻求帮助
 
-11. 接下来只需要将运行程序的命令打包成一个服务开机自启后台运行即可
+11. 接下来只需要将运行程序的命令打包成一个服务开机自启后台运行即可（后台运行）
 
     ```bash
     cd /etc/init.d/
-    sudo touch papuwx.sh
-    sudo nano papuwx.sh
+    sudo touch klavx.sh
+    sudo nano klavx.sh
     ```
 
-    然后在打开的文件`pkupiano.sh`内写入：
+    然后在打开的文件`klavx.sh`内写入：
 
     ```bash
-    cd /var/www/papuwx
-    source /var/www/papuwx/papuwx_venv/bin/activate
-    uwsgi --daemonize2 --ini /var/www/papuwx/new.ini
+    cd /var/www/klavx
+    source /var/www/klavx/venv/bin/activate
+    uwsgi --daemonize2 --ini /var/www/klavx/new.ini
     ```
 
     然后将该脚本赋予可执行权限并设置为开机启动：
 
      ```bash
-     sudo chmod 777 papuwx.sh
-     sudo update-rc.d papuwx.sh defaults 90
+     sudo chmod 777 klavx.sh
+     sudo update-rc.d klavx.sh defaults 90
      ```
 
     要是发现程序没有在运行想要手动运行，只需要找到这个`.sh`文件并执行这个文件即可 
+    
+    如果程序正在运行，你想要停止它：
+    
+    ```bash
+    killall -s INT uwsgi
+    ```
+    
 
 ## 服务器维护
 
@@ -295,26 +313,18 @@ sudo adduser 新用户名
 
 - 也许是服务没有在运行
 
-  这时好办，手动运行上面提到的`pkupiano.sh`即可
+  这时好办，手动运行上面提到的`klavx.sh`即可
 
 - 也许是服务崩溃了
 
-  找到服务并且把它杀死然后再运行一遍
-
-  找到这个服务的方法是
+  所以要把他杀死
 
   ```bash
-  sudo netstat -tunlp | grep 5000
+  killall -s INT uwsgi
   ```
-
-  在输出结果最后可以找到服务的进程号和进程名（格式应该是`进程号/python3`）（如果没有输出结果表示服务没有在运行，或者服务被修改过导致其没有监听5000端口）
-
-  然后把他杀死（XXXX为进程号）
-
-  ```bash
-  sudo kill XXXX
-  ```
-
+  
+  然后重启（手动运行`klavx.sh`）
+  
 - 也许是系统崩溃了
 
   可以重启整个服务器
@@ -325,12 +335,12 @@ sudo adduser 新用户名
 
 ### 服务没挂！就是想瞅瞅
 
-- 可以去瞅瞅 `/var/www/papuwx/log/flask.log`里面记录了所有人调戏公众号的记录以及预约琴房等记录，但是读起来很不方便
+- 可以去瞅瞅 `/var/www/klavx/log/klavx.log`里面记录了所有人调戏公众号的记录以及预约琴房等记录，但是读起来很不方便
 - 还可以去瞅瞅腾讯云控制台的监控界面，系统负载一目了然
 
 ### 修改选课名单
 
-1. 切换路径到`/var/www/papuwx`下
+1. 切换路径到`/var/www/klavx`下
 
    *经过上面的教学你一定已经学会了！请发挥你的聪明才智！*
 
@@ -338,7 +348,7 @@ sudo adduser 新用户名
 
    *不会的话问问身边会Python的大佬*
 
-3. 将 `/var/www/papuwx` 下的 `course.txt` 修改为新的选课名单
+3. 将 `/var/www/klavx` 下的 `course.txt` 修改为新的选课名单
 
 4. 进入虚拟环境
 
@@ -354,4 +364,23 @@ sudo adduser 新用户名
 
    输入”Yes”后即刷新选课名单，（当然也可以输入yes,Y,y）
 
+### 给演奏部成员赋权
+
+1. 首先搞到一张新的演奏部成员的名单
+
+2. 将名字一行一个输入到一个`xxx.txt`文件中
+
+3. 将`xxx.txt`上传到服务器的`/var/www/klavx/`目录下
+
+   ```bash
+   scp ./xxx.txt ubuntu@服务器IP:/var/www/klavx/
+   ```
+
+4. 到服务器上的`/var/www/klavx/`目录下运行（确保在虚拟环境内）：
+
+   ```bash
+   python main.py authorize xxx.txt
+   ```
+
+5. 然后就搞定啦
 
