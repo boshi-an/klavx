@@ -1,0 +1,2471 @@
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 31435)
+spawned uWSGI worker 1 (pid: 31436, cores: 1)
+spawned uWSGI worker 2 (pid: 31437, cores: 1)
+spawned uWSGI http 1 (pid: 31438)
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	 CreateTime : 1630598817
+	 Content : 取消252
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 取消252 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: (None, None, 'B252') [0m
+
+[1;32;40mProcessing <Cancellation>: None None B252 [0m
+
+reply :
+	 MsgType : text
+	 Content : 您已取消
+		2020年10月6日 16:00~18:00 B252
+		2020年10月9日 13:00~15:00 B252
+		2020年12月25日 13:00~14:00 B252
+		2021年3月6日 15:00~17:00 B252
+		2021年3月27日 9:00~11:00 B252
+		2021年5月18日 20:30~22:30 B252
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	 CreateTime : 1630598869
+	 Content : 取消252
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 取消252 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: (None, None, 'B252') [0m
+
+[1;32;40mProcessing <Cancellation>: None None B252 [0m
+
+reply :
+	 MsgType : text
+	 Content : 您已取消
+
+
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 31438)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 33146)
+spawned uWSGI worker 1 (pid: 33147, cores: 1)
+spawned uWSGI worker 2 (pid: 33148, cores: 1)
+spawned uWSGI http 1 (pid: 33149)
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjjlncz6cnOdeUsGdUHu4Yyg
+	 CreateTime : 1630599686
+	 Content : hi
+	 Recognition : None
+
+
+[1;34;40mRecieved message: hi , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: [] [0m
+
+reply :
+	 MsgType : text
+	 Content : 这里是北京大学钢琴社,欢迎关注钢琴社公众号
+		（づ￣3￣）づ╭❤～
+		
+		输入“帮助”可以获得操作指南
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjjlncz6cnOdeUsGdUHu4Yyg
+	 CreateTime : 1630599689
+	 Content : hiv
+	 Recognition : None
+
+
+[1;34;40mRecieved message: hiv , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: [] [0m
+
+reply :
+	 MsgType : text
+	 Content : 这里是北京大学钢琴社,欢迎关注钢琴社公众号
+		（づ￣3￣）づ╭❤～
+		
+		输入“帮助”可以获得操作指南
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjjlncz6cnOdeUsGdUHu4Yyg
+	 CreateTime : 1630599692
+	 Content : 你是谁呀
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 你是谁呀 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: [] [0m
+
+reply :
+	 MsgType : text
+	 Content : 这里是北京大学钢琴社,欢迎关注钢琴社公众号
+		（づ￣3￣）づ╭❤～
+		
+		输入“帮助”可以获得操作指南
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjjlncz6cnOdeUsGdUHu4Yyg
+	 CreateTime : 1630599695
+	 Content : 你会什么呀
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 你会什么呀 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🙊
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjjlncz6cnOdeUsGdUHu4Yyg
+	 CreateTime : 1630599700
+	 Content : 嘤嘤嘤嘤嘤嘤嘤嘤嘤嘤嘤嘤嘤嘤嘤嘤嘤嘤嘤嘤
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 嘤嘤嘤嘤嘤嘤嘤嘤嘤嘤嘤嘤嘤嘤嘤嘤嘤嘤嘤嘤 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🙉
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjjlncz6cnOdeUsGdUHu4Yyg
+	 CreateTime : 1630599705
+	 Content : 有没有彩蛋呢
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 有没有彩蛋呢 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🌚
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjjlncz6cnOdeUsGdUHu4Yyg
+	 CreateTime : 1630600210
+	 Content : 你有彩蛋吗
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 你有彩蛋吗 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🙆
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjjlncz6cnOdeUsGdUHu4Yyg
+	 CreateTime : 1630600214
+	 Content : 菜单
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 菜单 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🙌
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjjlncz6cnOdeUsGdUHu4Yyg
+	 CreateTime : 1630600218
+	 Content : 彩蛋
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 彩蛋 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: [] [0m
+
+reply :
+	 MsgType : text
+	 Content : 今天你练琴了吗
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjjlncz6cnOdeUsGdUHu4Yyg
+	 CreateTime : 1630600237
+	 Content : 没有
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 没有 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🙆
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjjlncz6cnOdeUsGdUHu4Yyg
+	 CreateTime : 1630600256
+	 Content : 你知道二可可吗
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 你知道二可可吗 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🌚
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjjlncz6cnOdeUsGdUHu4Yyg
+	 CreateTime : 1630600261
+	 Content : 哼
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 哼 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🌛
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjjlncz6cnOdeUsGdUHu4Yyg
+	 CreateTime : 1630600267
+	 Content : 你不是安老师写的小笨蛋
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 你不是安老师写的小笨蛋 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🌛
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	 CreateTime : 1630601118
+	 Content : 查询本周
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 查询本周 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: (datetime.datetime(2021, 8, 30, 0, 0), datetime.datetime(2021, 9, 6, 0, 0), None) [0m
+
+[1;32;40mProcessing <Query>: 2021-08-30 00:00:00 2021-09-06 00:00:00 None [0m
+
+reply :
+	 MsgType : text
+	 Content : 2021年8月30日至2021年9月6日
+		
+		2021年8月31日：
+		[B252]
+		20:00~21:00 褚慈
+		
+		2021年9月3日：
+		[B252]
+		21:00~22:00 安博施
+		22:00~23:00 张煜豪
+		23:59~00:59 安博施
+		
+		2021年9月4日：
+		[B252]
+		23:59~00:59 安博施
+		
+		2021年9月5日：
+		[B252]
+		14:00~16:00 wdw
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	 CreateTime : 1630601128
+	 Content : 取消本周
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 取消本周 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🙋
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	 CreateTime : 1630601136
+	 Content : 取消9月4日
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 取消9月4日 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: (datetime.date(2021, 9, 4), None, None) [0m
+
+[1;32;40mProcessing <Cancellation>: 2021-09-04 None None [0m
+
+reply :
+	 MsgType : text
+	 Content : 您没有2021-09-04到2021-09-05 的预约
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	 CreateTime : 1630601149
+	 Content : 取消9月4日到9月5日
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 取消9月4日到9月5日 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: (datetime.date(2021, 9, 4), None, None) [0m
+
+[1;32;40mProcessing <Cancellation>: 2021-09-04 None None [0m
+
+reply :
+	 MsgType : text
+	 Content : 您没有2021-09-04到2021-09-05 的预约
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	 CreateTime : 1630601172
+	 Content : 取消9月5日0点
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 取消9月5日0点 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: (datetime.datetime(2021, 9, 5, 0, 0), None, None) [0m
+
+[1;32;40mProcessing <Cancellation>: 2021-09-05 00:00:00 None None [0m
+
+reply :
+	 MsgType : text
+	 Content : 您没有2021-09-05 00:00:00到2021-09-06 00:00:00 的预约
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	 CreateTime : 1630601196
+	 Content : 取消9月4日到9月6日
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 取消9月4日到9月6日 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: (datetime.date(2021, 9, 4), None, None) [0m
+
+[1;32;40mProcessing <Cancellation>: 2021-09-04 None None [0m
+
+reply :
+	 MsgType : text
+	 Content : 您没有2021-09-04到2021-09-05 的预约
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjjlncz6cnOdeUsGdUHu4Yyg
+	 CreateTime : 1630601230
+	 Content : 彩蛋
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 彩蛋 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: [] [0m
+
+reply :
+	 MsgType : text
+	 Content : 今天你练琴了吗
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjjlncz6cnOdeUsGdUHu4Yyg
+	 CreateTime : 1630601235
+	 Content : 蛋蛋
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 蛋蛋 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🌚
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjjlncz6cnOdeUsGdUHu4Yyg
+	 CreateTime : 1630601241
+	 Content : 白菜
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 白菜 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🌛
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjjlncz6cnOdeUsGdUHu4Yyg
+	 CreateTime : 1630601243
+	 Content : 【收到不支援的訊息類型，無法顯示】
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 【收到不支援的訊息類型，無法顯示】 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🙎
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjjlncz6cnOdeUsGdUHu4Yyg
+	 CreateTime : 1630601245
+	 Content : 【收到不支援的訊息類型，無法顯示】
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 【收到不支援的訊息類型，無法顯示】 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🙏
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjjlncz6cnOdeUsGdUHu4Yyg
+	 CreateTime : 1630601249
+	 Content : 【收到不支援的訊息類型，無法顯示】
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 【收到不支援的訊息類型，無法顯示】 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🙆
+
+
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 33149)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 41291)
+spawned uWSGI worker 1 (pid: 41292, cores: 1)
+spawned uWSGI worker 2 (pid: 41293, cores: 1)
+spawned uWSGI http 1 (pid: 41294)
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	 CreateTime : 1630601338
+	 Content : 取消9月4日到9月6日
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 取消9月4日到9月6日 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: (datetime.date(2021, 9, 4), None, None) [0m
+
+[1;32;40mProcessing <Cancellation>: 2021-09-04 None None [0m
+
+reply :
+	 MsgType : text
+	 Content : 您没有2021-09-04到2021-09-05 的预约
+
+
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 41294)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 41461)
+spawned uWSGI worker 1 (pid: 41462, cores: 1)
+spawned uWSGI worker 2 (pid: 41463, cores: 1)
+spawned uWSGI http 1 (pid: 41464)
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	 CreateTime : 1630601366
+	 Content : 取消9月4日到9月6诶
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 取消9月4日到9月6诶 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: (datetime.date(2021, 9, 4), None, None) [0m
+
+[1;32;40mProcessing <Cancellation>: 2021-09-04 None None [0m
+
+reply :
+	 MsgType : text
+	 Content : 您没有2021-09-04到2021-09-05 的预约
+
+
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 41464)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 41639)
+spawned uWSGI worker 1 (pid: 41640, cores: 1)
+spawned uWSGI worker 2 (pid: 41641, cores: 1)
+spawned uWSGI http 1 (pid: 41642)
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	 CreateTime : 1630601412
+	 Content : 取消9月4到9月6
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 取消9月4到9月6 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: (datetime.date(2021, 9, 4), datetime.date(2021, 9, 6), None) [0m
+
+[1;32;40mProcessing <Cancellation>: 2021-09-04 2021-09-06 None [0m
+
+reply :
+	 MsgType : text
+	 Content : 您没有2021-09-04到2021-09-05 的预约
+
+
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 41642)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 41758)
+spawned uWSGI worker 1 (pid: 41759, cores: 1)
+spawned uWSGI worker 2 (pid: 41760, cores: 1)
+spawned uWSGI http 1 (pid: 41761)
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	 CreateTime : 1630601433
+	 Content : 取消9月4日到9月6日
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 取消9月4日到9月6日 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;31;40mValue error occured![0m
+
+[1;34;40mInterpretation result: (datetime.date(2021, 9, 4), datetime.date(2021, 9, 6), None) [0m
+
+[1;32;40mProcessing <Cancellation>: 2021-09-04 2021-09-06 None [0m
+
+reply :
+	 MsgType : text
+	 Content : 您没有2021-09-04到2021-09-05 的预约
+
+
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 41761)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 45384)
+spawned uWSGI worker 1 (pid: 45385, cores: 1)
+spawned uWSGI worker 2 (pid: 45386, cores: 1)
+spawned uWSGI http 1 (pid: 45387)
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	 CreateTime : 1630603486
+	 Content : 查询本周三
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 查询本周三 , interpreting [0m
+
+[1;34;40mInterpretation result: (datetime.datetime(2021, 9, 1, 0, 0), datetime.datetime(2021, 9, 2, 0, 0), None) [0m
+
+[1;32;40mProcessing <Query>: 2021-09-01 00:00:00 2021-09-02 00:00:00 None [0m
+
+reply :
+	 MsgType : text
+	 Content : 2021年9月1日至2021年9月2日没有预约
+
+
+[uwsgi-http key:  client_addr: 74.120.14.43 client_port: 21703] hr_read(): Connection reset by peer [plugins/http/http.c line 917]
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adju3w3EFiAs3VijVsomHpCNY
+	 CreateTime : 1630630592
+	 Content : 你真皮
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 你真皮 , interpreting [0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🌞
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adju3w3EFiAs3VijVsomHpCNY
+	 CreateTime : 1630630598
+	 Content : 你好皮哦
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 你好皮哦 , interpreting [0m
+
+[1;34;40mInterpretation result: [] [0m
+
+reply :
+	 MsgType : text
+	 Content : 这里是北京大学钢琴社,欢迎关注钢琴社公众号
+		（づ￣3￣）づ╭❤～
+		
+		输入“帮助”可以获得操作指南
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adju3w3EFiAs3VijVsomHpCNY
+	 CreateTime : 1630630606
+	 Content : 你红包能够
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 你红包能够 , interpreting [0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🌛
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adju3w3EFiAs3VijVsomHpCNY
+	 CreateTime : 1630630614
+	 Content : 你怎么回事
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 你怎么回事 , interpreting [0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🌝
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adju3w3EFiAs3VijVsomHpCNY
+	 CreateTime : 1630630622
+	 Content : 【收到不支持的消息类型，暂无法显示】
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 【收到不支持的消息类型，暂无法显示】 , interpreting [0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🙌
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjjsx8sdEVC3tZTl7icPW9go
+	 CreateTime : 1630632362
+	 Content : None
+	 Recognition : None
+
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2035, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2021, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2018, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1534, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1549, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1668, in make_response
+    raise TypeError(
+TypeError: The view function for 'index' did not return a valid response. The function either returned None or ended without a return statement.
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjjsx8sdEVC3tZTl7icPW9go
+	 CreateTime : 1630632362
+	 Content : None
+	 Recognition : None
+
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2035, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2021, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2018, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1534, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1549, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1668, in make_response
+    raise TypeError(
+TypeError: The view function for 'index' did not return a valid response. The function either returned None or ended without a return statement.
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjjsx8sdEVC3tZTl7icPW9go
+	 CreateTime : 1630632362
+	 Content : None
+	 Recognition : None
+
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2035, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2021, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2018, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1534, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1549, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1668, in make_response
+    raise TypeError(
+TypeError: The view function for 'index' did not return a valid response. The function either returned None or ended without a return statement.
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjjsx8sdEVC3tZTl7icPW9go
+	 CreateTime : 1630632380
+	 Content : None
+	 Recognition : None
+
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2035, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2021, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2018, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1534, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1549, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1668, in make_response
+    raise TypeError(
+TypeError: The view function for 'index' did not return a valid response. The function either returned None or ended without a return statement.
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjjsx8sdEVC3tZTl7icPW9go
+	 CreateTime : 1630632380
+	 Content : None
+	 Recognition : None
+
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2035, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2021, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2018, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1534, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1549, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1668, in make_response
+    raise TypeError(
+TypeError: The view function for 'index' did not return a valid response. The function either returned None or ended without a return statement.
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjjsx8sdEVC3tZTl7icPW9go
+	 CreateTime : 1630632380
+	 Content : None
+	 Recognition : None
+
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2035, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2021, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2018, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1534, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1549, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1668, in make_response
+    raise TypeError(
+TypeError: The view function for 'index' did not return a valid response. The function either returned None or ended without a return statement.
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjjsx8sdEVC3tZTl7icPW9go
+	 CreateTime : 1630632401
+	 Content : None
+	 Recognition : None
+
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2035, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2021, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2018, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1534, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1549, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1668, in make_response
+    raise TypeError(
+TypeError: The view function for 'index' did not return a valid response. The function either returned None or ended without a return statement.
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjjsx8sdEVC3tZTl7icPW9go
+	 CreateTime : 1630632401
+	 Content : None
+	 Recognition : None
+
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2035, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2021, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2018, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1534, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1549, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1668, in make_response
+    raise TypeError(
+TypeError: The view function for 'index' did not return a valid response. The function either returned None or ended without a return statement.
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjjsx8sdEVC3tZTl7icPW9go
+	 CreateTime : 1630632401
+	 Content : None
+	 Recognition : None
+
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2035, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2021, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2018, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1534, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1549, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1668, in make_response
+    raise TypeError(
+TypeError: The view function for 'index' did not return a valid response. The function either returned None or ended without a return statement.
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjjsx8sdEVC3tZTl7icPW9go
+	 CreateTime : 1630632546
+	 Content : None
+	 Recognition : None
+
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2035, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2021, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2018, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1534, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1549, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1668, in make_response
+    raise TypeError(
+TypeError: The view function for 'index' did not return a valid response. The function either returned None or ended without a return statement.
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjjsx8sdEVC3tZTl7icPW9go
+	 CreateTime : 1630632546
+	 Content : None
+	 Recognition : None
+
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2035, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2021, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2018, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1534, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1549, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1668, in make_response
+    raise TypeError(
+TypeError: The view function for 'index' did not return a valid response. The function either returned None or ended without a return statement.
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjjsx8sdEVC3tZTl7icPW9go
+	 CreateTime : 1630632546
+	 Content : None
+	 Recognition : None
+
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2035, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2021, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2018, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1534, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1549, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1668, in make_response
+    raise TypeError(
+TypeError: The view function for 'index' did not return a valid response. The function either returned None or ended without a return statement.
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjjsx8sdEVC3tZTl7icPW9go
+	 CreateTime : 1630632569
+	 Content : None
+	 Recognition : None
+
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2035, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2021, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2018, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1534, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1549, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1668, in make_response
+    raise TypeError(
+TypeError: The view function for 'index' did not return a valid response. The function either returned None or ended without a return statement.
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjjsx8sdEVC3tZTl7icPW9go
+	 CreateTime : 1630632569
+	 Content : None
+	 Recognition : None
+
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2035, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2021, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2018, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1534, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1549, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1668, in make_response
+    raise TypeError(
+TypeError: The view function for 'index' did not return a valid response. The function either returned None or ended without a return statement.
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjjsx8sdEVC3tZTl7icPW9go
+	 CreateTime : 1630632569
+	 Content : None
+	 Recognition : None
+
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2035, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2021, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2018, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1534, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1549, in finalize_request
+    response = self.make_response(rv)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1668, in make_response
+    raise TypeError(
+TypeError: The view function for 'index' did not return a valid response. The function either returned None or ended without a return statement.
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjomn63C31IvHBiCM1hHVAS4
+	 CreateTime : 1630635615
+	 Content : None
+	 Recognition : None
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjuLmLuv1CuTqKzvGv2Hok0Q
+	 CreateTime : 1630636935
+	 Content : 皮？
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 皮？ , interpreting [0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🌚
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjuLmLuv1CuTqKzvGv2Hok0Q
+	 CreateTime : 1630636940
+	 Content : 真皮
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 真皮 , interpreting [0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🌝
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjuLmLuv1CuTqKzvGv2Hok0Q
+	 CreateTime : 1630636958
+	 Content : 帮助
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 帮助 , interpreting [0m
+
+[1;34;40mInterpretation result: [] [0m
+
+reply :
+	 MsgType : text
+	 Content : 你可以在这里留言（后台应该不会有人看到的），在这里预约琴房（仅供排练用哦，平时练琴不需要也不应该预约），也可以查询预约情况
+		
+		预约的格式为“预约+<时间起点>+到/至+<时间终点>+琴房名”，后面两项可以省略，默认预约一个小时
+		
+		查询的格式类似哦~
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjv9OYAHXunFbHDRwnIuSBgI
+	 CreateTime : 1630637146
+	 Content : 查看本周
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 查看本周 , interpreting [0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🙇
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjv9OYAHXunFbHDRwnIuSBgI
+	 CreateTime : 1630637157
+	 Content : 查询本周
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 查询本周 , interpreting [0m
+
+[1;34;40mInterpretation result: (datetime.datetime(2021, 8, 30, 0, 0), datetime.datetime(2021, 9, 6, 0, 0), None) [0m
+
+[1;32;40mProcessing <Query>: 2021-08-30 00:00:00 2021-09-06 00:00:00 None [0m
+
+reply :
+	 MsgType : text
+	 Content : 2021年8月30日至2021年9月6日
+		
+		2021年8月31日：
+		[B252]
+		20:00~21:00 褚慈
+		
+		2021年9月3日：
+		[B252]
+		22:00~23:00 张煜豪
+		23:59~00:59 安博施
+		
+		2021年9月4日：
+		[B252]
+		23:59~00:59 安博施
+		
+		2021年9月5日：
+		[B252]
+		14:00~16:00 wdw
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjv9OYAHXunFbHDRwnIuSBgI
+	 CreateTime : 1630637191
+	 Content : 查询下周
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 查询下周 , interpreting [0m
+
+[1;34;40mInterpretation result: (datetime.datetime(2021, 9, 6, 0, 0), datetime.datetime(2021, 9, 13, 0, 0), None) [0m
+
+[1;32;40mProcessing <Query>: 2021-09-06 00:00:00 2021-09-13 00:00:00 None [0m
+
+reply :
+	 MsgType : text
+	 Content : 2021年9月6日至2021年9月13日没有预约
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjv9OYAHXunFbHDRwnIuSBgI
+	 CreateTime : 1630637203
+	 Content : 查询本周日
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 查询本周日 , interpreting [0m
+
+[1;34;40mInterpretation result: (datetime.datetime(2021, 9, 5, 0, 0), datetime.datetime(2021, 9, 6, 0, 0), None) [0m
+
+[1;32;40mProcessing <Query>: 2021-09-05 00:00:00 2021-09-06 00:00:00 None [0m
+
+reply :
+	 MsgType : text
+	 Content : 2021年9月5日至2021年9月6日
+		
+		2021年9月5日：
+		[B252]
+		14:00~16:00 wdw
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjv9OYAHXunFbHDRwnIuSBgI
+	 CreateTime : 1630637215
+	 Content : 查询本周八
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 查询本周八 , interpreting [0m
+
+[1;34;40mInterpretation result: (datetime.datetime(2021, 8, 30, 0, 0), datetime.datetime(2021, 8, 31, 0, 0), None) [0m
+
+[1;32;40mProcessing <Query>: 2021-08-30 00:00:00 2021-08-31 00:00:00 None [0m
+
+reply :
+	 MsgType : text
+	 Content : 2021年8月30日至2021年8月31日
+		
+		2021年8月31日：
+		[B252]
+		20:00~21:00 褚慈
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjv9OYAHXunFbHDRwnIuSBgI
+	 CreateTime : 1630637229
+	 Content : 查询下周65536
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 查询下周65536 , interpreting [0m
+
+[1;34;40mInterpretation result: (datetime.datetime(2021, 9, 7, 0, 0), datetime.datetime(2021, 9, 8, 0, 0), None) [0m
+
+[1;32;40mProcessing <Query>: 2021-09-07 00:00:00 2021-09-08 00:00:00 None [0m
+
+reply :
+	 MsgType : text
+	 Content : 2021年9月7日至2021年9月8日没有预约
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjv9OYAHXunFbHDRwnIuSBgI
+	 CreateTime : 1630637252
+	 Content : 预约下周1024早上八点
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 预约下周1024早上八点 , interpreting [0m
+
+[1;34;40mInterpretation result: (datetime.datetime(2021, 9, 7, 8, 0), None, None) [0m
+
+[1;32;40mProcessing <Reservation>: 2021-09-07 08:00:00 None None [0m
+
+reply :
+	 MsgType : text
+	 Content : 由于您没有给定结束时间，默认您的预约时常为1小时
+		您已预约 2021年9月7日 8:00~9:00 B252
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjv9OYAHXunFbHDRwnIuSBgI
+	 CreateTime : 1630637272
+	 Content : 取消预约下周1024早上八点
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 取消预约下周1024早上八点 , interpreting [0m
+
+[1;34;40mInterpretation result: (datetime.datetime(2021, 9, 7, 8, 0), None, None) [0m
+
+[1;32;40mProcessing <Cancellation>: 2021-09-07 08:00:00 None None [0m
+
+reply :
+	 MsgType : text
+	 Content : 您已取消2021年9月7日 8:00~9:00 B252
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjv9OYAHXunFbHDRwnIuSBgI
+	 CreateTime : 1630637289
+	 Content : 查询下周0
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 查询下周0 , interpreting [0m
+
+[1;34;40mInterpretation result: (datetime.datetime(2021, 9, 5, 0, 0), datetime.datetime(2021, 9, 6, 0, 0), None) [0m
+
+[1;32;40mProcessing <Query>: 2021-09-05 00:00:00 2021-09-06 00:00:00 None [0m
+
+reply :
+	 MsgType : text
+	 Content : 2021年9月5日至2021年9月6日
+		
+		2021年9月5日：
+		[B252]
+		14:00~16:00 wdw
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjv9OYAHXunFbHDRwnIuSBgI
+	 CreateTime : 1630637313
+	 Content : 查询下周0.123
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 查询下周0.123 , interpreting [0m
+
+[1;34;40mInterpretation result: (datetime.datetime(2021, 9, 5, 0, 0), None, 'B123') [0m
+
+[1;32;40mProcessing <Query>: 2021-09-05 00:00:00 None B123 [0m
+
+reply :
+	 MsgType : text
+	 Content : 没有找到 B123 琴房
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjv9OYAHXunFbHDRwnIuSBgI
+	 CreateTime : 1630637345
+	 Content : 查询下周一#
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 查询下周一# , interpreting [0m
+
+[1;34;40mInterpretation result: (datetime.datetime(2021, 9, 6, 0, 0), datetime.datetime(2021, 9, 7, 0, 0), None) [0m
+
+[1;32;40mProcessing <Query>: 2021-09-06 00:00:00 2021-09-07 00:00:00 None [0m
+
+reply :
+	 MsgType : text
+	 Content : 2021年9月6日至2021年9月7日没有预约
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjv9OYAHXunFbHDRwnIuSBgI
+	 CreateTime : 1630637370
+	 Content : 我是褚慈
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 我是褚慈 , interpreting [0m
+
+[1;34;40mInterpretation result: ('褚慈',) [0m
+
+reply :
+	 MsgType : text
+	 Content : 您已设置姓名为 褚慈
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjv9OYAHXunFbHDRwnIuSBgI
+	 CreateTime : 1630637422
+	 Content : 我不是张之临
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 我不是张之临 , interpreting [0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🙎
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjv9OYAHXunFbHDRwnIuSBgI
+	 CreateTime : 1630637428
+	 Content : 你好
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 你好 , interpreting [0m
+
+[1;34;40mInterpretation result: [] [0m
+
+reply :
+	 MsgType : text
+	 Content : 这里是北京大学钢琴社,欢迎关注钢琴社公众号
+		（づ￣3￣）づ╭❤～
+		
+		输入“帮助”可以获得操作指南
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjv9OYAHXunFbHDRwnIuSBgI
+	 CreateTime : 1630637433
+	 Content : 帮助
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 帮助 , interpreting [0m
+
+[1;34;40mInterpretation result: [] [0m
+
+reply :
+	 MsgType : text
+	 Content : 你可以在这里留言（后台应该不会有人看到的），在这里预约琴房（仅供排练用哦，平时练琴不需要也不应该预约），也可以查询预约情况
+		
+		预约的格式为“预约+<时间起点>+到/至+<时间终点>+琴房名”，后面两项可以省略，默认预约一个小时
+		
+		查询的格式类似哦~
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjv9OYAHXunFbHDRwnIuSBgI
+	 CreateTime : 1630637435
+	 Content : 帮助l
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 帮助l , interpreting [0m
+
+[1;34;40mInterpretation result: [] [0m
+
+reply :
+	 MsgType : text
+	 Content : 你可以在这里留言（后台应该不会有人看到的），在这里预约琴房（仅供排练用哦，平时练琴不需要也不应该预约），也可以查询预约情况
+		
+		预约的格式为“预约+<时间起点>+到/至+<时间终点>+琴房名”，后面两项可以省略，默认预约一个小时
+		
+		查询的格式类似哦~
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjv9OYAHXunFbHDRwnIuSBgI
+	 CreateTime : 1630637472
+	 Content : 预约1993年3月23日早上八点
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 预约1993年3月23日早上八点 , interpreting [0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🙌
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjv9OYAHXunFbHDRwnIuSBgI
+	 CreateTime : 1630637485
+	 Content : 预约9月5日早上八点
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 预约9月5日早上八点 , interpreting [0m
+
+[1;34;40mInterpretation result: (datetime.datetime(2021, 9, 5, 8, 0), None, None) [0m
+
+[1;32;40mProcessing <Reservation>: 2021-09-05 08:00:00 None None [0m
+
+reply :
+	 MsgType : text
+	 Content : 由于您没有给定结束时间，默认您的预约时常为1小时
+		您已预约 2021年9月5日 8:00~9:00 B252
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjv9OYAHXunFbHDRwnIuSBgI
+	 CreateTime : 1630637493
+	 Content : 取消预约9月5日早上八点
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 取消预约9月5日早上八点 , interpreting [0m
+
+[1;34;40mInterpretation result: (datetime.datetime(2021, 9, 5, 8, 0), None, None) [0m
+
+[1;32;40mProcessing <Cancellation>: 2021-09-05 08:00:00 None None [0m
+
+reply :
+	 MsgType : text
+	 Content : 您已取消2021年9月5日 8:00~9:00 B252
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjv9OYAHXunFbHDRwnIuSBgI
+	 CreateTime : 1630637499
+	 Content : 预约9月32日早上八点
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 预约9月32日早上八点 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+reply :
+	 MsgType : text
+	 Content : day is out of range for month
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjv9OYAHXunFbHDRwnIuSBgI
+	 CreateTime : 1630637513
+	 Content : 预约13月4日早上八点
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 预约13月4日早上八点 , interpreting [0m
+
+[1;31;40mValue error occured![0m
+
+reply :
+	 MsgType : text
+	 Content : month must be in 1..12
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjv9OYAHXunFbHDRwnIuSBgI
+	 CreateTime : 1630637529
+	 Content : 预约5.6月11.2日早上五点半
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 预约5.6月11.2日早上五点半 , interpreting [0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🙋
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjv9OYAHXunFbHDRwnIuSBgI
+	 CreateTime : 1630637554
+	 Content : 预约/s月/s日早上八点
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 预约/s月/s日早上八点 , interpreting [0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🙇
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adju8alc-KvkNFxKm0Tv-utgk
+	 CreateTime : 1630637630
+	 Content : None
+	 Recognition : None
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjhyG_9JB4o1MyfLUob0BpZg
+	 CreateTime : 1630637678
+	 Content : hi
+	 Recognition : None
+
+
+[1;34;40mRecieved message: hi , interpreting [0m
+
+[1;34;40mInterpretation result: [] [0m
+
+reply :
+	 MsgType : text
+	 Content : 这里是北京大学钢琴社,欢迎关注钢琴社公众号
+		（づ￣3￣）づ╭❤～
+		
+		输入“帮助”可以获得操作指南
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjhyG_9JB4o1MyfLUob0BpZg
+	 CreateTime : 1630637684
+	 Content : 帮助
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 帮助 , interpreting [0m
+
+[1;34;40mInterpretation result: [] [0m
+
+reply :
+	 MsgType : text
+	 Content : 你可以在这里留言（后台应该不会有人看到的），在这里预约琴房（仅供排练用哦，平时练琴不需要也不应该预约），也可以查询预约情况
+		
+		预约的格式为“预约+<时间起点>+到/至+<时间终点>+琴房名”，后面两项可以省略，默认预约一个小时
+		
+		查询的格式类似哦~
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjstms6plGLi82HI27ycJ2aQ
+	 CreateTime : 1630637708
+	 Content : hi
+	 Recognition : None
+
+
+[1;34;40mRecieved message: hi , interpreting [0m
+
+[1;34;40mInterpretation result: [] [0m
+
+reply :
+	 MsgType : text
+	 Content : 这里是北京大学钢琴社,欢迎关注钢琴社公众号
+		（づ￣3￣）づ╭❤～
+		
+		输入“帮助”可以获得操作指南
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjstms6plGLi82HI27ycJ2aQ
+	 CreateTime : 1630637713
+	 Content : 帮助
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 帮助 , interpreting [0m
+
+[1;34;40mInterpretation result: [] [0m
+
+reply :
+	 MsgType : text
+	 Content : 你可以在这里留言（后台应该不会有人看到的），在这里预约琴房（仅供排练用哦，平时练琴不需要也不应该预约），也可以查询预约情况
+		
+		预约的格式为“预约+<时间起点>+到/至+<时间终点>+琴房名”，后面两项可以省略，默认预约一个小时
+		
+		查询的格式类似哦~
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjvANvRXQqP7d5-0yVFII9-8
+	 CreateTime : 1630638084
+	 Content : .
+	 Recognition : None
+
+
+[1;34;40mRecieved message: . , interpreting [0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🙊
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjvANvRXQqP7d5-0yVFII9-8
+	 CreateTime : 1630638094
+	 Content : 机器人？
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 机器人？ , interpreting [0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🌚
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjvANvRXQqP7d5-0yVFII9-8
+	 CreateTime : 1630638098
+	 Content : ？
+	 Recognition : None
+
+
+[1;34;40mRecieved message: ？ , interpreting [0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🙍
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjvANvRXQqP7d5-0yVFII9-8
+	 CreateTime : 1630638103
+	 Content : ？
+	 Recognition : None
+
+
+[1;34;40mRecieved message: ？ , interpreting [0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🌞
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjvANvRXQqP7d5-0yVFII9-8
+	 CreateTime : 1630638105
+	 Content : ？？？
+	 Recognition : None
+
+
+[1;34;40mRecieved message: ？？？ , interpreting [0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🙆
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjvANvRXQqP7d5-0yVFII9-8
+	 CreateTime : 1630638110
+	 Content : 自动回复
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 自动回复 , interpreting [0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🙍
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjvANvRXQqP7d5-0yVFII9-8
+	 CreateTime : 1630638112
+	 Content : /:,@!
+	 Recognition : None
+
+
+[1;34;40mRecieved message: /:,@! , interpreting [0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🙏
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjvANvRXQqP7d5-0yVFII9-8
+	 CreateTime : 1630638118
+	 Content : 无限循环吗
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 无限循环吗 , interpreting [0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🙏
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjvANvRXQqP7d5-0yVFII9-8
+	 CreateTime : 1630638126
+	 Content : 没循环？
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 没循环？ , interpreting [0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🌛
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjvANvRXQqP7d5-0yVFII9-8
+	 CreateTime : 1630638130
+	 Content : ？
+	 Recognition : None
+
+
+[1;34;40mRecieved message: ？ , interpreting [0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🙋
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjvANvRXQqP7d5-0yVFII9-8
+	 CreateTime : 1630638132
+	 Content : ？
+	 Recognition : None
+
+
+[1;34;40mRecieved message: ？ , interpreting [0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🌞
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjoBhLT-wqNWssBXbQH1TTb4
+	 CreateTime : 1630638139
+	 Content : hi
+	 Recognition : None
+
+
+[1;34;40mRecieved message: hi , interpreting [0m
+
+[1;34;40mInterpretation result: [] [0m
+
+reply :
+	 MsgType : text
+	 Content : 这里是北京大学钢琴社,欢迎关注钢琴社公众号
+		（づ￣3￣）づ╭❤～
+		
+		输入“帮助”可以获得操作指南
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjvANvRXQqP7d5-0yVFII9-8
+	 CreateTime : 1630638140
+	 Content : 随机的
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 随机的 , interpreting [0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🙍
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjoBhLT-wqNWssBXbQH1TTb4
+	 CreateTime : 1630638145
+	 Content : 帮助
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 帮助 , interpreting [0m
+
+[1;34;40mInterpretation result: [] [0m
+
+reply :
+	 MsgType : text
+	 Content : 你可以在这里留言（后台应该不会有人看到的），在这里预约琴房（仅供排练用哦，平时练琴不需要也不应该预约），也可以查询预约情况
+		
+		预约的格式为“预约+<时间起点>+到/至+<时间终点>+琴房名”，后面两项可以省略，默认预约一个小时
+		
+		查询的格式类似哦~
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjubOPIz7zawnRR80Tr7mHeg
+	 CreateTime : 1630638431
+	 Content : hi
+	 Recognition : None
+
+
+[1;34;40mRecieved message: hi , interpreting [0m
+
+[1;34;40mInterpretation result: [] [0m
+
+reply :
+	 MsgType : text
+	 Content : 这里是北京大学钢琴社,欢迎关注钢琴社公众号
+		（づ￣3￣）づ╭❤～
+		
+		输入“帮助”可以获得操作指南
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjubOPIz7zawnRR80Tr7mHeg
+	 CreateTime : 1630638436
+	 Content : 帮助
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 帮助 , interpreting [0m
+
+[1;34;40mInterpretation result: [] [0m
+
+reply :
+	 MsgType : text
+	 Content : 你可以在这里留言（后台应该不会有人看到的），在这里预约琴房（仅供排练用哦，平时练琴不需要也不应该预约），也可以查询预约情况
+		
+		预约的格式为“预约+<时间起点>+到/至+<时间终点>+琴房名”，后面两项可以省略，默认预约一个小时
+		
+		查询的格式类似哦~
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjubOPIz7zawnRR80Tr7mHeg
+	 CreateTime : 1630638471
+	 Content : 后台不会有人看到，我信你个鬼
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 后台不会有人看到，我信你个鬼 , interpreting [0m
+
+[1;34;40mInterpretation result: Can't understand! [0m
+
+reply :
+	 MsgType : text
+	 Content : 🙉
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjrYOBG-uNtTiREvtpnl07dY
+	 CreateTime : 1630638597
+	 Content : 我是
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 我是 , interpreting [0m
+
+[1;34;40mInterpretation result: ('',) [0m
+
+reply :
+	 MsgType : text
+	 Content : 您即将设置姓名为 。请再输入一次，请注意，一旦设置后不可更改。
+
+
+receive :
+	 ToUserName : gh_e55ff3051e1d
+	 FromUserName : op3adjrYOBG-uNtTiREvtpnl07dY
+	 CreateTime : 1630638617
+	 Content : 我是蒋然
+	 Recognition : None
+
+
+[1;34;40mRecieved message: 我是蒋然 , interpreting [0m
+
+[1;34;40mInterpretation result: ('蒋然',) [0m
+
+reply :
+	 MsgType : text
+	 Content : 两次输入不一致，请重新输入
+
+
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 45387)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.

@@ -1,1 +1,4 @@
 venv/
+log/
+migrations/
+__pycache__/

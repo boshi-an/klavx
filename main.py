@@ -90,30 +90,15 @@ def checkEcho():
 	return False
 
 
-# toEtree的作用是将传入的参数d转换为一个数据包结构并返回，默认转换为'xml'类型
-# 如果d是列表/元组/字典，对d中的每一个键值对，递归调用toEtree
-def toEtree(d, name='xml'):
-	e = etree.Element(name)
-	if isinstance(d, dict):
-		for k,v in d.items():
-			e.append(toEtree(v, name=k))
-	elif isinstance(d, tuple) or isinstance(d, list):
-		for k,v in d:
-			e.append(toEtree(v, name=k))
-	else:
-		e.text = str(d)
-	return e
 
 
 # 后台接受信息，对收到的xml进行解析后得到msgReceived，再将其转发给函数processText做进一步处理
 # 关于后台收到的消息的XML数据包结构，可以参考微信官方网页：
 # https://developers.weixin.qq.com/doc/offiaccount/Message_Management/Receiving_standard_messages.html
 def processMessage():
-	# fromstring函数直接将字符串转换为element类
-	try: e = etree.fromstring(request.data) #etree: html解析工具
+	try: e = etree.fromstring(request.data)#etree: html解析工具
 	except etree.XMLSyntaxError: abort(BAD_REQUEST)
 
-	# 从element中读取相应的数据
 	msgReceived = {x:e.findtext(x) for x in
 					'ToUserName FromUserName CreateTime Content Recognition'.split()}
 	utils.printDict("receive", msgReceived)
@@ -138,29 +123,48 @@ def processMessage():
 		#消息已处理，或者不存在MsgId
 		return ''
 
-	# 如果用户发来的消息是文本或语音，则转发给processText做进一步的处理
 	return processText(**msgReceived)
 
+
+# toEtree的作用是将传入的参数d转换为一个数据包结构并返回，默认转换为'xml'类型
+# 如果d是列表/元组/字典，对d中的每一个键值对，递归调用toEtree
+def toEtree(d, name='xml'):
+	e = etree.Element(name)
+	if isinstance(d, dict):
+		for k,v in d.items():
+			e.append(toEtree(v, name=k))
+	elif isinstance(d, tuple) or isinstance(d, list):
+		for k,v in d:
+			e.append(toEtree(v, name=k))
+	else:
+		e.text = str(d)
+	return e
 
 
 def processText(ToUserName, FromUserName, CreateTime, Content, Recognition):
 	g.openId = FromUserName
 	Content = Content or Recognition
 	
+	# 调用AI.doInterprete来处理内容，转换为相应的字典replyDict
 	try:
 		replyDict = dict(MsgType='text', Content=AI.doInterprete(Content))
 	except MyException as e:
 		replyDict = dict(MsgType='text', Content=e.args[0])
 
 	reply = toEtree(dict(FromUserName=ToUserName, ToUserName=FromUserName, CreateTime=CreateTime))
+	
+	# 将replyDict中的数据加入ElementTree
 	for k,v in replyDict.items():
 		reply.append(toEtree(v, name=k))
+	
+	# 生成回复的xml并返回
 	result = etree.tostring(reply, encoding='utf8')
 	utils.printDict("reply", replyDict)
 	return result
 
 if __name__=='__main__':
-	# 刷新钢琴课命令: `python3 main.py refreshcourses`
+
+	# 刷新钢琴课命令: 进入命令行输入`sudo python3 main.py refreshcourses`
 	if len(sys.argv)==2 and sys.argv[1]=='refreshcourses' :
 		if input("Old courses will be deleted. Are you sure? ") in ['Y','y','YES','Yes','yes'] :
 			function.refreshCourses()

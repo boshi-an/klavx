@@ -1,8 +1,11 @@
 
 
-import re
 import datetime
-from typing import SupportsBytes
+import re
+
+import exception
+import utils
+
 
 def givenPattern(pat) :
 	def wrapped(string) :
@@ -29,23 +32,6 @@ class Pattern :
 		self.subResults = []
 		self.combiners = []
 		
-		pass
-	
-	@classmethod
-	def createPrefixPattern() :
-
-		pass
-	
-	@classmethod
-	def createSelectivePattern() :
-
-		pass
-
-	@classmethod
-	def createSuffixPattern() :
-
-		pass
-	
 	# I used wrapper to view patterns and regxprs the same way
 	# pattern(string) = ((l,r), (res1, res2, ...))
 	def appendSubPatternSeq(self, subpattern, combiner) :
@@ -89,49 +75,78 @@ class TextInterpreter :
 
 	# when there are 0 or more than 1 matches
 	# call function whenNone and whenMultiple 
-	def __init__(self, whenNone=None, whenMultiple=None) :
+	def __init__(self) :
 
 		self.patternFuncSeq = []
-		self.whenNone = whenNone
-		self.whenMultiple = whenMultiple
+		self.whenNone = None
+		self.whenMultiple = None
 		pass
 
-	def appendPattern(self, pat, recall) :
+	def registerNoneFunction(self, func) :
+
+		self.whenNone = func
+
+	def registerMultipleFunction(self, func) :
+
+		self.whenMultiple = func
+
+	def registerPattern(self, pat, recall) :
 
 		self.patternFuncSeq.append((pat, recall))
 	
 	# doing interpretation and calling corresponding functions
 	def doInterprete(self, string) :
 
+		print('\033[1;34;40mRecieved message:', string, ', interpreting \033[0m\n')
+
 		successNum = 0
 		funcParaPair = None
 		for pattern,func in self.patternFuncSeq :
-			tmp = pattern.match(string)
+			try :
+				tmp = pattern.match(string)
+			except ValueError as e:
+				print('\033[1;31;40mValue error occured!\033[0m\n')
+				return e
+			except exception.MyException as e:
+				print('\033[1;31;40m', e, '\033[0m\n')
+				return e
+			except OverflowError as e:
+				print('\033[1;31;40m', e, '\033[0m\n')
+				return e
 			if tmp != None :
 				_,res = tmp
 				funcParaPair = (func, res)
 				successNum += 1
 		if successNum == 0 :
+			print('\033[1;34;40mInterpretation result:', 'Can\'t understand!', '\033[0m\n')
 			if self.whenNone != None :
-				self.whenNone()
-			return "No interpretation found!"
+				return self.whenNone()
+			else :
+				return "No interpretation found!"
 		elif successNum >= 2 :
+			print('\033[1;34;40mInterpretation result:', 'Multiple answers!', '\033[0m\n')
 			if self.whenMultiple != None :
-				self.whenMultiple()
-			return "Multiple interpretation found!"
+				return self.whenMultiple()
+			else :
+				return "Multiple interpretation found!"
 		else :
-			funcParaPair[0](*funcParaPair[1])
-			return "One interpretation found!"
+			print('\033[1;34;40mInterpretation result:', funcParaPair[1], '\033[0m\n')
+			return funcParaPair[0](*funcParaPair[1])
 
 pReserve = Pattern()
+pCancel = Pattern()
 pQuery = Pattern()
 pIam = Pattern()
 pTime = Pattern()
 pDate = Pattern()
 pClock = Pattern()
 pNumber = Pattern()
-pNumber_adj = Pattern()	# numbers that have no preceeding letters
 pLocation = Pattern()
+pNumber_adj = Pattern()	# numbers that have no preceeding letters
+pSparseTime = Pattern()
+pEasterEgg = Pattern()
+pAbout = Pattern()
+pHelp = Pattern()
 
 def initPatterns() :
 
@@ -153,11 +168,12 @@ def initPatterns() :
 				if t[0] == 10 :
 					return t[1]+10
 				else :
-					assert(t[1] == 10)
+					if t[1] != 10 :
+						raise exception.MyException('Number '+s+' interpretation error!')
 					return t[0]*10
 			else :
-				assert(len(t) == 2)
-				assert(t[1] == 10)
+				if t[1] != 10 or len(s) != 3:
+						raise exception.MyException('Number '+s+' interpretation error!')
 				return t[0]*10 + t[2]
 
 	def nextMonday() :
@@ -175,11 +191,11 @@ def initPatterns() :
 
 	# Defining numbers
 	pNumber.appendSubPatternSeq(
-		[r'[零一二三四五六七八九十0-9日天]+'],
+		[r'[零一二三四五六七八九十0-9]+'],
 		lambda x : None if x==None else (readChinese(x),)
 	)
 	pNumber_adj.appendSubPatternSeq(
-		[r'^[零一二三四五六七八九十0-9日天]+'],
+		[r'^[零一二三四五六七八九十0-9]+'],
 		lambda x : None if x==None else (readChinese(x),)
 	)
 
@@ -197,58 +213,52 @@ def initPatterns() :
 		lambda x : None if x==None else (datetime.date.today() + datetime.timedelta(days=1)*len(x),)
 	)
 	pDate.appendSubPatternSeq(
-		[r'大*后天'],
-		lambda x : None if x==None else (datetime.date.today() + datetime.timedelta(days=1)*len(x),)
-	)
-	pDate.appendSubPatternSeq(
 		[r'下*个?(周|星期)', pNumber_adj],
-		lambda x,y : None if haveNone(x,y) else (nextMonday() + datetime.timedelta(days=y[0]+x.count('下')*7-8),)
+		lambda x,y : None if haveNone(x,y) else (nextMonday() + datetime.timedelta(days=y[0]%7+x.count('下')*7-8),)
 	)
 	pDate.appendSubPatternSeq(
-		[pNumber, r'月', pNumber_adj, r'日*|号*'],
+		[r'下*个?(周日|星期日|星期天)'],
+		lambda x : None if haveNone(x) else (nextMonday() + datetime.timedelta(days=7+x.count('下')*7-8),)
+	)
+	pDate.appendSubPatternSeq(
+		[pNumber, r'^月', pNumber_adj, r'^日*|^号*'],
 		lambda x,_1,y,_2 : None if haveNone(x,_1,y,_2) else (datetime.date.today().replace(month=x[0], day=y[0]),)
 	)
 	pDate.appendSubPatternSeq(
-		[pNumber, r'\.', pNumber_adj, r'\.', pNumber_adj, r'[ ]|$'],
+		[pNumber, r'^\.', pNumber_adj, r'^\.', pNumber_adj, r'[ ]|$'],
 		lambda x,_1,y,_2,z,_3 : None if haveNone(x,_1,y,_2,z,_3) else (datetime.date.today().replace(year=x[0], month=y[0], day=z[0]),)
 	)
 	pDate.appendSubPatternSeq(
-		[pNumber, r'\.', pNumber_adj, r'[ ]|$'],
+		[pNumber, r'^\.', pNumber_adj, r'[ ]|$'],
 		lambda x,_1,y,_2 : None if haveNone(x,_1,y,_2) else (datetime.date.today().replace(month=x[0], day=y[0]),)
 	)
 
 	# Defining clock
+	pSparseTime.appendSubPatternSeq(
+		[r'上午|早'],
+		lambda x : None if x==None else ('AM',)
+	)
+	pSparseTime.appendSubPatternSeq(
+		[r'下午|晚'],
+		lambda x : None if x==None else ('PM',)
+	)
+
+	# Defining clock
 	pClock.appendSubPatternSeq(
-		[r'上午|早', pNumber, r'\:|点', pNumber_adj],
-		lambda x,y,_,z : None if haveNone(x,y,_,z) else (datetime.datetime.strptime(str(y[0])+':'+str(z[0])+' AM', '%I:%M %p').time(),)
+		[pNumber, r'^\:', pNumber_adj, r'am|pm|AM|PM|Am|Pm'],
+		lambda x,_,y,z : None if haveNone(x,_,y,z) else (datetime.datetime.strptime(str(x[0])+':'+str(y[0])+' '+z.lower(), '%I:%M %p').time(), )
 	)
 	pClock.appendSubPatternSeq(
-		[r'下午|晚', pNumber, r'\:|点', pNumber_adj],
-		lambda x,y,_,z : None if haveNone(x,y,_,z) else (datetime.datetime.strptime(str(y[0])+':'+str(z[0])+' PM', '%I:%M %p').time(),)
-	)
-	pClock.appendSubPatternSeq(
-		[pNumber, r'\:', pNumber_adj, r'am|pm|AM|PM|Am|Pm'],
-		lambda x,_,y,z : None if haveNone(x,_,y,z) else (datetime.datetime.strptime(str(x[0])+':'+str(y[0])+' '+z, '%I:%M %p').time(), )
-	)
-	pClock.appendSubPatternSeq(
-		[pNumber, r'\:', pNumber_adj],
+		[pNumber, r'\:|点|时', pNumber_adj],
 		lambda y,_,z : None if haveNone(y,_,z) else (datetime.datetime.strptime(str(y[0])+':'+str(z[0]), '%H:%M').time(),)
 	)
 	pClock.appendSubPatternSeq(
-		[r'上午|早', pNumber, r'^点半'],
-		lambda x,y,z : None if haveNone(x,y,z) else (datetime.datetime.strptime(str(y[0])+':'+str(30)+' AM', '%I:%M %p').time(), )
+		[pNumber, r'^点半'],
+		lambda y,z : None if haveNone(y,z) else (datetime.datetime.strptime(str(y[0])+':'+str(30), '%H:%M').time(), )
 	)
 	pClock.appendSubPatternSeq(
-		[r'上午|早', pNumber],
-		lambda x,y : None if haveNone(x,y) else (datetime.datetime.strptime(str(y[0])+':'+str(0)+' AM', '%I:%M %p').time(), )
-	)
-	pClock.appendSubPatternSeq(
-		[r'下午|晚', pNumber, r'^点半'],
-		lambda x,y,z : None if haveNone(x,y,z) else (datetime.datetime.strptime(str(y[0])+':'+str(30)+' PM', '%I:%M %p').time(), )
-	)
-	pClock.appendSubPatternSeq(
-		[r'下午|晚', pNumber],
-		lambda x,y : None if haveNone(x,y) else (datetime.datetime.strptime(str(y[0])+':'+str(0)+' PM', '%I:%M %p').time(), )
+		[pNumber, r'^点|^时'],
+		lambda y,z : None if haveNone(y,z) else (datetime.datetime.strptime(str(y[0])+':'+str(00), '%H:%M').time(), )
 	)
 
 	# Defining location
@@ -263,9 +273,30 @@ def initPatterns() :
 
 	# Defining time
 	# time = begin to end
+	def moveTime(clock, sparse) :
+		clock = clock.replace(hour=clock.hour%12)
+		if sparse=='PM' :
+			clock = clock.replace(hour=clock.hour+12)
+		return clock
 	pTime.appendSubPatternSeq(
-		[pDate, pClock, r'到|至', pClock],
-		lambda x,y,_,z : None if haveNone(x,y,_,z) else (datetime.datetime.combine(x[0],y[0]), datetime.datetime.combine(x[0],z[0]))
+		[pDate, pSparseTime, pClock, r'到|至|\-', pSparseTime, pClock],
+		lambda x,y1,z1,_,y2,z2 : None if haveNone(x,y1,z1,_,y2,z2) else (datetime.datetime.combine(x[0],moveTime(*z1,*y1)), datetime.datetime.combine(*x,moveTime(*z2,*y2)))
+	)
+	pTime.appendSubPatternSeq(
+		[pDate, pSparseTime, pClock, r'到|至|\-',  pClock],
+		lambda x,y,z1,_,z2 : None if haveNone(x,y,z1,_,z2) else (datetime.datetime.combine(*x,moveTime(*z1,*y)), datetime.datetime.combine(*x,moveTime(*z2,*y)))
+	)
+	pTime.appendSubPatternSeq(
+		[pDate, pSparseTime, pClock],
+		lambda x,y,z : None if haveNone(x,y,z) else (datetime.datetime.combine(*x,moveTime(*z,*y)), None)
+	)
+	pTime.appendSubPatternSeq(
+		[pDate, pClock, r'到|至|\-', pClock],
+		lambda x,y,_,z : None if haveNone(x,y,_,z) else (datetime.datetime.combine(*x,*y), datetime.datetime.combine(*x,*z))
+	)
+	pTime.appendSubPatternSeq(
+		[pDate, pClock],
+		lambda x,y : None if haveNone(x,y) else (datetime.datetime.combine(*x,*y), None)
 	)
 
 	# Defining reserve
@@ -274,7 +305,102 @@ def initPatterns() :
 		['^预约', pTime, pLocation],
 		lambda x,y,z : None if haveNone(x,y,z) else (*y, *z)
 	)
+	pReserve.appendSubPatternSeq(
+		['^预约', pTime],
+		lambda x,y : None if haveNone(x,y) else (*y, None)
+	)
 
+	# Defining Query
+	# query = when and where
+	pQuery.appendSubPatternSeq(
+		['^查询', pTime, pLocation],
+		lambda x,y,z : None if haveNone(x,y,z) else (*y, *z)
+	)
+	pQuery.appendSubPatternSeq(
+		['^查询', pTime],
+		lambda x,y : None if haveNone(x,y) else (*y, None)
+	)
+	pQuery.appendSubPatternSeq(
+		['^查询', pDate, '到|至|-', pDate, pLocation],
+		lambda _,x,__,y,z : None if haveNone(_,x,__,y,z) else (utils.toDatetime(*x), utils.toDatetime(*y), *z)
+	)
+	pQuery.appendSubPatternSeq(
+		['^查询', pDate, '到|至|-', pDate],
+		lambda _,x,__,y : None if haveNone(_,x,__,y) else (utils.toDatetime(*x), utils.toDatetime(*y), None)
+	)
+	pQuery.appendSubPatternSeq(
+		['^查询', pDate, pLocation],
+		lambda x,y,z : None if haveNone(x,y,z) else (utils.toDatetime(*y), None, *z)
+	)
+	pQuery.appendSubPatternSeq(
+		['^查询', pDate],
+		lambda x,y : None if haveNone(x,y) else (utils.toDatetime(*y), utils.toDatetime(*y)+datetime.timedelta(days=1), None)
+	)
+	pQuery.appendSubPatternSeq(
+		['^查询', pLocation],
+		lambda x,y : None if haveNone(x,y) else (None, None, *y)
+	)
+	pQuery.appendSubPatternSeq(
+		['^查询本周'],
+		lambda x : None if x==None else (utils.toDatetime(nextMonday())-datetime.timedelta(days=7), utils.toDatetime(nextMonday()), None)
+	)
+	pQuery.appendSubPatternSeq(
+		['^查询下*周'],
+		lambda x : None if x==None else (utils.toDatetime(nextMonday())+datetime.timedelta(days=7*(len(x)-4)), utils.toDatetime(nextMonday())+datetime.timedelta(days=7*(len(x)-3)), None)
+	)
+	pQuery.appendSubPatternSeq(
+		['^查询$'],
+		lambda x : None if x==None else (None, None, None)
+	)
+
+	# Defining cancellation
+	pCancel.appendSubPatternSeq(
+		['^取消', pTime, pLocation],
+		lambda _,x,y : None if haveNone(_,x,y) else (*x, *y)
+	)
+	pCancel.appendSubPatternSeq(
+		['^取消', pTime],
+		lambda _,x : None if haveNone(_,x) else (*x, None)
+	)
+	pCancel.appendSubPatternSeq(
+		['^取消', pDate, '到', pDate],
+		lambda _,x,__,y : None if haveNone(_,x,__,y) else (*x, *y, None)
+	)
+	pCancel.appendSubPatternSeq(
+		['^取消', pDate, pClock],
+		lambda _,x,y : None if haveNone(_,x,y) else (datetime.datetime.combine(*x, *y), None, None)
+	)
+	pCancel.appendSubPatternSeq(
+		['^取消', pDate],
+		lambda _,x : None if haveNone(_,x) else (*x, None, None)
+	)
+	pCancel.appendSubPatternSeq(
+		['^取消', pLocation],
+		lambda _,x : None if haveNone(_,x) else (None, None, *x)
+	)
+
+	# Defining I am
+	pIam.appendSubPatternSeq(
+		['^我是', '.*'],
+		lambda x,y : None if haveNone(x,y) else (y,)
+	)
+
+	# Defining a lot of things
+	pAbout.appendSubPatternSeq(
+		['^关于|^你是|^你好|^hello|^Hello|^Hi|^hi'],
+		lambda x : None if x==None else []
+	)
+	pEasterEgg.appendSubPatternSeq(
+		['^彩蛋|^练琴'],
+		lambda x : None if x==None else []
+	)
+	pHelp.appendSubPatternSeq(
+		['^帮助|^help|^Help|^HELP'],
+		lambda x : None if x==None else []
+	)
+
+	return
+	print('下面一长串是测试代码，如果其中有一行为None请小心')
 	print(pDate.match('大后天'))
 	print(pNumber.match('1982'))
 	print(pNumber.match('三十'))
@@ -293,6 +419,12 @@ def initPatterns() :
 	print(pLocation.match('252'))
 	print(pLocation.match('B252'))
 	print(pReserve.match('预约2021.9.1 8:40am到晚上七点半的B252'))
+	print(pReserve.match('预约明天下午8:00到九点半'))
+	print(pQuery.match('查询'))
+	print(pQuery.match('查询252'))
+	print(pQuery.match('查询明天'))
+	print(pQuery.match('查询2020.6.4 252'))
+	print(pIam.match('我是李云迪'))
 	pass
 
 if __name__ == '__main__' :
@@ -312,7 +444,7 @@ if __name__ == '__main__' :
 	
 	pat1 = Pattern()
 	pat1.appendSubPatternSeq([r'[0-9]+', r'\+', r'[0-9]+'], lambda a,b,c:None if a==None or b==None else (int(a)+int(c),))
-	inter.appendPattern(pat1, m1)
+	inter.registerPattern(pat1, m1)
 	inter.doInterprete(input())
 	'''
 	pass
