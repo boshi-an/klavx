@@ -106,13 +106,13 @@ class TextInterpreter :
 				tmp = pattern.match(string)
 			except ValueError as e:
 				utils.writeLog('Error', 'Value error occured!', '1;31;40')
-				return e
+				return str(e)
 			except exception.MyException as e:
 				utils.writeLog('Error', str(e), '1;31;40')
-				return e
+				return str(e)
 			except OverflowError as e:
 				utils.writeLog('Error', str(e), '1;31;40')
-				return e
+				return str(e)
 			if tmp != None :
 				_,res = tmp
 				funcParaPair = (func, res)
@@ -131,7 +131,12 @@ class TextInterpreter :
 				return "Multiple interpretation found!"
 		else :
 			utils.writeLog('InterpretResult', str(funcParaPair[1]), '1;34;40')
-			return funcParaPair[0](*funcParaPair[1])
+			try:
+				result = funcParaPair[0](*funcParaPair[1])
+			except exception.MyException as e :
+				utils.writeLog('Error', str(e), '1;31;40')
+				return str(e)
+			return result
 
 pReserve = Pattern()
 pCancel = Pattern()
@@ -182,7 +187,7 @@ def initPatterns() :
 			day = datetime.date.today() + datetime.timedelta(days=i)
 			if day.weekday() == 0 :
 				return day
-		raise "No next monday found!!!"
+		raise exception.MyException("No next monday found!!!")
 	
 	def haveNone(*arg) :
 		for a in arg :

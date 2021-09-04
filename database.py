@@ -24,8 +24,9 @@ class User(db.Model):
 	openId = db.Column(db.String(), unique=True, nullable=True) #null一般为手动录入但没登记的老师
 	name = db.Column(db.String(), nullable=False)
 	authorized = db.Column(db.Integer(), nullable=True)
+	administrator = db.Column(db.Integer(), nullable=True)
 	def __repr__(self):
-		return '<User {} {} {}>'.format(self.openId, self.name, self.authorized)
+		return '<User {} {} {} {}>'.format(self.openId, self.name, self.authorized, self.administrator)
 
 # 登录信息
 class Registration(db.Model):
@@ -88,7 +89,7 @@ class Logs(db.Model) :
 	timeStamp = db.Column(db.DateTime(), default=datetime.datetime.now, nullable=False)
 	message = db.Column(db.String(collation='NOCASE'), unique=False, nullable=False)
 	def __repr__(self):
-		return '{}:\t<{}>\tid:{}\tmsg:{}'.format(self.timeStamp, self.type, self.id, self.message[:50]+'...'*(len(self.message)>50))
+		return '{:06}:{}:\t<{}>\tmsg:{}'.format(self.id, self.timeStamp, self.type, self.message[:50]+'...'*(len(self.message)>50))
 
 admin.add_view(ModelView(Course, db.session))
 admin.add_view(ModelView(Reservation, db.session))

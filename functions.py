@@ -9,15 +9,23 @@ from exception import MyException
 from database import Course, Reservation, Room, Registration, User, Message, Logs, db
 
 
-def authenticated(func):
-	def newFunc(*args, **kwargs):
+def authenticated(func) :
+	def newFunc(*args, **kwargs) :
 		user = User.query.filter_by(openId=g.openId).first()
-		if user is None:
+		if user is None :
 			raise MyException('抱歉，您还没有登记。请发送 我是xxx')
 		g.user = user
 		return func(*args, **kwargs)
 	return newFunc
 
+def isAdmin(func) :
+	def newFunc(*args, **kwargs) :
+		user = User.query.filter(db.and_(User.openId==g.openId, User.administrator==1)).first()
+		if user is None :
+			raise MyException('只有管理员可以使用此命令')
+		g.user = user
+		return func(*args, **kwargs)
+	return newFunc
 
 def getRoom(roomName):
 	if roomName is None :
@@ -325,6 +333,13 @@ def authorizeUsers(name) :
 	user = getCreateUser(name)
 	print('authorizing', user)
 	user.authorized = 1
+	db.session.commit()
+
+def makeAdmin(name) :
+	user = getCreateUser(name)
+	print('authorizing', user)
+	user.administrator = 1
+	db.session.commit()
 
 def about() :
 
@@ -337,6 +352,7 @@ def easterEgg() :
 def help() :
 	return '你可以在这里留言（后台应该不会有人看到的），在这里预约琴房（仅供排练用哦，平时练琴不需要也不应该预约），也可以查询预约情况\n\n预约的格式为“预约+<时间起点>+到/至+<时间终点>+琴房名”，后面两项可以省略，默认预约一个小时\n\n查询的格式类似哦~'
 
+@isAdmin
 def checkLog() :
 
 	lastLogs = Logs.query.order_by(Logs.id.desc()).limit(20).all()

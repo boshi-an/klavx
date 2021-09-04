@@ -51,7 +51,7 @@ AI.registerPattern(interpreter.pQuery, func.processQuery)
 AI.registerPattern(interpreter.pAbout, func.about)
 AI.registerPattern(interpreter.pEasterEgg, func.easterEgg)
 AI.registerPattern(interpreter.pHelp, func.help)
-#AI.registerPattern(interpreter.pCheckLog, func.checkLog)
+AI.registerPattern(interpreter.pCheckLog, func.checkLog)
 
 # 微信段设置的token，用于验证服务器是否正确运行
 wxToken = 'bigchord'
@@ -123,12 +123,13 @@ def processMessage():
 			#消息已处理，或者不存在MsgId
 			replyDict['Content'] = 'IntegrityError: 消息已处理，或者不存在MsgId'
 		else :
+			# 是一条正常的文字消息
 			replyDict['Content'] = processText(e.findtext('Content'))
 	
 	# 用户发来的消息不是文本也不是语音（比如图片），就根据微信的要求来返回错误提示
 	else :
 		replyDict['Content'] = '小AI暂时无法理解这类信息呢~'
-
+	
 	utils.writeLog('Reply', utils.dict2Str(replyDict), '0')
 	return etree.tostring(utils.toEtree(replyDict), encoding='utf8')
 
@@ -139,7 +140,7 @@ def processText(Content):
 	try:
 		reply = AI.doInterprete(Content)
 	except MyException as e:
-		reply = e.args
+		reply = str(e)
 
 	return reply
 
@@ -163,5 +164,9 @@ if __name__=='__main__':
 				if not line :
 					break
 				func.authorizeUsers(line)
+	elif len(sys.argv)==2 and sys.argv[1]=='admin' :
+		print('Give admin permission to users name:')
+		name = input()
+		func.makeAdmin(name)
 	else :
 		Manager(app).run()
