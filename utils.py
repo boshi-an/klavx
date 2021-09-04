@@ -1,5 +1,7 @@
 import datetime
 from lxml import etree
+import database as db
+from flask import g
 
 # toEtree的作用是将传入的参数d转换为一个数据包结构并返回，默认转换为'xml'类型
 # 如果d是列表/元组/字典，对d中的每一个键值对，递归调用toEtree
@@ -15,11 +17,11 @@ def toEtree(d, name='xml'):
 		e.text = str(d)
 	return e
 
-def printDict(name, d) :
-	print(name, ":")
+def dict2Str(d) :
+	result = '\n'
 	for key,val in d.items() :
-		print('\t',key,":",str(val).replace('\n','\n\t\t'))
-	print('\n')
+		result += '\t' + key + ' : ' + str(val).replace('\n','\n\t\t') + '\n'
+	return result
 
 def packTexttoLXML(text, ToUserName, FromUserName, CreateTime) :
 	
@@ -43,3 +45,13 @@ def formatDate(date) :
 
 def formatDatetime(dtime) :
 	return '{}年{}月{}日{}:{:02}'.format(dtime.year, dtime.month, dtime.day, dtime.hour, dtime.minute)
+
+# color是日志颜色，参见python命令行字体颜色
+def writeLog(type, message, color='0') :
+	newLog = db.Logs(type=type, message=message)
+	db.db.session.add(newLog)
+	db.db.session.commit()
+	if g.visibleLog :
+		print('\033['+color+'m'+str(newLog)+'\033[0m')
+	else :
+		print(str(newLog))

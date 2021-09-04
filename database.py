@@ -82,10 +82,20 @@ class Course(db.Model):
 				self.startTime.hour, self.startTime.minute,
 				self.endTime.hour, self.endTime.minute)
 
+class Logs(db.Model) :
+	id = db.Column(db.Integer(), primary_key=True)
+	type = db.Column(db.String(collation='NOCASE'), unique=False, nullable=False)
+	timeStamp = db.Column(db.DateTime(), default=datetime.datetime.now, nullable=False)
+	message = db.Column(db.String(collation='NOCASE'), unique=False, nullable=False)
+	def __repr__(self):
+		return '{}:\t<{}>\tid:{}\tmsg:{}'.format(self.timeStamp, self.type, self.id, self.message[:50]+'...'*(len(self.message)>50))
+
 admin.add_view(ModelView(Course, db.session))
 admin.add_view(ModelView(Reservation, db.session))
 admin.add_view(ModelView(Room, db.session))
 admin.add_view(ModelView(Registration, db.session))
 admin.add_view(ModelView(User, db.session))
 admin.add_view(ModelView(Message, db.session))
-	
+admin.add_view(ModelView(Logs, db.session))
+
+db.create_all()

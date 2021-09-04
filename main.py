@@ -29,6 +29,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['PROPAGATE_EXCEPTIONS'] = True
 app.logger.setLevel('ERROR')
+g.visibleLog = False
 
 import database as db
 import functions as func
@@ -50,6 +51,7 @@ AI.registerPattern(interpreter.pQuery, func.processQuery)
 AI.registerPattern(interpreter.pAbout, func.about)
 AI.registerPattern(interpreter.pEasterEgg, func.easterEgg)
 AI.registerPattern(interpreter.pHelp, func.help)
+#AI.registerPattern(interpreter.pCheckLog, func.checkLog)
 
 # 微信段设置的token，用于验证服务器是否正确运行
 wxToken = 'bigchord'
@@ -58,16 +60,14 @@ wxToken = 'bigchord'
 # 在SQLAlchemy中,表格以类的形式存在,数据项以对象的形式存在,增删查改均通过构建对话session来进行
 # 了解数据库基本知识和SQLAlchemy的基本语法,对通读代码有很大的帮助
 
-appPath = '/papuwx/'
+appPath = '/klavx/'
 
 '''Flask的回调接口？'''
 @app.route(appPath, methods=['GET', 'POST'])
 def index():
-	
 	authenticateMessage()
 	if checkEcho() :
 		return request.args['echostr']
-	
 	res = processMessage()
 	return res
 
@@ -80,8 +80,8 @@ def authenticateMessage():
 			#succeeded, pass through
 			return None
 	except KeyError:
-		pass
-	abort(BAD_REQUEST)
+		# 如果不是微信服务器发来的请求，则认为是非法请求
+		abort(BAD_REQUEST)
 
 
 # 响应微信公众号配置页面发起的验证服务器请求
@@ -101,7 +101,8 @@ def processMessage():
 	g.openId = e.findtext('FromUserName')
 	msgReceived = {x:e.findtext(x) for x in
 					'ToUserName FromUserName CreateTime Content Recognition'.split()}
-	utils.printDict("receive", msgReceived)
+	
+	utils.writeLog('Receive', utils.dict2Str(msgReceived), '0')
 
 	replyDict = dict(ToUserName=e.findtext('FromUserName'),
 		FromUserName=e.findtext('ToUserName'),
@@ -113,12 +114,8 @@ def processMessage():
 	if e.findtext('MsgType').lower()=='event' and e.findtext('Event').lower()=='subscribe':
 		replyDict['Content'] = '感谢关注钢琴社公众号~'
 	
-	# 用户发来的消息不是文本也不是语音（比如图片），就根据微信的要求来返回错误提示
-	elif e.findtext('MsgType') not in ('text','voice'):
-		replyDict['Content'] = '小AI暂时无法理解这类信息呢~'
-
 	# 用户发来的是文本或语音
-	else :
+	elif e.findtext('MsgType') in ('text','voice'):
 		try:
 			db.db.session.add(db.Message(msgId=int(e.findtext('MsgId'))))
 			db.db.session.commit()
@@ -127,7 +124,12 @@ def processMessage():
 			replyDict['Content'] = 'IntegrityError: 消息已处理，或者不存在MsgId'
 		else :
 			replyDict['Content'] = processText(e.findtext('Content'))
-	utils.printDict('reply', replyDict)
+	
+	# 用户发来的消息不是文本也不是语音（比如图片），就根据微信的要求来返回错误提示
+	else :
+		replyDict['Content'] = '小AI暂时无法理解这类信息呢~'
+
+	utils.writeLog('Reply', utils.dict2Str(replyDict), '0')
 	return etree.tostring(utils.toEtree(replyDict), encoding='utf8')
 
 def processText(Content):
@@ -142,6 +144,8 @@ def processText(Content):
 	return reply
 
 if __name__=='__main__':
+
+	g.visibleLog = True
 
 	# 刷新钢琴课命令: 进入命令行输入`sudo python main.py refreshcourses`
 	if len(sys.argv)==2 and sys.argv[1]=='refreshcourses' :

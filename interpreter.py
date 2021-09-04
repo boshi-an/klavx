@@ -97,7 +97,7 @@ class TextInterpreter :
 	# doing interpretation and calling corresponding functions
 	def doInterprete(self, string) :
 
-		print('\033[1;34;40mRecieved message:', string, ', interpreting \033[0m\n')
+		utils.writeLog('Interpret', string, '1;32;40')
 
 		successNum = 0
 		funcParaPair = None
@@ -105,32 +105,32 @@ class TextInterpreter :
 			try :
 				tmp = pattern.match(string)
 			except ValueError as e:
-				print('\033[1;31;40mValue error occured!\033[0m\n')
+				utils.writeLog('Error', 'Value error occured!', '1;31;40')
 				return e
 			except exception.MyException as e:
-				print('\033[1;31;40m', e, '\033[0m\n')
+				utils.writeLog('Error', str(e), '1;31;40')
 				return e
 			except OverflowError as e:
-				print('\033[1;31;40m', e, '\033[0m\n')
+				utils.writeLog('Error', str(e), '1;31;40')
 				return e
 			if tmp != None :
 				_,res = tmp
 				funcParaPair = (func, res)
 				successNum += 1
 		if successNum == 0 :
-			print('\033[1;34;40mInterpretation result:', 'Can\'t understand!', '\033[0m\n')
+			utils.writeLog('Warning', 'Can\'t understand!', '1;34;40')
 			if self.whenNone != None :
 				return self.whenNone()
 			else :
 				return "No interpretation found!"
 		elif successNum >= 2 :
-			print('\033[1;34;40mInterpretation result:', 'Multiple answers!', '\033[0m\n')
+			utils.writeLog('Warning', 'Multiple answers!', '1;34;40')
 			if self.whenMultiple != None :
 				return self.whenMultiple()
 			else :
 				return "Multiple interpretation found!"
 		else :
-			print('\033[1;34;40mInterpretation result:', funcParaPair[1], '\033[0m\n')
+			utils.writeLog('InterpretResult', str(funcParaPair[1]), '1;34;40')
 			return funcParaPair[0](*funcParaPair[1])
 
 pReserve = Pattern()
@@ -145,6 +145,7 @@ pLocation = Pattern()
 pNumber_adj = Pattern()	# numbers that have no preceeding letters
 pSparseTime = Pattern()
 pEasterEgg = Pattern()
+pCheckLog = Pattern()
 pAbout = Pattern()
 pHelp = Pattern()
 
@@ -341,7 +342,7 @@ def initPatterns() :
 		lambda x,y : None if haveNone(x,y) else (None, None, *y)
 	)
 	pQuery.appendSubPatternSeq(
-		['^查询本周'],
+		['^查询本周|^查询这周'],
 		lambda x : None if x==None else (utils.toDatetime(nextMonday())-datetime.timedelta(days=7), utils.toDatetime(nextMonday()), None)
 	)
 	pQuery.appendSubPatternSeq(
@@ -396,6 +397,10 @@ def initPatterns() :
 	)
 	pHelp.appendSubPatternSeq(
 		['^帮助|^help|^Help|^HELP'],
+		lambda x : None if x==None else []
+	)
+	pCheckLog.appendSubPatternSeq(
+		['^查看日志$|^查看后台$'],
 		lambda x : None if x==None else []
 	)
 

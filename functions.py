@@ -6,7 +6,7 @@ import utils
 from flask import g
 
 from exception import MyException
-from database import Course, Reservation, Room, Registration, User, Message, db
+from database import Course, Reservation, Room, Registration, User, Message, Logs, db
 
 
 def authenticated(func):
@@ -132,10 +132,10 @@ def processIam(name) :
 @authenticated
 def processReservation(start, end, roomName):
 
-	print('\033[1;32;40mProcessing <Reservation>:', start, end, roomName, '\033[0m\n')
-
 	curUser = User.query.filter_by(openId=g.openId).all()
-	print('current user:', curUser)
+
+	utils.writeLog('Reservation', str(start)+', '+str(end)+', '+str(roomName)+', '+str(curUser), '1;32;40')
+
 	if len(curUser) == 0 or curUser[0].authorized != 1 :
 		return '抱歉，只有经过认证的演奏部成员可以预约'
 	if len(curUser) > 1 :
@@ -210,7 +210,7 @@ def processReservation(start, end, roomName):
 @authenticated
 def processCancel(start, end, roomName):
 
-	print('\033[1;32;40mProcessing <Cancellation>:', start, end, roomName, '\033[0m\n')
+	utils.writeLog('Cancellation', str(start)+', '+str(end)+', '+str(roomName), '1;32;40')
 
 	query = Reservation.query.filter_by(user=g.user)
 	
@@ -250,7 +250,7 @@ def processCancel(start, end, roomName):
 @authenticated
 def processQuery(start, end, roomName) :
 
-	print('\033[1;32;40mProcessing <Query>:', start, end, roomName, '\033[0m\n')
+	utils.writeLog('Query', str(start)+', '+str(end)+', '+str(roomName), '1;32;40')
 	matches = []
 	timeRepr = ''
 	hasCourse = False
@@ -292,10 +292,9 @@ def processQuery(start, end, roomName) :
 def getCreateUser(name):
 	print('getting', name)
 	user = User.query.filter_by(name=name)
-	#print(user)
 	user = user.first()
 	if user is None:
-		print(name, 'doesn\'t exist!', 'Creating')
+		utils.writeLog('CreateUser', name, '1;33;40')
 		user = User(name=name)
 		db.session.add(user)
 		db.session.commit()
@@ -333,8 +332,13 @@ def about() :
 
 def easterEgg() :
 
-	return '今天你练琴了吗'
+	return '今天你练琴了吗' + randomEmoji()
 
 def help() :
-
 	return '你可以在这里留言（后台应该不会有人看到的），在这里预约琴房（仅供排练用哦，平时练琴不需要也不应该预约），也可以查询预约情况\n\n预约的格式为“预约+<时间起点>+到/至+<时间终点>+琴房名”，后面两项可以省略，默认预约一个小时\n\n查询的格式类似哦~'
+
+def checkLog() :
+
+	lastLogs = Logs.query.order_by(Logs.id.desc()).limit(20).all()
+	result = '\n\n'.join([str(s) for s in lastLogs])
+	return result

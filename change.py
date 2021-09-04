@@ -13,6 +13,7 @@ from flask_admin import Admin
 from flask_admin.contrib.sqla import ModelView
 from flask_script import Manager
 from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
 from lxml import etree
 from sqlalchemy.exc import IntegrityError
 
@@ -45,6 +46,7 @@ class User(db.Model):
 	openId = db.Column(db.String(), unique=True, nullable=True) #null一般为手动录入但没登记的老师
 	name = db.Column(db.String(), nullable=False)
 	authorized = db.Column(db.Integer(), nullable=True)
+	administrator = db.Column(db.Integer(), nullable=True)
 	def __repr__(self):
 		return '<User {} {} {}>'.format(self.openId, self.name, self.authorized)
 
@@ -109,6 +111,8 @@ admin.add_view(ModelView(Room, db.session))
 admin.add_view(ModelView(Registration, db.session))
 admin.add_view(ModelView(User, db.session))
 admin.add_view(ModelView(Message, db.session))
+
+migrate = Migrate(app,db)
 
 if __name__ == '__main__' :
 	u = User.query
