@@ -1,0 +1,623 @@
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 487852)
+spawned uWSGI worker 1 (pid: 487853, cores: 1)
+spawned uWSGI worker 2 (pid: 487854, cores: 1)
+spawned uWSGI http 1 (pid: 487855)
+000157:2021-09-04 21:53:12.867517:	<Receive>	msg:
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3...
+000158:2021-09-04 21:53:12.884679:	<Interpret>	msg:我是汤一可
+000159:2021-09-04 21:53:12.896427:	<InterpretResult>	msg:('汤一可',)
+000160:2021-09-04 21:53:12.915600:	<Reply>	msg:
+	ToUserName : op3adjjlncz6cnOdeUsGdUHu4Yyg
+	FromU...
+000161:2021-09-04 21:53:20.156032:	<Receive>	msg:
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3...
+000162:2021-09-04 21:53:20.177904:	<Interpret>	msg:汤一可
+000163:2021-09-04 21:53:20.185827:	<Warning>	msg:Can't understand!
+000164:2021-09-04 21:53:20.191951:	<Reply>	msg:
+	ToUserName : op3adjjlncz6cnOdeUsGdUHu4Yyg
+	FromU...
+000165:2021-09-04 21:53:28.182159:	<Receive>	msg:
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3...
+000166:2021-09-04 21:53:28.195300:	<Interpret>	msg:我是汤一可
+000167:2021-09-04 21:53:28.201636:	<InterpretResult>	msg:('汤一可',)
+000168:2021-09-04 21:53:28.220191:	<Reply>	msg:
+	ToUserName : op3adjjlncz6cnOdeUsGdUHu4Yyg
+	FromU...
+000169:2021-09-04 21:53:48.753302:	<Receive>	msg:
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3...
+000170:2021-09-04 21:53:48.766522:	<Interpret>	msg:预约今天晚上两点
+000171:2021-09-04 21:53:48.773769:	<Warning>	msg:Can't understand!
+000172:2021-09-04 21:53:48.779668:	<Reply>	msg:
+	ToUserName : op3adjjlncz6cnOdeUsGdUHu4Yyg
+	FromU...
+000173:2021-09-04 21:54:19.607098:	<Receive>	msg:
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3...
+000174:2021-09-04 21:54:19.620991:	<Interpret>	msg:预约3：30
+000175:2021-09-04 21:54:19.627341:	<Warning>	msg:Can't understand!
+000176:2021-09-04 21:54:19.632717:	<Reply>	msg:
+	ToUserName : op3adjjlncz6cnOdeUsGdUHu4Yyg
+	FromU...
+000177:2021-09-04 21:54:48.055556:	<Receive>	msg:
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3...
+000178:2021-09-04 21:54:48.068705:	<Interpret>	msg:预约今天晚上两点到三点
+000179:2021-09-04 21:54:48.083048:	<InterpretResult>	msg:(datetime.datetime(2021, 9, 4, 15, 0), None, None)
+000180:2021-09-04 21:54:48.093809:	<Reservation>	msg:2021-09-04 15:00:00, None, None, [<User op3adjjlnc...
+000181:2021-09-04 21:54:48.100876:	<Reply>	msg:
+	ToUserName : op3adjjlncz6cnOdeUsGdUHu4Yyg
+	FromU...
+000182:2021-09-04 21:55:56.218334:	<Receive>	msg:
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3...
+000183:2021-09-04 21:55:56.233461:	<Interpret>	msg:刚刚是安老师他自己发的！不怪我！！！
+000184:2021-09-04 21:55:56.247556:	<Warning>	msg:Can't understand!
+000185:2021-09-04 21:55:56.255661:	<Reply>	msg:
+	ToUserName : op3adjjlncz6cnOdeUsGdUHu4Yyg
+	FromU...
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 487855)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 489917)
+spawned uWSGI worker 1 (pid: 489918, cores: 1)
+spawned uWSGI worker 2 (pid: 489919, cores: 1)
+spawned uWSGI http 1 (pid: 489920)
+000186:2021-09-04 21:57:00.341614:	<Receive>	msg:
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3...
+000187:2021-09-04 21:57:00.358486:	<Interpret>	msg:预约今天晚上2点
+000188:2021-09-04 21:57:00.367680:	<InterpretResult>	msg:(datetime.datetime(2021, 9, 4, 14, 0), None, None)
+000189:2021-09-04 21:57:00.377011:	<Reservation>	msg:2021-09-04 14:00:00, None, None, [<User op3adjpkIj...
+000190:2021-09-04 21:57:00.404546:	<Reply>	msg:
+	ToUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	FromU...
+000191:2021-09-04 21:57:09.732374:	<Receive>	msg:
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3...
+000192:2021-09-04 21:57:09.750982:	<Interpret>	msg:预约今晚两点
+000193:2021-09-04 21:57:09.757283:	<Warning>	msg:Can't understand!
+000194:2021-09-04 21:57:09.767639:	<Reply>	msg:
+	ToUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	FromU...
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 489920)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 490093)
+spawned uWSGI worker 1 (pid: 490094, cores: 1)
+spawned uWSGI worker 2 (pid: 490095, cores: 1)
+spawned uWSGI http 1 (pid: 490096)
+000195:2021-09-04 21:57:46.023982:	<Receive>	msg:
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3...
+000196:2021-09-04 21:57:46.045498:	<Interpret>	msg:预约今晚两点
+000197:2021-09-04 21:57:46.052192:	<Warning>	msg:Can't understand!
+000198:2021-09-04 21:57:46.058089:	<Reply>	msg:
+	ToUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	FromU...
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 490096)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 514364)
+spawned uWSGI worker 1 (pid: 514365, cores: 1)
+spawned uWSGI worker 2 (pid: 514366, cores: 1)
+spawned uWSGI http 1 (pid: 514367)
+000199:2021-09-05 01:06:18.661910:	<Receive>	msg:
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3...
+000200:2021-09-05 01:06:18.679595:	<Interpret>	msg:ajsjf
+000201:2021-09-05 01:06:18.685722:	<Warning>	msg:Can't understand!
+000202:2021-09-05 01:06:18.691853:	<Reply>	msg:
+	ToUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	FromU...
+[uwsgi-http key:  client_addr: 167.248.133.42 client_port: 8365] hr_read(): Connection reset by peer [plugins/http/http.c line 917]
+000203:2021-09-05 11:02:12.380439:	<Receive>	msg:
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3...
+000204:2021-09-05 11:02:12.392757:	<Interpret>	msg:查看后台
+000205:2021-09-05 11:02:12.399354:	<InterpretResult>	msg:[]
+000206:2021-09-05 11:02:12.414628:	<Reply>	msg:
+	ToUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	FromU...
+000207:2021-09-05 11:41:15.307465:	<Receive>	msg:
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3...
+000208:2021-09-05 11:41:15.314485:	<Reply>	msg:
+	ToUserName : op3adjnAT-CiKLQWYK-5mhe1xxOk
+	FromU...
+000209:2021-09-05 12:02:34.204232:	<Receive>	msg:
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3...
+000210:2021-09-05 12:02:34.218643:	<Interpret>	msg:调戏
+000211:2021-09-05 12:02:34.231401:	<Warning>	msg:Can't understand!
+000212:2021-09-05 12:02:34.237487:	<Reply>	msg:
+	ToUserName : op3adjuLmLuv1CuTqKzvGv2Hok0Q
+	FromU...
+000213:2021-09-05 12:02:48.991600:	<Receive>	msg:
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3...
+000214:2021-09-05 12:02:49.003572:	<Interpret>	msg:[Unsupported Message]
+000215:2021-09-05 12:02:49.010275:	<Warning>	msg:Can't understand!
+000216:2021-09-05 12:02:49.022437:	<Reply>	msg:
+	ToUserName : op3adjuLmLuv1CuTqKzvGv2Hok0Q
+	FromU...
+000217:2021-09-05 12:02:55.463588:	<Receive>	msg:
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3...
+000218:2021-09-05 12:02:55.488607:	<Interpret>	msg:嘤嘤嘤
+000219:2021-09-05 12:02:55.495093:	<Warning>	msg:Can't understand!
+000220:2021-09-05 12:02:55.502242:	<Reply>	msg:
+	ToUserName : op3adjuLmLuv1CuTqKzvGv2Hok0Q
+	FromU...
+000221:2021-09-05 12:03:47.288420:	<Receive>	msg:
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3...
+000222:2021-09-05 12:03:47.306389:	<Interpret>	msg:我是谁
+000223:2021-09-05 12:03:47.315295:	<InterpretResult>	msg:('谁',)
+000224:2021-09-05 12:03:47.323088:	<Reply>	msg:
+	ToUserName : op3adjuLmLuv1CuTqKzvGv2Hok0Q
+	FromU...
+000225:2021-09-05 12:04:00.719060:	<Receive>	msg:
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3...
+000226:2021-09-05 12:04:00.760769:	<Interpret>	msg:预约一年后
+000227:2021-09-05 12:04:00.771379:	<Warning>	msg:Can't understand!
+000228:2021-09-05 12:04:00.777406:	<Reply>	msg:
+	ToUserName : op3adjuLmLuv1CuTqKzvGv2Hok0Q
+	FromU...
+000229:2021-09-05 12:04:27.439790:	<Receive>	msg:
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3...
+000230:2021-09-05 12:04:27.465592:	<Interpret>	msg:预约明天七点
+000231:2021-09-05 12:04:27.476645:	<InterpretResult>	msg:(datetime.datetime(2021, 9, 6, 7, 0), None, None)
+000232:2021-09-05 12:04:27.485173:	<Reservation>	msg:2021-09-06 07:00:00, None, None, [<User op3adjuLmL...
+000233:2021-09-05 12:04:27.517236:	<Reply>	msg:
+	ToUserName : op3adjuLmLuv1CuTqKzvGv2Hok0Q
+	FromU...
+000234:2021-09-05 13:24:51.234453:	<Receive>	msg:
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3...
+000235:2021-09-05 13:24:51.240476:	<Reply>	msg:
+	ToUserName : op3adjiCtAAX6Stfv74fEdsWXIKg
+	FromU...
+000236:2021-09-05 13:53:08.503179:	<Receive>	msg:
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3...
+000237:2021-09-05 13:53:08.509747:	<Reply>	msg:
+	ToUserName : op3adjrdN_aGI4TJ9_k6E7kWusO0
+	FromU...
+000238:2021-09-05 14:03:09.337517:	<Receive>	msg:
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3...
+000239:2021-09-05 14:03:09.351144:	<Interpret>	msg:哪里学琴
+000240:2021-09-05 14:03:09.357381:	<Warning>	msg:Can't understand!
+000241:2021-09-05 14:03:09.363018:	<Reply>	msg:
+	ToUserName : op3adjiCtAAX6Stfv74fEdsWXIKg
+	FromU...
+000242:2021-09-05 14:03:16.539839:	<Receive>	msg:
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3...
+000243:2021-09-05 14:03:16.566616:	<Interpret>	msg:学琴
+000244:2021-09-05 14:03:16.572742:	<Warning>	msg:Can't understand!
+000245:2021-09-05 14:03:16.578390:	<Reply>	msg:
+	ToUserName : op3adjiCtAAX6Stfv74fEdsWXIKg
+	FromU...
+000246:2021-09-05 15:32:27.191524:	<Receive>	msg:
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3...
+000247:2021-09-05 15:32:27.198398:	<Reply>	msg:
+	ToUserName : op3adjkR7CKH9fROIGxrt8kHHEAQ
+	FromU...
+000248:2021-09-05 16:36:36.884121:	<Receive>	msg:
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3...
+000249:2021-09-05 16:36:36.890691:	<Reply>	msg:
+	ToUserName : op3adjogHSWF0rTtYVW6mB6CrMxE
+	FromU...
+000250:2021-09-05 16:36:42.123418:	<Receive>	msg:
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3...
+000251:2021-09-05 16:36:42.131529:	<Reply>	msg:
+	ToUserName : op3adjogHSWF0rTtYVW6mB6CrMxE
+	FromU...
+000252:2021-09-05 16:36:50.908382:	<Receive>	msg:
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3...
+000253:2021-09-05 16:36:50.916077:	<Reply>	msg:
+	ToUserName : op3adjogHSWF0rTtYVW6mB6CrMxE
+	FromU...
+000254:2021-09-05 16:36:57.124463:	<Receive>	msg:
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3...
+000255:2021-09-05 16:36:57.130441:	<Reply>	msg:
+	ToUserName : op3adjogHSWF0rTtYVW6mB6CrMxE
+	FromU...
+000256:2021-09-05 16:37:29.827554:	<Receive>	msg:
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3...
+000257:2021-09-05 16:37:29.833969:	<Reply>	msg:
+	ToUserName : op3adjogHSWF0rTtYVW6mB6CrMxE
+	FromU...
+000258:2021-09-05 19:14:08.155684:	<Receive>	msg:
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3...
+000259:2021-09-05 19:14:08.163541:	<Reply>	msg:
+	ToUserName : op3adjvJbOcvCSSxVOyElfZcqsiQ
+	FromU...
+000260:2021-09-05 23:37:30.893628:	<Receive>	msg:
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3...
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1771, in _execute_context
+    self.dialect.do_execute(
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.IntegrityError: NOT NULL constraint failed: logs.message
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2035, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2021, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2018, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1533, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1531, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1517, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/var/www/klavx/main.py", line 71, in index
+    res = processMessage()
+  File "/var/www/klavx/main.py", line 127, in processMessage
+    replyDict['Content'] = processText(e.findtext('Content'))
+  File "/var/www/klavx/main.py", line 141, in processText
+    reply = AI.doInterprete(Content)
+  File "/var/www/klavx/./interpreter.py", line 100, in doInterprete
+    utils.writeLog('Interpret', string, '1;32;40')
+  File "/var/www/klavx/./utils.py", line 53, in writeLog
+    db.db.session.commit()
+  File "<string>", line 2, in commit
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1428, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 829, in commit
+    self._prepare_impl()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 808, in _prepare_impl
+    self.session.flush()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 3298, in flush
+    self._flush(objects)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 3438, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 3398, in _flush
+    flush_context.execute()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 456, in execute
+    rec.execute(self)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 630, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 242, in save_obj
+    _emit_insert_statements(
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 1219, in _emit_insert_statements
+    result = connection._execute_20(
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1583, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 323, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1452, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1814, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1995, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1771, in _execute_context
+    self.dialect.do_execute(
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) NOT NULL constraint failed: logs.message
+[SQL: INSERT INTO logs (type, "timeStamp", message) VALUES (?, ?, ?)]
+[parameters: ('Interpret', '2021-09-05 23:37:30.905082', None)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2035, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2021, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2018, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1533, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1531, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1517, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/var/www/klavx/main.py", line 71, in index
+    res = processMessage()
+  File "/var/www/klavx/main.py", line 105, in processMessage
+    utils.writeLog('Receive', utils.dict2Str(msgReceived), '0')
+  File "/var/www/klavx/./utils.py", line 53, in writeLog
+    db.db.session.commit()
+  File "<string>", line 2, in commit
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1428, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 827, in commit
+    self._assert_active(prepared_ok=True)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 601, in _assert_active
+    raise sa_exc.PendingRollbackError(
+sqlalchemy.exc.PendingRollbackError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (sqlite3.IntegrityError) NOT NULL constraint failed: logs.message
+[SQL: INSERT INTO logs (type, "timeStamp", message) VALUES (?, ?, ?)]
+[parameters: ('Interpret', '2021-09-05 23:37:30.905082', None)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj) (Background on this error at: https://sqlalche.me/e/14/7s2a)
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2035, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2021, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2018, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1533, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1531, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1517, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/var/www/klavx/main.py", line 71, in index
+    res = processMessage()
+  File "/var/www/klavx/main.py", line 105, in processMessage
+    utils.writeLog('Receive', utils.dict2Str(msgReceived), '0')
+  File "/var/www/klavx/./utils.py", line 53, in writeLog
+    db.db.session.commit()
+  File "<string>", line 2, in commit
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1428, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 827, in commit
+    self._assert_active(prepared_ok=True)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 601, in _assert_active
+    raise sa_exc.PendingRollbackError(
+sqlalchemy.exc.PendingRollbackError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (sqlite3.IntegrityError) NOT NULL constraint failed: logs.message
+[SQL: INSERT INTO logs (type, "timeStamp", message) VALUES (?, ?, ?)]
+[parameters: ('Interpret', '2021-09-05 23:37:30.905082', None)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj) (Background on this error at: https://sqlalche.me/e/14/7s2a)
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2035, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2021, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2018, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1533, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1531, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1517, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/var/www/klavx/main.py", line 71, in index
+    res = processMessage()
+  File "/var/www/klavx/main.py", line 105, in processMessage
+    utils.writeLog('Receive', utils.dict2Str(msgReceived), '0')
+  File "/var/www/klavx/./utils.py", line 53, in writeLog
+    db.db.session.commit()
+  File "<string>", line 2, in commit
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1428, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 827, in commit
+    self._assert_active(prepared_ok=True)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 601, in _assert_active
+    raise sa_exc.PendingRollbackError(
+sqlalchemy.exc.PendingRollbackError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (sqlite3.IntegrityError) NOT NULL constraint failed: logs.message
+[SQL: INSERT INTO logs (type, "timeStamp", message) VALUES (?, ?, ?)]
+[parameters: ('Interpret', '2021-09-05 23:37:30.905082', None)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj) (Background on this error at: https://sqlalche.me/e/14/7s2a)
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2035, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2021, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2018, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1533, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1531, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1517, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/var/www/klavx/main.py", line 71, in index
+    res = processMessage()
+  File "/var/www/klavx/main.py", line 105, in processMessage
+    utils.writeLog('Receive', utils.dict2Str(msgReceived), '0')
+  File "/var/www/klavx/./utils.py", line 53, in writeLog
+    db.db.session.commit()
+  File "<string>", line 2, in commit
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1428, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 827, in commit
+    self._assert_active(prepared_ok=True)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 601, in _assert_active
+    raise sa_exc.PendingRollbackError(
+sqlalchemy.exc.PendingRollbackError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (sqlite3.IntegrityError) NOT NULL constraint failed: logs.message
+[SQL: INSERT INTO logs (type, "timeStamp", message) VALUES (?, ?, ?)]
+[parameters: ('Interpret', '2021-09-05 23:37:30.905082', None)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj) (Background on this error at: https://sqlalche.me/e/14/7s2a)
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2035, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2021, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 2018, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1533, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1531, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/flask/app.py", line 1517, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/var/www/klavx/main.py", line 71, in index
+    res = processMessage()
+  File "/var/www/klavx/main.py", line 105, in processMessage
+    utils.writeLog('Receive', utils.dict2Str(msgReceived), '0')
+  File "/var/www/klavx/./utils.py", line 53, in writeLog
+    db.db.session.commit()
+  File "<string>", line 2, in commit
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1428, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 827, in commit
+    self._assert_active(prepared_ok=True)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 601, in _assert_active
+    raise sa_exc.PendingRollbackError(
+sqlalchemy.exc.PendingRollbackError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (sqlite3.IntegrityError) NOT NULL constraint failed: logs.message
+[SQL: INSERT INTO logs (type, "timeStamp", message) VALUES (?, ?, ?)]
+[parameters: ('Interpret', '2021-09-05 23:37:30.905082', None)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj) (Background on this error at: https://sqlalche.me/e/14/7s2a)
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 514367)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 714564)
+spawned uWSGI worker 1 (pid: 714565, cores: 1)
+spawned uWSGI worker 2 (pid: 714566, cores: 1)
+spawned uWSGI http 1 (pid: 714567)
+000261:2021-09-06 01:16:44.139066:	<Receive>	msg:
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3...
+000262:2021-09-06 01:16:44.159571:	<Reply>	msg:
+	ToUserName : op3adjuC2Vg7IqtOii-vdQFE92hg
+	FromU...
+000263:2021-09-06 07:26:48.533663:	<Receive>	msg:
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3...
+000264:2021-09-06 07:26:48.539422:	<Reply>	msg:
+	ToUserName : op3adjoIv3LGHnzvhyM7q72DKq6M
+	FromU...
+000265:2021-09-06 08:35:54.122079:	<Receive>	msg:
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3...
+000266:2021-09-06 08:35:54.136781:	<Reply>	msg:
+	ToUserName : op3adjqvAB0jxJQ_RuX9Rq-qgYMs
+	FromU...
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 714567)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 884837)
+spawned uWSGI worker 1 (pid: 884838, cores: 1)
+spawned uWSGI worker 2 (pid: 884839, cores: 1)
+spawned uWSGI http 1 (pid: 884840)
+000318:2021-09-06 15:22:22.321974:	<Receive>	msg:
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjjgbTio8oyuaFfeFbg1EQfU
+	CreateTime : 1630912942
+	Content : None
+
+000319:2021-09-06 15:22:22.340780:	<Reply>	msg:
+	ToUserName : op3adjjgbTio8oyuaFfeFbg1EQfU
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1630912942
+	MsgType : text
+	Content : 感谢关注钢琴社公众号~
+
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 884840)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 14230)
+spawned uWSGI worker 1 (pid: 14231, cores: 1)
+invalid request block size: 21573 (max 4096)...skip
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 14504)
+spawned uWSGI worker 1 (pid: 14505, cores: 1)
+invalid request block size: 21573 (max 4096)...skip
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 14836)
+spawned uWSGI worker 1 (pid: 14837, cores: 1)
+spawned uWSGI http 1 (pid: 14838)
+000320:2021-09-06 16:31:37.642020:	<Receive>	msg:
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	CreateTime : 1630917097
+	Content : 123
+
+fucking: 123
+000321:2021-09-06 16:31:37.667680:	<Interpret>	msg:123
+000322:2021-09-06 16:31:37.674873:	<Warning>	msg:Can't understand!
+000323:2021-09-06 16:31:37.685494:	<Reply>	msg:
+	ToUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1630917097
+	MsgType : text
+	Content : 嘤嘤嘤，你说的话有点模糊呢，小AI不太理解
+
+000324:2021-09-06 16:32:01.902484:	<Receive>	msg:
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	CreateTime : 1630917121
+	Content : 查看后台
+
+fucking: 查看后台
+000325:2021-09-06 16:32:01.947376:	<Interpret>	msg:查看后台
+000326:2021-09-06 16:32:01.976197:	<InterpretResult>	msg:[]
+000327:2021-09-06 16:32:01.999413:	<Reply>	msg:
+	ToUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1630917121
+	MsgType : text
+	Content : 000326:2021-09-06 16:32:01.976197:	<InterpretResult>	msg:[]
+		
+		000325:2021-09-06 16:32:01.947376:	<Interpret>	msg:查看后台
+		
+		000324:2021-09-06 16:32:01.902484:	<Receive>	msg:
+			ToUserName : gh_e55ff3051e1d
+			FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+			CreateTime : 1630917121
+			Content : 查看后台
+		
+		
+		000323:2021-09-06 16:31:37.685494:	<Reply>	msg:
+			ToUserName : ...
+000328:2021-09-06 16:33:08.395782:	<Receive>	msg:
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjubOPIz7zawnRR80Tr7mHeg
+	CreateTime : 1630917188
+	Content : None
+
+000329:2021-09-06 16:33:08.409723:	<Reply>	msg:
+	ToUserName : op3adjubOPIz7zawnRR80Tr7mHeg
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1630917188
+	MsgType : text
+	Content : 
+
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 14838)
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
