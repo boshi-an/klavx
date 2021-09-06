@@ -98,33 +98,47 @@ def processMessage():
 	try: e = etree.fromstring(request.data)#etree: html解析工具
 	except etree.XMLSyntaxError: abort(BAD_REQUEST)
 
-	g.openId = e.findtext('FromUserName')
-	msgReceived = {x:e.findtext(x) for x in
-					'ToUserName FromUserName CreateTime Content Recognition'.split()}
+	ToUserName = e.findtext('ToUserName')
+	FromUserName = e.findtext('FromUserName')
+	CreateTime = e.findtext('CreateTime')
+	Content = e.findtext('Content')
+	MsgType = e.findtext('MsgType')
+	MsgId = e.findtext('MsgId')
+	Recognition = e.findtext('Recognition')
+
+	if MsgType == 'voice' :
+		Content = Recognition.replace('。', '')
+
+	g.openId = FromUserName
+	msgReceived = dict(ToUserName=ToUserName, FromUserName=FromUserName, CreateTime=CreateTime,
+		Content=Content)
 	
 	utils.writeLog('Receive', utils.dict2Str(msgReceived), '0')
 
-	replyDict = dict(ToUserName=e.findtext('FromUserName'),
-		FromUserName=e.findtext('ToUserName'),
-		CreateTime=e.findtext('CreateTime'),
+	replyDict = dict(ToUserName=FromUserName,
+		FromUserName=ToUserName,
+		CreateTime=CreateTime,
 		MsgType='text')
 
 	# MsgType为event表示服务器收到事件推送，如果event的值为subscribe，即有用户关注了北大钢琴社的
 	# 公众号，则生成replyDict，将其转换为相应的xml格式并返回
-	if e.findtext('MsgType').lower()=='event' and e.findtext('Event').lower()=='subscribe':
-		replyDict['Content'] = '感谢关注钢琴社公众号~'
-	
+	if MsgType.lower()=='event' :
+		if e.findtext('Event').lower()=='subscribe':
+			replyDict['Content'] = '感谢关注钢琴社公众号~'
+		else :
+			replyDict['Content'] = ''
+
 	# 用户发来的是文本或语音
-	elif e.findtext('MsgType') in ('text','voice'):
+	elif MsgType in ('text','voice'):
 		try:
-			db.db.session.add(db.Message(msgId=int(e.findtext('MsgId'))))
+			db.db.session.add(db.Message(msgId=int(MsgId)))
 			db.db.session.commit()
 		except IntegrityError:
 			#消息已处理，或者不存在MsgId
 			replyDict['Content'] = 'IntegrityError: 消息已处理，或者不存在MsgId'
 		else :
-			# 是一条正常的文字消息
-			replyDict['Content'] = processText(e.findtext('Content'))
+			# 是一条正常的文字消息或语音消息
+			replyDict['Content'] = processText(Content)
 	
 	# 用户发来的消息不是文本也不是语音（比如图片），就根据微信的要求来返回错误提示
 	else :
@@ -135,7 +149,7 @@ def processMessage():
 
 def processText(Content):
 	reply = None
-	
+
 	# 调用AI.doInterprete来处理内容，转换为相应的etree:reply
 	try:
 		reply = AI.doInterprete(Content)

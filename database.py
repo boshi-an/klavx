@@ -89,7 +89,7 @@ class Logs(db.Model) :
 	timeStamp = db.Column(db.DateTime(), default=datetime.datetime.now, nullable=False)
 	message = db.Column(db.String(collation='NOCASE'), unique=False, nullable=False)
 	def __repr__(self):
-		return '{:06}:{}:\t<{}>\tmsg:{}'.format(self.id, self.timeStamp, self.type, self.message[:50]+'...'*(len(self.message)>50))
+		return '{:06}:{}:\t<{}>\tmsg:{}'.format(self.id, self.timeStamp, self.type, self.message[:500]+'...'*(len(self.message)>500))
 
 admin.add_view(ModelView(Course, db.session))
 admin.add_view(ModelView(Reservation, db.session))

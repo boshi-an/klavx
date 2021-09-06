@@ -97,6 +97,8 @@ class TextInterpreter :
 	# doing interpretation and calling corresponding functions
 	def doInterprete(self, string) :
 
+		print('fucking:',string)
+
 		utils.writeLog('Interpret', string, '1;32;40')
 
 		successNum = 0
@@ -241,11 +243,11 @@ def initPatterns() :
 
 	# Defining clock
 	pSparseTime.appendSubPatternSeq(
-		[r'上午|早'],
+		[r'上午|早上*'],
 		lambda x : None if x==None else ('AM',)
 	)
 	pSparseTime.appendSubPatternSeq(
-		[r'下午|晚'],
+		[r'下午|晚上*'],
 		lambda x : None if x==None else ('PM',)
 	)
 
