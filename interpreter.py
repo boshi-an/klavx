@@ -251,11 +251,11 @@ def initPatterns() :
 
 	# Defining clock
 	pClock.appendSubPatternSeq(
-		[pNumber, r'^\:', pNumber_adj, r'am|pm|AM|PM|Am|Pm'],
+		[pNumber, r'^\:|^：', pNumber_adj, r'am|pm|AM|PM|Am|Pm'],
 		lambda x,_,y,z : None if haveNone(x,_,y,z) else (datetime.datetime.strptime(str(x[0])+':'+str(y[0])+' '+z.lower(), '%I:%M %p').time(), )
 	)
 	pClock.appendSubPatternSeq(
-		[pNumber, r'\:|点|时', pNumber_adj],
+		[pNumber, r'\:|点|时|^：', pNumber_adj],
 		lambda y,_,z : None if haveNone(y,_,z) else (datetime.datetime.strptime(str(y[0])+':'+str(z[0]), '%H:%M').time(),)
 	)
 	pClock.appendSubPatternSeq(
@@ -285,11 +285,11 @@ def initPatterns() :
 			clock = clock.replace(hour=clock.hour+12)
 		return clock
 	pTime.appendSubPatternSeq(
-		[pDate, pSparseTime, pClock, r'到|至|\-', pSparseTime, pClock],
+		[pDate, pSparseTime, pClock, r'到|至|\-|\~|～', pSparseTime, pClock],
 		lambda x,y1,z1,_,y2,z2 : None if haveNone(x,y1,z1,_,y2,z2) else (datetime.datetime.combine(x[0],moveTime(*z1,*y1)), datetime.datetime.combine(*x,moveTime(*z2,*y2)))
 	)
 	pTime.appendSubPatternSeq(
-		[pDate, pSparseTime, pClock, r'到|至|\-',  pClock],
+		[pDate, pSparseTime, pClock, r'到|至|\-|\~|～',  pClock],
 		lambda x,y,z1,_,z2 : None if haveNone(x,y,z1,_,z2) else (datetime.datetime.combine(*x,moveTime(*z1,*y)), datetime.datetime.combine(*x,moveTime(*z2,*y)))
 	)
 	pTime.appendSubPatternSeq(
@@ -297,7 +297,7 @@ def initPatterns() :
 		lambda x,y,z : None if haveNone(x,y,z) else (datetime.datetime.combine(*x,moveTime(*z,*y)), None)
 	)
 	pTime.appendSubPatternSeq(
-		[pDate, pClock, r'到|至|\-', pClock],
+		[pDate, pClock, r'到|至|\-|\~|～', pClock],
 		lambda x,y,_,z : None if haveNone(x,y,_,z) else (datetime.datetime.combine(*x,*y), datetime.datetime.combine(*x,*z))
 	)
 	pTime.appendSubPatternSeq(
@@ -327,11 +327,11 @@ def initPatterns() :
 		lambda x,y : None if haveNone(x,y) else (*y, None)
 	)
 	pQuery.appendSubPatternSeq(
-		['^查询', pDate, '到|至|-', pDate, pLocation],
+		['^查询', pDate, r'到|至|-|\~|～', pDate, pLocation],
 		lambda _,x,__,y,z : None if haveNone(_,x,__,y,z) else (utils.toDatetime(*x), utils.toDatetime(*y), *z)
 	)
 	pQuery.appendSubPatternSeq(
-		['^查询', pDate, '到|至|-', pDate],
+		['^查询', pDate, r'到|至|-|\~|～', pDate],
 		lambda _,x,__,y : None if haveNone(_,x,__,y) else (utils.toDatetime(*x), utils.toDatetime(*y), None)
 	)
 	pQuery.appendSubPatternSeq(

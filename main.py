@@ -81,7 +81,7 @@ def admin() :
 	else :
 		utils.writeLog('<Background>', 'Authorized user is trying to access background.', '0')
 		lastLogs = db.Logs.query.order_by(db.Logs.id.desc()).limit(2000).all()
-		result = '</br></br>'.join([str(s) for s in lastLogs])
+		result = '</br></br>'.join([str(s) for s in lastLogs]).replace('\n', '</br>')
 		return result
 	
 
