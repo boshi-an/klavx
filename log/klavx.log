@@ -2930,3 +2930,229 @@ spawned uWSGI http 1 (pid: 21796)
 		
 		查询的格式类似哦~
 
+000622:2021-09-12 21:00:11.878565:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	CreateTime : 1631451611
+	Content : None
+
+000623:2021-09-12 21:00:11.890369:	<Reply>	
+	ToUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1631451611
+	MsgType : text
+	Content : 小AI暂时无法理解这类信息呢~
+
+000624:2021-09-12 21:11:56.719368:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjiVsGbMmYpNP6Orm-hyXTm0
+	CreateTime : 1631452316
+	Content : None
+
+000625:2021-09-12 21:11:56.730845:	<Reply>	
+	ToUserName : op3adjiVsGbMmYpNP6Orm-hyXTm0
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1631452316
+	MsgType : text
+	Content : 感谢关注钢琴社公众号~
+
+000626:2021-09-12 23:08:06.787769:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjqB0pi01MPSzBYajVZgVJqU
+	CreateTime : 1631459286
+	Content : None
+
+000627:2021-09-12 23:08:06.796123:	<Reply>	
+	ToUserName : op3adjqB0pi01MPSzBYajVZgVJqU
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1631459286
+	MsgType : text
+	Content : 感谢关注钢琴社公众号~
+
+000628:2021-09-12 23:15:10.754660:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjqB0pi01MPSzBYajVZgVJqU
+	CreateTime : 1631459710
+	Content : None
+
+000629:2021-09-12 23:15:10.764011:	<Reply>	
+	ToUserName : op3adjqB0pi01MPSzBYajVZgVJqU
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1631459710
+	MsgType : text
+	Content : 
+
+000630:2021-09-13 07:52:47.880123:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adju3w3EFiAs3VijVsomHpCNY
+	CreateTime : 1631490767
+	Content : 预约9月22日19：00～21：00 B252
+
+000631:2021-09-13 07:52:47.904927:	<Interpret>	预约9月22日19：00～21：00 B252
+000632:2021-09-13 07:52:47.912813:	<InterpretResult>	(datetime.datetime(2021, 9, 22, 19, 0), None, 'B252')
+000633:2021-09-13 07:52:47.920017:	<Reservation>	2021-09-22 19:00:00, None, B252, [<User op3adju3w3EFiAs3VijVsomHpCNY 蒋然 1 None>]
+000634:2021-09-13 07:52:47.965690:	<Reply>	
+	ToUserName : op3adju3w3EFiAs3VijVsomHpCNY
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1631490767
+	MsgType : text
+	Content : 由于您没有给定结束时间，默认您的预约时常为1小时
+		您已预约 2021年9月22日 19:00~20:00 B252
+
+000635:2021-09-13 07:53:11.470612:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adju3w3EFiAs3VijVsomHpCNY
+	CreateTime : 1631490791
+	Content : 预约9月22日19：00~20：00 B252
+
+000636:2021-09-13 07:53:11.490495:	<Interpret>	预约9月22日19：00~20：00 B252
+000637:2021-09-13 07:53:11.498983:	<InterpretResult>	(datetime.datetime(2021, 9, 22, 19, 0), datetime.datetime(2021, 9, 22, 20, 0), 'B252')
+000638:2021-09-13 07:53:11.506803:	<Reservation>	2021-09-22 19:00:00, 2021-09-22 20:00:00, B252, [<User op3adju3w3EFiAs3VijVsomHpCNY 蒋然 1 None>]
+000639:2021-09-13 07:53:11.516590:	<Reply>	
+	ToUserName : op3adju3w3EFiAs3VijVsomHpCNY
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1631490791
+	MsgType : text
+	Content : 抱歉，每人最多持有 2 个预约。如需添加新的预约，请取消至少一个预约。
+
+000640:2021-09-13 07:53:23.161397:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adju3w3EFiAs3VijVsomHpCNY
+	CreateTime : 1631490802
+	Content : 取消预约9月22日19：00~20：00 B252
+
+000641:2021-09-13 07:53:23.180371:	<Interpret>	取消预约9月22日19：00~20：00 B252
+000642:2021-09-13 07:53:23.186431:	<InterpretResult>	(datetime.datetime(2021, 9, 22, 19, 0), datetime.datetime(2021, 9, 22, 20, 0), 'B252')
+000643:2021-09-13 07:53:23.194939:	<Cancellation>	2021-09-22 19:00:00, 2021-09-22 20:00:00, B252
+000644:2021-09-13 07:53:23.217401:	<Reply>	
+	ToUserName : op3adju3w3EFiAs3VijVsomHpCNY
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1631490802
+	MsgType : text
+	Content : 您已取消2021年9月22日 19:00~20:00 B252
+
+000645:2021-09-13 07:53:37.818468:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adju3w3EFiAs3VijVsomHpCNY
+	CreateTime : 1631490817
+	Content : 预约9月22日19：00~21：00 B252
+
+000646:2021-09-13 07:53:37.835484:	<Interpret>	预约9月22日19：00~21：00 B252
+000647:2021-09-13 07:53:37.843078:	<InterpretResult>	(datetime.datetime(2021, 9, 22, 19, 0), datetime.datetime(2021, 9, 22, 21, 0), 'B252')
+000648:2021-09-13 07:53:37.851721:	<Reservation>	2021-09-22 19:00:00, 2021-09-22 21:00:00, B252, [<User op3adju3w3EFiAs3VijVsomHpCNY 蒋然 1 None>]
+000649:2021-09-13 07:53:37.877686:	<Reply>	
+	ToUserName : op3adju3w3EFiAs3VijVsomHpCNY
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1631490817
+	MsgType : text
+	Content : 您已预约 2021年9月22日 19:00~21:00 B252
+
+000650:2021-09-13 11:45:38.524421:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjqGR5NDJAvxFb8l4SkE3MYI
+	CreateTime : 1631504738
+	Content : None
+
+000651:2021-09-13 11:45:38.532903:	<Reply>	
+	ToUserName : op3adjqGR5NDJAvxFb8l4SkE3MYI
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1631504738
+	MsgType : text
+	Content : 感谢关注钢琴社公众号~
+
+000652:2021-09-13 12:49:20.238105:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjibEMce9aEJwfFCXsHHz99Y
+	CreateTime : 1631508560
+	Content : None
+
+000653:2021-09-13 12:49:20.261784:	<Reply>	
+	ToUserName : op3adjibEMce9aEJwfFCXsHHz99Y
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1631508560
+	MsgType : text
+	Content : 感谢关注钢琴社公众号~
+
+000654:2021-09-13 15:25:30.479747:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjn6wyDfeMFUXAUlCZPsW7Gw
+	CreateTime : 1631517930
+	Content : None
+
+000655:2021-09-13 15:25:30.501407:	<Reply>	
+	ToUserName : op3adjn6wyDfeMFUXAUlCZPsW7Gw
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1631517930
+	MsgType : text
+	Content : 感谢关注钢琴社公众号~
+
+000656:2021-09-13 17:44:39.377751:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjpxhrvlMs6P8Jl5vgTqKNNY
+	CreateTime : 1631526279
+	Content : None
+
+000657:2021-09-13 17:44:39.387601:	<Reply>	
+	ToUserName : op3adjpxhrvlMs6P8Jl5vgTqKNNY
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1631526279
+	MsgType : text
+	Content : 感谢关注钢琴社公众号~
+
+gateway "uWSGI http 1" has been buried (pid: 21796)
+...brutally killing workers...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /var/www/klavx
+closing all non-uwsgi socket fds > 2 (max_fd = 4096)...
+found fd 3 mapped to socket 0 (127.0.0.1:36525)
+running /var/www/klavx/venv/bin/uwsgi
+[uWSGI] getting INI configuration from /var/www/klavx/new.ini
+*** Starting uWSGI 2.0.19.1 (64bit) on [Mon Sep 13 19:45:52 2021] ***
+compiled with version: 7.5.0 on 30 August 2021 06:16:19
+os: Linux-4.15.0-142-generic #146-Ubuntu SMP Tue Apr 13 01:11:19 UTC 2021
+nodename: VM-0-6-ubuntu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/klavx
+detected binary path: /var/www/klavx/venv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 7192
+your memory page size is 4096 bytes
+detected max file descriptor number: 4096
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 127.0.0.1:5000 fd 5
+uwsgi socket 0 bound to TCP address 127.0.0.1:45507 (port auto-assigned) fd 4
+Python version: 3.6.9 (default, Jan 26 2021, 15:33:00)  [GCC 8.4.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55aada573320
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145808 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55aada573320 pid: 21794 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 21794)
+spawned uWSGI worker 1 (pid: 19944, cores: 1)
+spawned uWSGI http 1 (pid: 19945)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 26217)
+spawned uWSGI worker 1 (pid: 26218, cores: 1)
+spawned uWSGI http 1 (pid: 26219)
+000658:2021-09-13 20:33:55.553843:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	CreateTime : 1631536435
+	Content : 123
+
+000659:2021-09-13 20:33:55.644191:	<Interpret>	123
+000660:2021-09-13 20:33:55.652175:	<Warning>	Can't understand!
+000661:2021-09-13 20:33:55.658195:	<Reply>	
+	ToUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1631536435
+	MsgType : text
+	Content : 嘤嘤嘤，你说的话有点模糊呢，小AI不太理解
+

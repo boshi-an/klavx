@@ -76,7 +76,7 @@ def index() :
 def admin() :
 	getCode = int(request.args['code'])
 	if getCode != current_app.adminCode :
-		utils.writeLog('<Background>', 'Unauthorized user is trying to access background.', '0')
+		utils.writeLog('<Error>', 'Unauthorized user is trying to access background.', '0')
 		return 'FUCK YOU!'
 	else :
 		utils.writeLog('<Background>', 'Authorized user is trying to access background.', '0')
