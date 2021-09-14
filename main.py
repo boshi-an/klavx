@@ -44,7 +44,9 @@ interpreter.initPatterns()
 AI = interpreter.TextInterpreter()
 # 向AI注册在没有匹配项时采用的函数
 AI.registerNoneFunction(func.vagueRequest)
+# 向AI注册有多个匹配项时采用的函数
 AI.registerMultipleFunction(func.vagueRequest)
+# 向AI注册其他功能的函数
 AI.registerPattern(interpreter.pIam, func.processIam)
 AI.registerPattern(interpreter.pReserve, func.processReservation)
 AI.registerPattern(interpreter.pCancel, func.processCancel)
@@ -80,7 +82,7 @@ def admin() :
 		return 'FUCK YOU!'
 	else :
 		utils.writeLog('<Background>', 'Authorized user is trying to access background.', '0')
-		lastLogs = db.Logs.query.order_by(db.Logs.id.desc()).limit(2000).all()
+		lastLogs = db.Logs.query.order_by(db.Logs.id.desc()).limit(200).all()
 		result = '</br></br>'.join([str(s) for s in lastLogs]).replace('\n', '</br>')
 		return result
 	

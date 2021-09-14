@@ -3156,3 +3156,59 @@ spawned uWSGI http 1 (pid: 26219)
 	MsgType : text
 	Content : 嘤嘤嘤，你说的话有点模糊呢，小AI不太理解
 
+000662:2021-09-13 20:40:35.331779:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjprb4VAVmKmIYWeoa5M1naI
+	CreateTime : 1631536835
+	Content : None
+
+000663:2021-09-13 20:40:35.341982:	<Reply>	
+	ToUserName : op3adjprb4VAVmKmIYWeoa5M1naI
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1631536835
+	MsgType : text
+	Content : 感谢关注钢琴社公众号~
+
+000664:2021-09-13 20:40:58.744490:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjprb4VAVmKmIYWeoa5M1naI
+	CreateTime : 1631536858
+	Content : 招新信息在哪啊
+
+000665:2021-09-13 20:40:58.756327:	<Interpret>	招新信息在哪啊
+000666:2021-09-13 20:40:58.762427:	<Warning>	Can't understand!
+000667:2021-09-13 20:40:58.769950:	<Reply>	
+	ToUserName : op3adjprb4VAVmKmIYWeoa5M1naI
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1631536858
+	MsgType : text
+	Content : 嘤嘤嘤，你说的话有点模糊呢，小AI不太理解
+
+000668:2021-09-13 20:45:50.572278:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	CreateTime : 1631537150
+	Content : 123
+
+000669:2021-09-13 20:45:50.589362:	<Interpret>	123
+000670:2021-09-13 20:45:50.597143:	<Warning>	Can't understand!
+000671:2021-09-13 20:45:50.602419:	<Reply>	
+	ToUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1631537150
+	MsgType : text
+	Content : 嘤嘤嘤，你说的话有点模糊呢，小AI不太理解
+
+000672:2021-09-14 09:12:13.882000:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjnNCMETqTKL_hLO3jd_mFjs
+	CreateTime : 1631581933
+	Content : None
+
+000673:2021-09-14 09:12:13.888319:	<Reply>	
+	ToUserName : op3adjnNCMETqTKL_hLO3jd_mFjs
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1631581933
+	MsgType : text
+	Content : 感谢关注钢琴社公众号~
+
