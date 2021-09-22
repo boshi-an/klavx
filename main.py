@@ -10,7 +10,7 @@ import sqlite3
 import sys
 from http.client import BAD_REQUEST
 
-from flask import Flask, abort, g, request, current_app 
+from flask import Flask, abort, current_app, g, request
 from flask_admin import Admin
 from flask_admin.contrib.sqla import ModelView
 from flask_script import Manager
@@ -178,25 +178,40 @@ if __name__=='__main__':
 
 	current_app.visibleLog = True
 
-	# 刷新钢琴课命令: 进入命令行输入`sudo python main.py refreshcourses`
-	if len(sys.argv)==2 and sys.argv[1]=='refreshcourses' :
+	# 刷新钢琴课命令: 进入命令行输入`sudo python main.py refreshcourses <filename>`
+	if sys.argv[1]=='refreshcourses' :
+		fileName = 'courses.txt'
+		if len(sys.argv)==3 :
+			fileName = sys.argv[2]
 		if input("Old courses will be deleted. Are you sure? ") in ['Y','y','YES','Yes','yes'] :
-			function.refreshCourses()
+			func.refreshCourses(fileName)
 			print('done')
 		else:
 			print('aborted')
 
 	# 添加演奏部成员：`sudo python main.py authorize <filename>`
-	elif len(sys.argv)==3 and sys.argv[1]=='authorize' :
+	elif sys.argv[1]=='authorize' :
+		fileName = 'perform.txt'
+		if len(sys.argv)==3 :
+			fileName = sys.argv[2]
 		with open(sys.argv[2], 'r') as file:
 			while True:
 				line = file.readline()
 				if not line :
 					break
+				line = line.replace('\n', '').replace(' ', '')
 				func.authorizeUsers(line)
+	
 	elif len(sys.argv)==2 and sys.argv[1]=='admin' :
 		print('Give admin permission to users name:')
 		name = input()
 		func.makeAdmin(name)
+	
+	elif len(sys.argv)==3 and sys.argv[1]=='show' :
+		if sys.argv[2] == 'User' :
+			func.showDatabase(db.User)
+		elif sys.argv[2] == 'Course' :
+			func.showDatabase(db.Course)
+	
 	else :
 		Manager(app).run()

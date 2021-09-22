@@ -309,12 +309,12 @@ def getCreateUser(name):
 	print('got', name, user)
 	return user
 
-def refreshCourses():
+def refreshCourses(fileName):
 	B252 = getRoom('B252')
 	B250 = getRoom('B250')
 	B253 = getRoom('B253')
 	Course.query.delete()
-	for line in open('courses.txt'):
+	for line in open(fileName):
 		weekday, startHour, endHour, teacherName = line.split()
 		print(weekday, startHour, endHour, teacherName)
 		weekday = '周一 周二 周三 周四 周五 周六 周日'.split().index(weekday)
@@ -357,3 +357,9 @@ def checkLog() :
 
 	current_app.adminCode = random.randint(1,1000000000)
 	return 'http://82.157.114.38/klavx/admin/?code='+str(current_app.adminCode)
+
+def showDatabase(dbName) :
+
+	p = dbName.query.all()
+	for i in p :
+		print(i)

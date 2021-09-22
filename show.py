@@ -44,8 +44,8 @@ if __name__ == '__main__' :
 	# u = Logs.query.delete()
 	# db.session.commit()
 	# u = Logs.query.all()
-	u = User.query.filter(User.name=='程陶然\n')
-	u.delete()
-	# u.authorized = 1
-
-	db.session.commit()	
+	u = User.query.all() # filter(User.name=='吴宛睿').first()
+	# u.delete()
+	# db.session.commit()
+	for r in u :
+		print(r)
