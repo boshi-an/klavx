@@ -107,7 +107,7 @@ def randomEmoji() :
 
 def vagueRequest() :
 
-	return '嘤嘤嘤，你说的话有点模糊呢，小AI不太理解'
+	return '嘤嘤嘤，你说的话有点模糊呢，小AI不太理解。输入“帮助”学习如何跟小AI交流'
 
 def processIam(name) :
 	user = User.query.filter_by(openId=g.openId).first()
