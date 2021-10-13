@@ -85,6 +85,7 @@ def queryOccupations(start, end, room):
 	return (reservations, courses)
 
 def formatOccupation(date, reservations, courses):
+	print(date, reservations, courses)
 	dateRepr = utils.formatDate(date)
 	resultList = reservations + courses
 	resultList.sort(key=lambda x:(x['room'], x['start'], x['end']))
@@ -256,9 +257,9 @@ def processCancel(start, end, roomName):
 	return '您已取消{}{}'.format('\n'*(len(resultList)>1), '\n'.join(resultList))
 
 @authenticated
-def processQuery(start, end, roomName) :
+def processQuery(start, end, roomName, userId = None) :
 
-	utils.writeLog('Query', str(start)+', '+str(end)+', '+str(roomName), '1;32;40')
+	utils.writeLog('Query', str(start)+', '+str(end)+', '+str(roomName)+', '+str(userId), '1;32;40')
 	matches = []
 	timeRepr = ''
 	hasCourse = False
@@ -266,6 +267,7 @@ def processQuery(start, end, roomName) :
 	if end is not None and (end.date() - start.date()).days > 33 :
 		return '您查询的时间区间过长'
 
+	# 给定时间区间
 	if start is not None and end is not None :
 		for i in range((end.date() - start.date()).days+1) :
 			date = (start + datetime.timedelta(days=i)).date()
@@ -275,15 +277,27 @@ def processQuery(start, end, roomName) :
 			matches.append(formatOccupation(date, tmpReserve, tmpCourses))
 			hasCourse = hasCourse or (len(tmpCourses)>0)
 		timeRepr = utils.formatDate(start) + '至' + utils.formatDate(end)
+	# 给定时间点
 	elif start is not None and end is None :
 		tmpReserve, tmpCourses = queryOccupations(start, None, getRoom(roomName))
 		hasCourse = len(tmpCourses)>0
 		timeRepr = utils.formatDatetime(start)
-	else :
+	# 给定用户名
+	elif userId is not None :
+		start = datetime.datetime.now()
+		thisUser = User.query.filter(User.openId == userId).first()
+		allReserve = thisUser.reservations.filter(db.and_(Reservation.start>=start)).all()
+		for reserve in allReserve :
+			matches.append(formatOccupation(reserve.start, *queryOccupations(reserve.start, reserve.end, reserve.room)))
+		timeRepr = '你：'
+
+	# 没有给定时间，默认当前时间
+	elif start is None and end is None :
 		start = datetime.datetime.now()
 		tmpReserve, tmpCourses = queryOccupations(start, None, getRoom(roomName))
 		hasCourse = len(tmpCourses)>0
 		timeRepr = utils.formatDatetime(start)
+
 
 	if roomName is not None :
 		timeRepr += '的' + roomName
@@ -350,7 +364,7 @@ def easterEgg() :
 	return '今天你练琴了吗' + randomEmoji()
 
 def help() :
-	return '你可以在这里留言（后台应该不会有人看到的），在这里预约琴房（仅供排练用哦，平时练琴不需要也不应该预约），也可以查询预约情况\n\n预约的格式为“预约+<时间起点>+到/至+<时间终点>+琴房名”，后面两项可以省略，默认预约一个小时\n\n查询的格式类似哦~'
+	return '你可以在这里留言（后台应该不会有人看到的），在这里预约琴房（仅供排练用哦，平时练琴不需要也不应该预约），也可以查询预约情况\n\n预约的格式为“预约+<时间起点>+到/至+<时间终点>+琴房名”，后面两项可以省略，默认预约一个小时\n\n查询的格式类似哦~\n\n输入“我是xxx”注册新用户'
 
 @isAdmin
 def checkLog() :

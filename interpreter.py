@@ -1,7 +1,8 @@
 
-
 import datetime
 import re
+
+from flask import current_app, g
 
 import exception
 import utils
@@ -336,7 +337,7 @@ def initPatterns() :
 	)
 	pQuery.appendSubPatternSeq(
 		['^查询', pDate, pLocation],
-		lambda x,y,z : None if haveNone(x,y,z) else (utils.toDatetime(*y), None, *z)
+		lambda x,y,z : None if haveNone(x,y,z) else (utils.toDatetime(*y), utils.toDatetime(*y)+datetime.timedelta(days=1), *z)
 	)
 	pQuery.appendSubPatternSeq(
 		['^查询', pDate],
@@ -353,6 +354,10 @@ def initPatterns() :
 	pQuery.appendSubPatternSeq(
 		['^查询下*周'],
 		lambda x : None if x==None else (utils.toDatetime(nextMonday())+datetime.timedelta(days=7*(len(x)-4)), utils.toDatetime(nextMonday())+datetime.timedelta(days=7*(len(x)-3)), None)
+	)
+	pQuery.appendSubPatternSeq(
+		['^查询我'],
+		lambda x : None if x==None else (None, None, None, g.openId)
 	)
 	pQuery.appendSubPatternSeq(
 		['^查询$'],

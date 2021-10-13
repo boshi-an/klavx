@@ -20436,3 +20436,1934 @@ spawned uWSGI http 1 (pid: 25020)
 	MsgType : text
 	Content : 嘤嘤嘤，你说的话有点模糊呢，小AI不太理解。输入“帮助”学习如何跟小AI交流
 
+003990:2021-10-11 18:03:16.256367:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	CreateTime : 1633946595
+	Content : zyh
+
+003991:2021-10-11 18:03:16.272475:	<Interpret>	zyh
+003992:2021-10-11 18:03:16.278566:	<Warning>	Can't understand!
+003993:2021-10-11 18:03:16.289890:	<Reply>	
+	ToUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1633946595
+	MsgType : text
+	Content : 嘤嘤嘤，你说的话有点模糊呢，小AI不太理解。输入“帮助”学习如何跟小AI交流
+
+003994:2021-10-11 19:26:41.743594:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adju3w3EFiAs3VijVsomHpCNY
+	CreateTime : 1633951600
+	Content : 查询今天
+
+003995:2021-10-11 19:26:41.764121:	<Interpret>	查询今天
+003996:2021-10-11 19:26:41.772475:	<InterpretResult>	(datetime.datetime(2021, 10, 11, 0, 0), datetime.datetime(2021, 10, 12, 0, 0), None)
+003997:2021-10-11 19:26:41.782908:	<Query>	2021-10-11 00:00:00, 2021-10-12 00:00:00, None
+003998:2021-10-11 19:26:41.807785:	<Reply>	
+	ToUserName : op3adju3w3EFiAs3VijVsomHpCNY
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1633951600
+	MsgType : text
+	Content : 2021年10月11日至2021年10月12日
+		
+		2021年10月11日：
+		[B252]
+		19:00~21:00 张柏舟
+		
+		2021年10月12日：
+		[B252]
+		19:00~20:30 张霄扬
+
+003999:2021-10-11 20:57:13.677382:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjpf0w9eILQ-dtxyx6pBdo1g
+	CreateTime : 1633957032
+	Content : 预约本周五下午2点到4点的b252
+
+004000:2021-10-11 20:57:13.690644:	<Interpret>	预约本周五下午2点到4点的b252
+004001:2021-10-11 20:57:13.716795:	<InterpretResult>	(datetime.datetime(2021, 10, 8, 14, 0), datetime.datetime(2021, 10, 8, 16, 0), 'B252')
+004002:2021-10-11 20:57:13.726025:	<Reservation>	2021-10-08 14:00:00, 2021-10-08 16:00:00, B252, [<User op3adjpf0w9eILQ-dtxyx6pBdo1g 蔡子羽 1 None>]
+004003:2021-10-11 20:57:13.753234:	<Reply>	
+	ToUserName : op3adjpf0w9eILQ-dtxyx6pBdo1g
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1633957032
+	MsgType : text
+	Content : 此时段的 B252 预约已满
+
+004004:2021-10-11 20:57:48.465481:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjpf0w9eILQ-dtxyx6pBdo1g
+	CreateTime : 1633957068
+	Content : 查询本周
+
+004005:2021-10-11 20:57:48.499057:	<Interpret>	查询本周
+004006:2021-10-11 20:57:48.506663:	<InterpretResult>	(datetime.datetime(2021, 10, 4, 0, 0), datetime.datetime(2021, 10, 11, 0, 0), None)
+004007:2021-10-11 20:57:48.515620:	<Query>	2021-10-04 00:00:00, 2021-10-11 00:00:00, None
+004008:2021-10-11 20:57:48.554619:	<Reply>	
+	ToUserName : op3adjpf0w9eILQ-dtxyx6pBdo1g
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1633957068
+	MsgType : text
+	Content : 2021年10月4日至2021年10月11日
+		
+		2021年10月4日：
+		[B252]
+		19:00~21:00 张柏舟
+		
+		2021年10月6日：
+		[B252]
+		08:30~10:00 陈子儒
+		13:00~14:30 蔡子羽
+		
+		[B253]
+		19:00~20:00 林丛宇
+		
+		2021年10月7日：
+		[B253]
+		16:30~17:30 张煜豪
+		18:00~19:00 郑加毅
+		
+		2021年10月8日：
+		[B252]
+		10:00~12:00 韩知润
+		14:00~16:00 王逸飞
+		20:00~21:00 林梦颖
+		
+		[B253]
+		19:30~21:00 张煜豪
+		21:00~22:00 史博文
+		
+		2021年10月9日：
+		[B25...
+004009:2021-10-11 20:58:07.326899:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjpf0w9eILQ-dtxyx6pBdo1g
+	CreateTime : 1633957087
+	Content : 预约15日下午2点到4点的b252
+
+004010:2021-10-11 20:58:07.360253:	<Interpret>	预约15日下午2点到4点的b252
+004011:2021-10-11 20:58:07.366625:	<Warning>	Can't understand!
+004012:2021-10-11 20:58:07.378709:	<Reply>	
+	ToUserName : op3adjpf0w9eILQ-dtxyx6pBdo1g
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1633957087
+	MsgType : text
+	Content : 嘤嘤嘤，你说的话有点模糊呢，小AI不太理解。输入“帮助”学习如何跟小AI交流
+
+004013:2021-10-11 20:58:18.553309:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjpf0w9eILQ-dtxyx6pBdo1g
+	CreateTime : 1633957098
+	Content : 预约11月15日下午2点到4点的b252
+
+004014:2021-10-11 20:58:18.566883:	<Interpret>	预约11月15日下午2点到4点的b252
+004015:2021-10-11 20:58:18.578229:	<InterpretResult>	(datetime.datetime(2021, 11, 15, 14, 0), datetime.datetime(2021, 11, 15, 16, 0), 'B252')
+004016:2021-10-11 20:58:18.587656:	<Reservation>	2021-11-15 14:00:00, 2021-11-15 16:00:00, B252, [<User op3adjpf0w9eILQ-dtxyx6pBdo1g 蔡子羽 1 None>]
+004017:2021-10-11 20:58:18.608251:	<Reply>	
+	ToUserName : op3adjpf0w9eILQ-dtxyx6pBdo1g
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1633957098
+	MsgType : text
+	Content : 您已预约 2021年11月15日 14:00~16:00 B252
+
+004018:2021-10-11 20:58:31.603206:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjpf0w9eILQ-dtxyx6pBdo1g
+	CreateTime : 1633957111
+	Content : 取消预约11月15日下午2点到4点的b252
+
+004019:2021-10-11 20:58:31.614335:	<Interpret>	取消预约11月15日下午2点到4点的b252
+004020:2021-10-11 20:58:31.621905:	<InterpretResult>	(datetime.datetime(2021, 11, 15, 14, 0), datetime.datetime(2021, 11, 15, 16, 0), 'B252')
+004021:2021-10-11 20:58:31.628406:	<Cancellation>	2021-11-15 14:00:00, 2021-11-15 16:00:00, B252
+004022:2021-10-11 20:58:31.660058:	<Reply>	
+	ToUserName : op3adjpf0w9eILQ-dtxyx6pBdo1g
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1633957111
+	MsgType : text
+	Content : 您已取消2021年11月15日 14:00~16:00 B252
+
+004023:2021-10-11 20:58:36.498590:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjpf0w9eILQ-dtxyx6pBdo1g
+	CreateTime : 1633957116
+	Content : 预约10月15日下午2点到4点的b252
+
+004024:2021-10-11 20:58:36.509839:	<Interpret>	预约10月15日下午2点到4点的b252
+004025:2021-10-11 20:58:36.516862:	<InterpretResult>	(datetime.datetime(2021, 10, 15, 14, 0), datetime.datetime(2021, 10, 15, 16, 0), 'B252')
+004026:2021-10-11 20:58:36.523030:	<Reservation>	2021-10-15 14:00:00, 2021-10-15 16:00:00, B252, [<User op3adjpf0w9eILQ-dtxyx6pBdo1g 蔡子羽 1 None>]
+004027:2021-10-11 20:58:36.540140:	<Reply>	
+	ToUserName : op3adjpf0w9eILQ-dtxyx6pBdo1g
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1633957116
+	MsgType : text
+	Content : 您已预约 2021年10月15日 14:00~16:00 B252
+
+004028:2021-10-11 20:58:39.223370:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjpf0w9eILQ-dtxyx6pBdo1g
+	CreateTime : 1633957118
+	Content : 查询本周
+
+004029:2021-10-11 20:58:39.234867:	<Interpret>	查询本周
+004030:2021-10-11 20:58:39.241087:	<InterpretResult>	(datetime.datetime(2021, 10, 4, 0, 0), datetime.datetime(2021, 10, 11, 0, 0), None)
+004031:2021-10-11 20:58:39.246776:	<Query>	2021-10-04 00:00:00, 2021-10-11 00:00:00, None
+004032:2021-10-11 20:58:39.284207:	<Reply>	
+	ToUserName : op3adjpf0w9eILQ-dtxyx6pBdo1g
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1633957118
+	MsgType : text
+	Content : 2021年10月4日至2021年10月11日
+		
+		2021年10月4日：
+		[B252]
+		19:00~21:00 张柏舟
+		
+		2021年10月6日：
+		[B252]
+		08:30~10:00 陈子儒
+		13:00~14:30 蔡子羽
+		
+		[B253]
+		19:00~20:00 林丛宇
+		
+		2021年10月7日：
+		[B253]
+		16:30~17:30 张煜豪
+		18:00~19:00 郑加毅
+		
+		2021年10月8日：
+		[B252]
+		10:00~12:00 韩知润
+		14:00~16:00 王逸飞
+		20:00~21:00 林梦颖
+		
+		[B253]
+		19:30~21:00 张煜豪
+		21:00~22:00 史博文
+		
+		2021年10月9日：
+		[B25...
+004033:2021-10-11 20:58:45.186942:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjpf0w9eILQ-dtxyx6pBdo1g
+	CreateTime : 1633957124
+	Content : 查询下周
+
+004034:2021-10-11 20:58:45.204894:	<Interpret>	查询下周
+004035:2021-10-11 20:58:45.211705:	<InterpretResult>	(datetime.datetime(2021, 10, 11, 0, 0), datetime.datetime(2021, 10, 18, 0, 0), None)
+004036:2021-10-11 20:58:45.218053:	<Query>	2021-10-11 00:00:00, 2021-10-18 00:00:00, None
+004037:2021-10-11 20:58:45.248589:	<Reply>	
+	ToUserName : op3adjpf0w9eILQ-dtxyx6pBdo1g
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1633957124
+	MsgType : text
+	Content : 2021年10月11日至2021年10月18日
+		
+		2021年10月11日：
+		[B252]
+		19:00~21:00 张柏舟
+		
+		2021年10月12日：
+		[B252]
+		19:00~20:30 张霄扬
+		
+		2021年10月13日：
+		[B252]
+		13:00~14:30 蔡子羽
+		19:00~21:00 蒋然
+		
+		[B253]
+		19:00~21:00 陈子儒
+		
+		2021年10月14日：
+		[B252]
+		15:00~17:00 李星霓
+		
+		2021年10月15日：
+		[B252]
+		14:00~16:00 蔡子羽
+		
+		2021年10月16日：
+		[B252]
+		08:00~10:00 李星霓
+		
+		2021年10月17日：
+		[B252]
+		18...
+004038:2021-10-11 21:13:39.668170:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adji2bNTqGIbxBu58Ur8X0IeQ
+	CreateTime : 1633958019
+	Content : 查询 周四
+
+004039:2021-10-11 21:13:39.680257:	<Interpret>	查询 周四
+004040:2021-10-11 21:13:39.687974:	<InterpretResult>	(datetime.datetime(2021, 10, 7, 0, 0), datetime.datetime(2021, 10, 8, 0, 0), None)
+004041:2021-10-11 21:13:39.694887:	<Query>	2021-10-07 00:00:00, 2021-10-08 00:00:00, None
+004042:2021-10-11 21:13:39.709626:	<Reply>	
+	ToUserName : op3adji2bNTqGIbxBu58Ur8X0IeQ
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1633958019
+	MsgType : text
+	Content : 2021年10月7日至2021年10月8日
+		
+		2021年10月7日：
+		[B253]
+		16:30~17:30 张煜豪
+		18:00~19:00 郑加毅
+		
+		2021年10月8日：
+		[B252]
+		10:00~12:00 韩知润
+		14:00~16:00 王逸飞
+		20:00~21:00 林梦颖
+		
+		[B253]
+		19:30~21:00 张煜豪
+		21:00~22:00 史博文
+
+004043:2021-10-11 21:13:59.263819:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adji2bNTqGIbxBu58Ur8X0IeQ
+	CreateTime : 1633958038
+	Content : 查询 10月14
+
+004044:2021-10-11 21:13:59.275119:	<Interpret>	查询 10月14
+004045:2021-10-11 21:13:59.286990:	<InterpretResult>	(datetime.datetime(2021, 10, 14, 0, 0), datetime.datetime(2021, 10, 15, 0, 0), None)
+004046:2021-10-11 21:13:59.294649:	<Query>	2021-10-14 00:00:00, 2021-10-15 00:00:00, None
+004047:2021-10-11 21:13:59.306636:	<Reply>	
+	ToUserName : op3adji2bNTqGIbxBu58Ur8X0IeQ
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1633958038
+	MsgType : text
+	Content : 2021年10月14日至2021年10月15日
+		
+		2021年10月14日：
+		[B252]
+		15:00~17:00 李星霓
+		
+		2021年10月15日：
+		[B252]
+		14:00~16:00 蔡子羽
+
+004048:2021-10-11 21:14:19.705184:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adji2bNTqGIbxBu58Ur8X0IeQ
+	CreateTime : 1633958059
+	Content : 预约 10月14 10：00—12：00
+
+004049:2021-10-11 21:14:19.730518:	<Interpret>	预约 10月14 10：00—12：00
+004050:2021-10-11 21:14:19.742712:	<InterpretResult>	(datetime.datetime(2021, 10, 14, 10, 0), None, 'B12')
+004051:2021-10-11 21:14:19.754072:	<Reservation>	2021-10-14 10:00:00, None, B12, [<User op3adji2bNTqGIbxBu58Ur8X0IeQ 王逸飞 1 None>]
+004052:2021-10-11 21:14:19.766709:	<Error>	没有找到 B12 琴房
+004053:2021-10-11 21:14:19.772946:	<Reply>	
+	ToUserName : op3adji2bNTqGIbxBu58Ur8X0IeQ
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1633958059
+	MsgType : text
+	Content : 没有找到 B12 琴房
+
+004054:2021-10-11 21:14:35.254363:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adji2bNTqGIbxBu58Ur8X0IeQ
+	CreateTime : 1633958074
+	Content : 预约 10月14 10：00到12：00
+
+004055:2021-10-11 21:14:35.267178:	<Interpret>	预约 10月14 10：00到12：00
+004056:2021-10-11 21:14:35.276204:	<InterpretResult>	(datetime.datetime(2021, 10, 14, 10, 0), datetime.datetime(2021, 10, 14, 12, 0), None)
+004057:2021-10-11 21:14:35.284073:	<Reservation>	2021-10-14 10:00:00, 2021-10-14 12:00:00, None, [<User op3adji2bNTqGIbxBu58Ur8X0IeQ 王逸飞 1 None>]
+004058:2021-10-11 21:14:35.306222:	<Reply>	
+	ToUserName : op3adji2bNTqGIbxBu58Ur8X0IeQ
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1633958074
+	MsgType : text
+	Content : 您已预约 2021年10月14日 10:00~12:00 B252
+
+004059:2021-10-11 21:14:53.526531:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adji2bNTqGIbxBu58Ur8X0IeQ
+	CreateTime : 1633958093
+	Content : 查询 10月14日
+
+004060:2021-10-11 21:14:53.538240:	<Interpret>	查询 10月14日
+004061:2021-10-11 21:14:53.545478:	<InterpretResult>	(datetime.datetime(2021, 10, 14, 0, 0), datetime.datetime(2021, 10, 15, 0, 0), None)
+004062:2021-10-11 21:14:53.551755:	<Query>	2021-10-14 00:00:00, 2021-10-15 00:00:00, None
+004063:2021-10-11 21:14:53.564882:	<Reply>	
+	ToUserName : op3adji2bNTqGIbxBu58Ur8X0IeQ
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1633958093
+	MsgType : text
+	Content : 2021年10月14日至2021年10月15日
+		
+		2021年10月14日：
+		[B252]
+		10:00~12:00 王逸飞
+		15:00~17:00 李星霓
+		
+		2021年10月15日：
+		[B252]
+		14:00~16:00 蔡子羽
+
+004064:2021-10-11 22:12:32.134546:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjpf0w9eILQ-dtxyx6pBdo1g
+	CreateTime : 1633961551
+	Content : 查询本周
+
+004065:2021-10-11 22:12:32.148619:	<Interpret>	查询本周
+004066:2021-10-11 22:12:32.155057:	<InterpretResult>	(datetime.datetime(2021, 10, 4, 0, 0), datetime.datetime(2021, 10, 11, 0, 0), None)
+004067:2021-10-11 22:12:32.161734:	<Query>	2021-10-04 00:00:00, 2021-10-11 00:00:00, None
+004068:2021-10-11 22:12:32.200550:	<Reply>	
+	ToUserName : op3adjpf0w9eILQ-dtxyx6pBdo1g
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1633961551
+	MsgType : text
+	Content : 2021年10月4日至2021年10月11日
+		
+		2021年10月4日：
+		[B252]
+		19:00~21:00 张柏舟
+		
+		2021年10月6日：
+		[B252]
+		08:30~10:00 陈子儒
+		13:00~14:30 蔡子羽
+		
+		[B253]
+		19:00~20:00 林丛宇
+		
+		2021年10月7日：
+		[B253]
+		16:30~17:30 张煜豪
+		18:00~19:00 郑加毅
+		
+		2021年10月8日：
+		[B252]
+		10:00~12:00 韩知润
+		14:00~16:00 王逸飞
+		20:00~21:00 林梦颖
+		
+		[B253]
+		19:30~21:00 张煜豪
+		21:00~22:00 史博文
+		
+		2021年10月9日：
+		[B25...
+004069:2021-10-11 22:12:40.867678:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjpf0w9eILQ-dtxyx6pBdo1g
+	CreateTime : 1633961560
+	Content : 查询下周
+
+004070:2021-10-11 22:12:40.881458:	<Interpret>	查询下周
+004071:2021-10-11 22:12:40.894135:	<InterpretResult>	(datetime.datetime(2021, 10, 11, 0, 0), datetime.datetime(2021, 10, 18, 0, 0), None)
+004072:2021-10-11 22:12:40.899934:	<Query>	2021-10-11 00:00:00, 2021-10-18 00:00:00, None
+004073:2021-10-11 22:12:40.930801:	<Reply>	
+	ToUserName : op3adjpf0w9eILQ-dtxyx6pBdo1g
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1633961560
+	MsgType : text
+	Content : 2021年10月11日至2021年10月18日
+		
+		2021年10月11日：
+		[B252]
+		19:00~21:00 张柏舟
+		
+		2021年10月12日：
+		[B252]
+		19:00~20:30 张霄扬
+		
+		2021年10月13日：
+		[B252]
+		13:00~14:30 蔡子羽
+		19:00~21:00 蒋然
+		
+		[B253]
+		19:00~21:00 陈子儒
+		
+		2021年10月14日：
+		[B252]
+		10:00~12:00 王逸飞
+		15:00~17:00 李星霓
+		
+		2021年10月15日：
+		[B252]
+		14:00~16:00 蔡子羽
+		
+		2021年10月16日：
+		[B252]
+		08:00~10:00 李星霓
+		
+		2021年10月...
+004074:2021-10-11 22:18:53.848293:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjjWCiCH-2_Hf-AJIqvQ-W_I
+	CreateTime : 1633961933
+	Content : None
+
+004075:2021-10-11 22:18:53.854793:	<Reply>	
+	ToUserName : op3adjjWCiCH-2_Hf-AJIqvQ-W_I
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1633961933
+	MsgType : text
+	Content : 感谢关注钢琴社公众号~
+
+004076:2021-10-11 22:28:18.971947:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjtPZBk1O-ptYSnKKuTryea0
+	CreateTime : 1633962498
+	Content : None
+
+004077:2021-10-11 22:28:18.979677:	<Reply>	
+	ToUserName : op3adjtPZBk1O-ptYSnKKuTryea0
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1633962498
+	MsgType : text
+	Content : 感谢关注钢琴社公众号~
+
+004078:2021-10-12 03:11:07.842159:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjixVtvZv4csYuIICJezL3hw
+	CreateTime : 1633979467
+	Content : None
+
+004079:2021-10-12 03:11:07.850682:	<Reply>	
+	ToUserName : op3adjixVtvZv4csYuIICJezL3hw
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1633979467
+	MsgType : text
+	Content : 感谢关注钢琴社公众号~
+
+004080:2021-10-12 09:07:00.068725:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjiSKN7W9w0iWusofK9GnFxc
+	CreateTime : 1634000818
+	Content : None
+
+004081:2021-10-12 09:07:00.076707:	<Reply>	
+	ToUserName : op3adjiSKN7W9w0iWusofK9GnFxc
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634000818
+	MsgType : text
+	Content : 感谢关注钢琴社公众号~
+
+004082:2021-10-12 09:22:18.850246:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjpf0w9eILQ-dtxyx6pBdo1g
+	CreateTime : 1634001738
+	Content : 查询下周
+
+004083:2021-10-12 09:22:18.861556:	<Interpret>	查询下周
+004084:2021-10-12 09:22:18.868019:	<InterpretResult>	(datetime.datetime(2021, 10, 18, 0, 0), datetime.datetime(2021, 10, 25, 0, 0), None)
+004085:2021-10-12 09:22:18.873473:	<Query>	2021-10-18 00:00:00, 2021-10-25 00:00:00, None
+004086:2021-10-12 09:22:18.894029:	<Reply>	
+	ToUserName : op3adjpf0w9eILQ-dtxyx6pBdo1g
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634001738
+	MsgType : text
+	Content : 2021年10月18日至2021年10月25日
+		
+		2021年10月20日：
+		[B252]
+		19:00~21:00 蒋然
+
+004087:2021-10-12 09:22:24.367936:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjpf0w9eILQ-dtxyx6pBdo1g
+	CreateTime : 1634001744
+	Content : 查询本周
+
+004088:2021-10-12 09:22:24.381843:	<Interpret>	查询本周
+004089:2021-10-12 09:22:24.392138:	<InterpretResult>	(datetime.datetime(2021, 10, 11, 0, 0), datetime.datetime(2021, 10, 18, 0, 0), None)
+004090:2021-10-12 09:22:24.402362:	<Query>	2021-10-11 00:00:00, 2021-10-18 00:00:00, None
+004091:2021-10-12 09:22:24.436128:	<Reply>	
+	ToUserName : op3adjpf0w9eILQ-dtxyx6pBdo1g
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634001744
+	MsgType : text
+	Content : 2021年10月11日至2021年10月18日
+		
+		2021年10月11日：
+		[B252]
+		19:00~21:00 张柏舟
+		
+		2021年10月12日：
+		[B252]
+		19:00~20:30 张霄扬
+		
+		2021年10月13日：
+		[B252]
+		13:00~14:30 蔡子羽
+		19:00~21:00 蒋然
+		
+		[B253]
+		19:00~21:00 陈子儒
+		
+		2021年10月14日：
+		[B252]
+		10:00~12:00 王逸飞
+		15:00~17:00 李星霓
+		
+		2021年10月15日：
+		[B252]
+		14:00~16:00 蔡子羽
+		
+		2021年10月16日：
+		[B252]
+		08:00~10:00 李星霓
+		
+		2021年10月...
+004092:2021-10-12 09:49:23.744373:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjjXHUsjbGZ6Ndnl-hn2aocY
+	CreateTime : 1634003363
+	Content : 查询
+
+004093:2021-10-12 09:49:23.760334:	<Interpret>	查询
+004094:2021-10-12 09:49:23.768571:	<InterpretResult>	(None, None, None)
+004095:2021-10-12 09:49:23.775355:	<Query>	None, None, None
+004096:2021-10-12 09:49:23.786898:	<Reply>	
+	ToUserName : op3adjjXHUsjbGZ6Ndnl-hn2aocY
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634003363
+	MsgType : text
+	Content : 2021年10月12日9:49没有预约
+
+004097:2021-10-12 09:49:43.901895:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjjXHUsjbGZ6Ndnl-hn2aocY
+	CreateTime : 1634003383
+	Content : 预约 2021年10月12日 13:00-15:00
+
+004098:2021-10-12 09:49:43.917111:	<Interpret>	预约 2021年10月12日 13:00-15:00
+004099:2021-10-12 09:49:43.923930:	<Warning>	Can't understand!
+004100:2021-10-12 09:49:43.929821:	<Reply>	
+	ToUserName : op3adjjXHUsjbGZ6Ndnl-hn2aocY
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634003383
+	MsgType : text
+	Content : 嘤嘤嘤，你说的话有点模糊呢，小AI不太理解。输入“帮助”学习如何跟小AI交流
+
+004101:2021-10-12 09:49:54.461188:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjjXHUsjbGZ6Ndnl-hn2aocY
+	CreateTime : 1634003393
+	Content : 预约2021年10月12日 13:00-15:00
+
+004102:2021-10-12 09:49:54.475141:	<Interpret>	预约2021年10月12日 13:00-15:00
+004103:2021-10-12 09:49:54.481812:	<Warning>	Can't understand!
+004104:2021-10-12 09:49:54.487344:	<Reply>	
+	ToUserName : op3adjjXHUsjbGZ6Ndnl-hn2aocY
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634003393
+	MsgType : text
+	Content : 嘤嘤嘤，你说的话有点模糊呢，小AI不太理解。输入“帮助”学习如何跟小AI交流
+
+004105:2021-10-12 09:50:05.730801:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjjXHUsjbGZ6Ndnl-hn2aocY
+	CreateTime : 1634003405
+	Content : qa1
+
+004106:2021-10-12 09:50:05.758906:	<Interpret>	qa1
+004107:2021-10-12 09:50:05.765102:	<Warning>	Can't understand!
+004108:2021-10-12 09:50:05.775825:	<Reply>	
+	ToUserName : op3adjjXHUsjbGZ6Ndnl-hn2aocY
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634003405
+	MsgType : text
+	Content : 嘤嘤嘤，你说的话有点模糊呢，小AI不太理解。输入“帮助”学习如何跟小AI交流
+
+004109:2021-10-12 09:50:10.977506:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjjXHUsjbGZ6Ndnl-hn2aocY
+	CreateTime : 1634003410
+	Content : 预约 2021年10月12日13:00-15:00
+
+004110:2021-10-12 09:50:10.990116:	<Interpret>	预约 2021年10月12日13:00-15:00
+004111:2021-10-12 09:50:10.996245:	<Warning>	Can't understand!
+004112:2021-10-12 09:50:11.002231:	<Reply>	
+	ToUserName : op3adjjXHUsjbGZ6Ndnl-hn2aocY
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634003410
+	MsgType : text
+	Content : 嘤嘤嘤，你说的话有点模糊呢，小AI不太理解。输入“帮助”学习如何跟小AI交流
+
+004113:2021-10-12 09:50:15.784760:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjjXHUsjbGZ6Ndnl-hn2aocY
+	CreateTime : 1634003415
+	Content : ？？？？qaq
+
+004114:2021-10-12 09:50:15.803966:	<Interpret>	？？？？qaq
+004115:2021-10-12 09:50:15.814216:	<Warning>	Can't understand!
+004116:2021-10-12 09:50:15.819032:	<Reply>	
+	ToUserName : op3adjjXHUsjbGZ6Ndnl-hn2aocY
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634003415
+	MsgType : text
+	Content : 嘤嘤嘤，你说的话有点模糊呢，小AI不太理解。输入“帮助”学习如何跟小AI交流
+
+004117:2021-10-12 09:50:37.273954:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjjXHUsjbGZ6Ndnl-hn2aocY
+	CreateTime : 1634003436
+	Content : 预约10月12日 13:00-15:00
+
+004118:2021-10-12 09:50:37.297765:	<Interpret>	预约10月12日 13:00-15:00
+004119:2021-10-12 09:50:37.313072:	<InterpretResult>	(datetime.datetime(2021, 10, 12, 13, 0), datetime.datetime(2021, 10, 12, 15, 0), None)
+004120:2021-10-12 09:50:37.332863:	<Reservation>	2021-10-12 13:00:00, 2021-10-12 15:00:00, None, [<User op3adjjXHUsjbGZ6Ndnl-hn2aocY 林汇平 1 None>]
+004121:2021-10-12 09:50:37.356407:	<Reply>	
+	ToUserName : op3adjjXHUsjbGZ6Ndnl-hn2aocY
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634003436
+	MsgType : text
+	Content : 您已预约 2021年10月12日 13:00~15:00 B252
+
+004122:2021-10-12 09:50:40.488258:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjjXHUsjbGZ6Ndnl-hn2aocY
+	CreateTime : 1634003440
+	Content : 谢谢
+
+004123:2021-10-12 09:50:40.503255:	<Interpret>	谢谢
+004124:2021-10-12 09:50:40.509599:	<Warning>	Can't understand!
+004125:2021-10-12 09:50:40.515617:	<Reply>	
+	ToUserName : op3adjjXHUsjbGZ6Ndnl-hn2aocY
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634003440
+	MsgType : text
+	Content : 嘤嘤嘤，你说的话有点模糊呢，小AI不太理解。输入“帮助”学习如何跟小AI交流
+
+004126:2021-10-12 10:55:28.438907:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjt6VkYoRYBeJNZ3OiAMDBG8
+	CreateTime : 1634007327
+	Content : 查询
+
+004127:2021-10-12 10:55:28.453454:	<Interpret>	查询
+004128:2021-10-12 10:55:28.464210:	<InterpretResult>	(None, None, None)
+004129:2021-10-12 10:55:28.476654:	<Query>	None, None, None
+004130:2021-10-12 10:55:28.486664:	<Reply>	
+	ToUserName : op3adjt6VkYoRYBeJNZ3OiAMDBG8
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634007327
+	MsgType : text
+	Content : 2021年10月12日10:55没有预约
+
+004131:2021-10-12 10:55:32.523677:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjt6VkYoRYBeJNZ3OiAMDBG8
+	CreateTime : 1634007332
+	Content : 查询本周
+
+004132:2021-10-12 10:55:32.534788:	<Interpret>	查询本周
+004133:2021-10-12 10:55:32.540937:	<InterpretResult>	(datetime.datetime(2021, 10, 11, 0, 0), datetime.datetime(2021, 10, 18, 0, 0), None)
+004134:2021-10-12 10:55:32.547166:	<Query>	2021-10-11 00:00:00, 2021-10-18 00:00:00, None
+004135:2021-10-12 10:55:32.578095:	<Reply>	
+	ToUserName : op3adjt6VkYoRYBeJNZ3OiAMDBG8
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634007332
+	MsgType : text
+	Content : 2021年10月11日至2021年10月18日
+		
+		2021年10月11日：
+		[B252]
+		19:00~21:00 张柏舟
+		
+		2021年10月12日：
+		[B252]
+		13:00~15:00 林汇平
+		19:00~20:30 张霄扬
+		
+		2021年10月13日：
+		[B252]
+		13:00~14:30 蔡子羽
+		19:00~21:00 蒋然
+		
+		[B253]
+		19:00~21:00 陈子儒
+		
+		2021年10月14日：
+		[B252]
+		10:00~12:00 王逸飞
+		15:00~17:00 李星霓
+		
+		2021年10月15日：
+		[B252]
+		14:00~16:00 蔡子羽
+		
+		2021年10月16日：
+		[B252]
+		08:00~10:00...
+004136:2021-10-12 11:04:56.579879:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjo_pg47tpN6oboQUPBN4jLs
+	CreateTime : 1634007896
+	Content : 查询今天
+
+004137:2021-10-12 11:04:56.595984:	<Interpret>	查询今天
+004138:2021-10-12 11:04:56.602061:	<InterpretResult>	(datetime.datetime(2021, 10, 12, 0, 0), datetime.datetime(2021, 10, 13, 0, 0), None)
+004139:2021-10-12 11:04:56.609624:	<Query>	2021-10-12 00:00:00, 2021-10-13 00:00:00, None
+004140:2021-10-12 11:04:56.624327:	<Reply>	
+	ToUserName : op3adjo_pg47tpN6oboQUPBN4jLs
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634007896
+	MsgType : text
+	Content : 2021年10月12日至2021年10月13日
+		
+		2021年10月12日：
+		[B252]
+		13:00~15:00 林汇平
+		19:00~20:30 张霄扬
+		
+		2021年10月13日：
+		[B252]
+		13:00~14:30 蔡子羽
+		19:00~21:00 蒋然
+		
+		[B253]
+		19:00~21:00 陈子儒
+
+004141:2021-10-12 11:55:54.441412:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	CreateTime : 1634010953
+	Content : 预约周四下午2点到4点
+
+004142:2021-10-12 11:55:54.478849:	<Interpret>	预约周四下午2点到4点
+004143:2021-10-12 11:55:54.490372:	<InterpretResult>	(datetime.datetime(2021, 10, 14, 14, 0), datetime.datetime(2021, 10, 14, 16, 0), None)
+004144:2021-10-12 11:55:54.505790:	<Reservation>	2021-10-14 14:00:00, 2021-10-14 16:00:00, None, [<User op3adjpkIjN9WPDSOl0E8sc5HN2M 安博施 1 1>]
+004145:2021-10-12 11:55:54.526059:	<Reply>	
+	ToUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634010953
+	MsgType : text
+	Content : 您已预约 2021年10月14日 14:00~16:00 B253
+
+004146:2021-10-12 14:44:04.760734:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjouPtroQg1HfH3asM9Tr0-E
+	CreateTime : 1634021043
+	Content : None
+
+004147:2021-10-12 14:44:04.767468:	<Reply>	
+	ToUserName : op3adjouPtroQg1HfH3asM9Tr0-E
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634021043
+	MsgType : text
+	Content : 感谢关注钢琴社公众号~
+
+004148:2021-10-12 14:49:17.180528:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjouPtroQg1HfH3asM9Tr0-E
+	CreateTime : 1634021356
+	Content : None
+
+004149:2021-10-12 14:49:17.188112:	<Reply>	
+	ToUserName : op3adjouPtroQg1HfH3asM9Tr0-E
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634021356
+	MsgType : text
+	Content : 
+
+004150:2021-10-12 18:34:21.771996:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjn7wT_9q-USuyohExUk6RJ0
+	CreateTime : 1634034860
+	Content : 预约今天20:30
+
+004151:2021-10-12 18:34:21.783344:	<Interpret>	预约今天20:30
+004152:2021-10-12 18:34:21.789175:	<InterpretResult>	(datetime.datetime(2021, 10, 12, 20, 30), None, None)
+004153:2021-10-12 18:34:21.800188:	<Reservation>	2021-10-12 20:30:00, None, None, [<User op3adjn7wT_9q-USuyohExUk6RJ0 要昌雨 1 None>]
+004154:2021-10-12 18:34:21.817868:	<Reply>	
+	ToUserName : op3adjn7wT_9q-USuyohExUk6RJ0
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634034860
+	MsgType : text
+	Content : 由于您没有给定结束时间，默认您的预约时常为1小时
+		您已预约 2021年10月12日 20:30~21:30 B252
+
+004155:2021-10-12 18:40:31.778362:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjipEJ4xT0ZbAbFsveTNGn-0
+	CreateTime : 1634035231
+	Content : 查询本周
+
+004156:2021-10-12 18:40:31.797376:	<Interpret>	查询本周
+004157:2021-10-12 18:40:31.803970:	<InterpretResult>	(datetime.datetime(2021, 10, 11, 0, 0), datetime.datetime(2021, 10, 18, 0, 0), None)
+004158:2021-10-12 18:40:31.812302:	<Query>	2021-10-11 00:00:00, 2021-10-18 00:00:00, None
+004159:2021-10-12 18:40:31.846717:	<Reply>	
+	ToUserName : op3adjipEJ4xT0ZbAbFsveTNGn-0
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634035231
+	MsgType : text
+	Content : 2021年10月11日至2021年10月18日
+		
+		2021年10月11日：
+		[B252]
+		19:00~21:00 张柏舟
+		
+		2021年10月12日：
+		[B252]
+		13:00~15:00 林汇平
+		19:00~20:30 张霄扬
+		20:30~21:30 要昌雨
+		
+		2021年10月13日：
+		[B252]
+		13:00~14:30 蔡子羽
+		19:00~21:00 蒋然
+		
+		[B253]
+		19:00~21:00 陈子儒
+		
+		2021年10月14日：
+		[B252]
+		10:00~12:00 王逸飞
+		15:00~17:00 李星霓
+		
+		[B253]
+		14:00~16:00 安博施
+		
+		2021年10月15日：
+		[B252]
+		14:00~16...
+004160:2021-10-13 10:55:50.447025:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjo_pg47tpN6oboQUPBN4jLs
+	CreateTime : 1634093749
+	Content : 查询今天
+
+004161:2021-10-13 10:55:50.470966:	<Interpret>	查询今天
+004162:2021-10-13 10:55:50.477190:	<InterpretResult>	(datetime.datetime(2021, 10, 13, 0, 0), datetime.datetime(2021, 10, 14, 0, 0), None)
+004163:2021-10-13 10:55:50.485953:	<Query>	2021-10-13 00:00:00, 2021-10-14 00:00:00, None
+004164:2021-10-13 10:55:50.502689:	<Reply>	
+	ToUserName : op3adjo_pg47tpN6oboQUPBN4jLs
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634093749
+	MsgType : text
+	Content : 2021年10月13日至2021年10月14日
+		
+		2021年10月13日：
+		[B252]
+		13:00~14:30 蔡子羽
+		19:00~21:00 蒋然
+		
+		[B253]
+		19:00~21:00 陈子儒
+		
+		2021年10月14日：
+		[B252]
+		10:00~12:00 王逸飞
+		15:00~17:00 李星霓
+		
+		[B253]
+		14:00~16:00 安博施
+
+004165:2021-10-13 15:36:21.583071:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjpf0w9eILQ-dtxyx6pBdo1g
+	CreateTime : 1634110580
+	Content : 查询本周
+
+004166:2021-10-13 15:36:21.598637:	<Interpret>	查询本周
+004167:2021-10-13 15:36:21.609048:	<InterpretResult>	(datetime.datetime(2021, 10, 11, 0, 0), datetime.datetime(2021, 10, 18, 0, 0), None)
+004168:2021-10-13 15:36:21.620268:	<Query>	2021-10-11 00:00:00, 2021-10-18 00:00:00, None
+004169:2021-10-13 15:36:21.662776:	<Reply>	
+	ToUserName : op3adjpf0w9eILQ-dtxyx6pBdo1g
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634110580
+	MsgType : text
+	Content : 2021年10月11日至2021年10月18日
+		
+		2021年10月11日：
+		[B252]
+		19:00~21:00 张柏舟
+		
+		2021年10月12日：
+		[B252]
+		13:00~15:00 林汇平
+		19:00~20:30 张霄扬
+		20:30~21:30 要昌雨
+		
+		2021年10月13日：
+		[B252]
+		13:00~14:30 蔡子羽
+		19:00~21:00 蒋然
+		
+		[B253]
+		19:00~21:00 陈子儒
+		
+		2021年10月14日：
+		[B252]
+		10:00~12:00 王逸飞
+		15:00~17:00 李星霓
+		
+		[B253]
+		14:00~16:00 安博施
+		
+		2021年10月15日：
+		[B252]
+		14:00~16...
+004170:2021-10-13 16:10:56.144329:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjl38g9VdQY4yLEYyX0s6XLs
+	CreateTime : 1634112655
+	Content : 预约今晚20点半到21点半 B253
+
+004171:2021-10-13 16:10:56.161815:	<Interpret>	预约今晚20点半到21点半 B253
+004172:2021-10-13 16:10:56.173072:	<Warning>	Can't understand!
+004173:2021-10-13 16:10:56.182843:	<Reply>	
+	ToUserName : op3adjl38g9VdQY4yLEYyX0s6XLs
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634112655
+	MsgType : text
+	Content : 嘤嘤嘤，你说的话有点模糊呢，小AI不太理解。输入“帮助”学习如何跟小AI交流
+
+004174:2021-10-13 16:11:03.862002:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjl38g9VdQY4yLEYyX0s6XLs
+	CreateTime : 1634112663
+	Content : ？
+
+004175:2021-10-13 16:11:03.875373:	<Interpret>	？
+004176:2021-10-13 16:11:03.892512:	<Warning>	Can't understand!
+004177:2021-10-13 16:11:03.900925:	<Reply>	
+	ToUserName : op3adjl38g9VdQY4yLEYyX0s6XLs
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634112663
+	MsgType : text
+	Content : 嘤嘤嘤，你说的话有点模糊呢，小AI不太理解。输入“帮助”学习如何跟小AI交流
+
+004178:2021-10-13 16:11:07.243603:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjl38g9VdQY4yLEYyX0s6XLs
+	CreateTime : 1634112666
+	Content : 帮助
+
+004179:2021-10-13 16:11:07.254372:	<Interpret>	帮助
+004180:2021-10-13 16:11:07.260441:	<InterpretResult>	[]
+004181:2021-10-13 16:11:07.267079:	<Reply>	
+	ToUserName : op3adjl38g9VdQY4yLEYyX0s6XLs
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634112666
+	MsgType : text
+	Content : 你可以在这里留言（后台应该不会有人看到的），在这里预约琴房（仅供排练用哦，平时练琴不需要也不应该预约），也可以查询预约情况
+		
+		预约的格式为“预约+<时间起点>+到/至+<时间终点>+琴房名”，后面两项可以省略，默认预约一个小时
+		
+		查询的格式类似哦~
+
+004182:2021-10-13 16:11:40.843095:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjl38g9VdQY4yLEYyX0s6XLs
+	CreateTime : 1634112700
+	Content : 预约20点半到21点半 B253
+
+004183:2021-10-13 16:11:40.859124:	<Interpret>	预约20点半到21点半 B253
+004184:2021-10-13 16:11:40.867057:	<Warning>	Can't understand!
+004185:2021-10-13 16:11:40.875703:	<Reply>	
+	ToUserName : op3adjl38g9VdQY4yLEYyX0s6XLs
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634112700
+	MsgType : text
+	Content : 嘤嘤嘤，你说的话有点模糊呢，小AI不太理解。输入“帮助”学习如何跟小AI交流
+
+004186:2021-10-13 16:11:51.191540:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjl38g9VdQY4yLEYyX0s6XLs
+	CreateTime : 1634112710
+	Content : 预约20点30到21点30 B253
+
+004187:2021-10-13 16:11:51.210517:	<Interpret>	预约20点30到21点30 B253
+004188:2021-10-13 16:11:51.217169:	<Warning>	Can't understand!
+004189:2021-10-13 16:11:51.222397:	<Reply>	
+	ToUserName : op3adjl38g9VdQY4yLEYyX0s6XLs
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634112710
+	MsgType : text
+	Content : 嘤嘤嘤，你说的话有点模糊呢，小AI不太理解。输入“帮助”学习如何跟小AI交流
+
+004190:2021-10-13 16:12:09.982267:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjl38g9VdQY4yLEYyX0s6XLs
+	CreateTime : 1634112729
+	Content : 预约今天20点半到21点半 B253
+
+004191:2021-10-13 16:12:09.996071:	<Interpret>	预约今天20点半到21点半 B253
+004192:2021-10-13 16:12:10.003104:	<InterpretResult>	(datetime.datetime(2021, 10, 13, 20, 30), datetime.datetime(2021, 10, 13, 21, 30), 'B253')
+004193:2021-10-13 16:12:10.021308:	<Reservation>	2021-10-13 20:30:00, 2021-10-13 21:30:00, B253, [<User op3adjl38g9VdQY4yLEYyX0s6XLs 郑加毅 1 None>]
+004194:2021-10-13 16:12:10.031345:	<Reply>	
+	ToUserName : op3adjl38g9VdQY4yLEYyX0s6XLs
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634112729
+	MsgType : text
+	Content : 此时段的 B253 预约已满
+
+004195:2021-10-13 16:12:14.820536:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjl38g9VdQY4yLEYyX0s6XLs
+	CreateTime : 1634112734
+	Content : 查询
+
+004196:2021-10-13 16:12:14.834242:	<Interpret>	查询
+004197:2021-10-13 16:12:14.840932:	<InterpretResult>	(None, None, None)
+004198:2021-10-13 16:12:14.849326:	<Query>	None, None, None
+004199:2021-10-13 16:12:14.856369:	<Reply>	
+	ToUserName : op3adjl38g9VdQY4yLEYyX0s6XLs
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634112734
+	MsgType : text
+	Content : 2021年10月13日16:12没有预约
+
+004200:2021-10-13 16:12:19.579061:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjl38g9VdQY4yLEYyX0s6XLs
+	CreateTime : 1634112739
+	Content : ？
+
+004201:2021-10-13 16:12:19.591564:	<Interpret>	？
+004202:2021-10-13 16:12:19.597747:	<Warning>	Can't understand!
+004203:2021-10-13 16:12:19.603681:	<Reply>	
+	ToUserName : op3adjl38g9VdQY4yLEYyX0s6XLs
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634112739
+	MsgType : text
+	Content : 嘤嘤嘤，你说的话有点模糊呢，小AI不太理解。输入“帮助”学习如何跟小AI交流
+
+004204:2021-10-13 16:12:25.203874:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjl38g9VdQY4yLEYyX0s6XLs
+	CreateTime : 1634112744
+	Content : 查询今天
+
+004205:2021-10-13 16:12:25.221909:	<Interpret>	查询今天
+004206:2021-10-13 16:12:25.228397:	<InterpretResult>	(datetime.datetime(2021, 10, 13, 0, 0), datetime.datetime(2021, 10, 14, 0, 0), None)
+004207:2021-10-13 16:12:25.235797:	<Query>	2021-10-13 00:00:00, 2021-10-14 00:00:00, None
+004208:2021-10-13 16:12:25.252807:	<Reply>	
+	ToUserName : op3adjl38g9VdQY4yLEYyX0s6XLs
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634112744
+	MsgType : text
+	Content : 2021年10月13日至2021年10月14日
+		
+		2021年10月13日：
+		[B252]
+		13:00~14:30 蔡子羽
+		19:00~21:00 蒋然
+		
+		[B253]
+		19:00~21:00 陈子儒
+		
+		2021年10月14日：
+		[B252]
+		10:00~12:00 王逸飞
+		15:00~17:00 李星霓
+		
+		[B253]
+		14:00~16:00 安博施
+
+004209:2021-10-13 16:12:40.832887:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjl38g9VdQY4yLEYyX0s6XLs
+	CreateTime : 1634112760
+	Content : 预约今天20点半到21点半 B250
+
+004210:2021-10-13 16:12:40.860548:	<Interpret>	预约今天20点半到21点半 B250
+004211:2021-10-13 16:12:40.869228:	<InterpretResult>	(datetime.datetime(2021, 10, 13, 20, 30), datetime.datetime(2021, 10, 13, 21, 30), 'B250')
+004212:2021-10-13 16:12:40.892391:	<Reservation>	2021-10-13 20:30:00, 2021-10-13 21:30:00, B250, [<User op3adjl38g9VdQY4yLEYyX0s6XLs 郑加毅 1 None>]
+004213:2021-10-13 16:12:40.929069:	<Reply>	
+	ToUserName : op3adjl38g9VdQY4yLEYyX0s6XLs
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634112760
+	MsgType : text
+	Content : 您已预约 2021年10月13日 20:30~21:30 B250
+
+004214:2021-10-13 16:35:40.125878:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjg_orKtByiyKbUmWdzpwZu8
+	CreateTime : 1634114139
+	Content : 查询本周
+
+004215:2021-10-13 16:35:40.143594:	<Interpret>	查询本周
+004216:2021-10-13 16:35:40.149847:	<InterpretResult>	(datetime.datetime(2021, 10, 11, 0, 0), datetime.datetime(2021, 10, 18, 0, 0), None)
+004217:2021-10-13 16:35:40.157257:	<Query>	2021-10-11 00:00:00, 2021-10-18 00:00:00, None
+004218:2021-10-13 16:35:40.191323:	<Reply>	
+	ToUserName : op3adjg_orKtByiyKbUmWdzpwZu8
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634114139
+	MsgType : text
+	Content : 2021年10月11日至2021年10月18日
+		
+		2021年10月11日：
+		[B252]
+		19:00~21:00 张柏舟
+		
+		2021年10月12日：
+		[B252]
+		13:00~15:00 林汇平
+		19:00~20:30 张霄扬
+		20:30~21:30 要昌雨
+		
+		2021年10月13日：
+		[B252]
+		13:00~14:30 蔡子羽
+		19:00~21:00 蒋然
+		
+		[B253]
+		19:00~21:00 陈子儒
+		
+		[B250]
+		20:30~21:30 郑加毅
+		
+		2021年10月14日：
+		[B252]
+		10:00~12:00 王逸飞
+		15:00~17:00 李星霓
+		
+		[B253]
+		14:00~16:00 安博施
+		
+		20...
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 25020)
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 21319)
+spawned uWSGI worker 1 (pid: 21320, cores: 1)
+spawned uWSGI http 1 (pid: 21321)
+004219:2021-10-13 19:39:09.511058:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjubOPIz7zawnRR80Tr7mHeg
+	CreateTime : 1634125148
+	Content : 查询本周
+
+004220:2021-10-13 19:39:09.544663:	<Interpret>	查询本周
+004221:2021-10-13 19:39:09.552995:	<InterpretResult>	(datetime.datetime(2021, 10, 11, 0, 0), datetime.datetime(2021, 10, 18, 0, 0), None)
+004222:2021-10-13 19:39:09.562755:	<Query>	2021-10-11 00:00:00, 2021-10-18 00:00:00, None
+004223:2021-10-13 19:39:09.629649:	<Reply>	
+	ToUserName : op3adjubOPIz7zawnRR80Tr7mHeg
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634125148
+	MsgType : text
+	Content : 2021年10月11日至2021年10月18日
+		
+		2021年10月11日：
+		[B252]
+		19:00~21:00 张柏舟
+		
+		2021年10月12日：
+		[B252]
+		13:00~15:00 林汇平
+		19:00~20:30 张霄扬
+		20:30~21:30 要昌雨
+		
+		2021年10月13日：
+		[B252]
+		13:00~14:30 蔡子羽
+		19:00~21:00 蒋然
+		
+		[B253]
+		19:00~21:00 陈子儒
+		
+		[B250]
+		20:30~21:30 郑加毅
+		
+		2021年10月14日：
+		[B252]
+		10:00~12:00 王逸飞
+		15:00~17:00 李星霓
+		
+		[B253]
+		14:00~16:00 安博施
+		
+		20...
+004224:2021-10-13 19:40:10.863929:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjubOPIz7zawnRR80Tr7mHeg
+	CreateTime : 1634125210
+	Content : 预约 本周日 19：00-21：00
+
+004225:2021-10-13 19:40:10.880679:	<Interpret>	预约 本周日 19：00-21：00
+004226:2021-10-13 19:40:10.905329:	<InterpretResult>	(datetime.datetime(2021, 10, 17, 19, 0), datetime.datetime(2021, 10, 17, 21, 0), None)
+004227:2021-10-13 19:40:10.913028:	<Reservation>	2021-10-17 19:00:00, 2021-10-17 21:00:00, None, [<User op3adjubOPIz7zawnRR80Tr7mHeg 张柏舟 1 None>]
+004228:2021-10-13 19:40:10.937039:	<Reply>	
+	ToUserName : op3adjubOPIz7zawnRR80Tr7mHeg
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634125210
+	MsgType : text
+	Content : 您已预约 2021年10月17日 19:00~21:00 B252
+
+004229:2021-10-13 21:01:43.918696:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adju3w3EFiAs3VijVsomHpCNY
+	CreateTime : 1634130102
+	Content : 查询今天
+
+004230:2021-10-13 21:01:43.939466:	<Interpret>	查询今天
+004231:2021-10-13 21:01:43.958924:	<InterpretResult>	(datetime.datetime(2021, 10, 13, 0, 0), datetime.datetime(2021, 10, 14, 0, 0), None)
+004232:2021-10-13 21:01:43.965914:	<Query>	2021-10-13 00:00:00, 2021-10-14 00:00:00, None
+004233:2021-10-13 21:01:43.991915:	<Reply>	
+	ToUserName : op3adju3w3EFiAs3VijVsomHpCNY
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634130102
+	MsgType : text
+	Content : 2021年10月13日至2021年10月14日
+		
+		2021年10月13日：
+		[B252]
+		13:00~14:30 蔡子羽
+		19:00~21:00 蒋然
+		
+		[B253]
+		19:00~21:00 陈子儒
+		
+		[B250]
+		20:30~21:30 郑加毅
+		
+		2021年10月14日：
+		[B252]
+		10:00~12:00 王逸飞
+		15:00~17:00 李星霓
+		
+		[B253]
+		14:00~16:00 安博施
+
+004234:2021-10-13 21:12:37.937291:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjiJvfaE-6oW6HTNqGku2NaE
+	CreateTime : 1634130757
+	Content : 预约 周六 10:00-11:30
+
+004235:2021-10-13 21:12:37.947565:	<Interpret>	预约 周六 10:00-11:30
+004236:2021-10-13 21:12:37.956959:	<InterpretResult>	(datetime.datetime(2021, 10, 16, 10, 0), datetime.datetime(2021, 10, 16, 11, 30), None)
+004237:2021-10-13 21:12:37.964694:	<Reservation>	2021-10-16 10:00:00, 2021-10-16 11:30:00, None, [<User op3adjiJvfaE-6oW6HTNqGku2NaE wdw 1 None>]
+004238:2021-10-13 21:12:37.989061:	<Reply>	
+	ToUserName : op3adjiJvfaE-6oW6HTNqGku2NaE
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634130757
+	MsgType : text
+	Content : 您已预约 2021年10月16日 10:00~11:30 B252
+
+004239:2021-10-13 21:12:47.077829:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjiJvfaE-6oW6HTNqGku2NaE
+	CreateTime : 1634130766
+	Content : 查询 10月16日
+
+004240:2021-10-13 21:12:47.091118:	<Interpret>	查询 10月16日
+004241:2021-10-13 21:12:47.098095:	<InterpretResult>	(datetime.datetime(2021, 10, 16, 0, 0), datetime.datetime(2021, 10, 17, 0, 0), None)
+004242:2021-10-13 21:12:47.104474:	<Query>	2021-10-16 00:00:00, 2021-10-17 00:00:00, None
+004243:2021-10-13 21:12:47.117403:	<Reply>	
+	ToUserName : op3adjiJvfaE-6oW6HTNqGku2NaE
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634130766
+	MsgType : text
+	Content : 2021年10月16日至2021年10月17日
+		
+		2021年10月16日：
+		[B252]
+		08:00~10:00 李星霓
+		10:00~11:30 wdw
+		
+		2021年10月17日：
+		[B252]
+		18:00~18:30 王雨晨
+		19:00~21:00 张柏舟
+
+004244:2021-10-13 21:13:39.850978:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjuD_Ityf7XSI-9qi2ausckI
+	CreateTime : 1634130819
+	Content : 预约 周六 15:00-17:00 b253
+
+004245:2021-10-13 21:13:39.863688:	<Interpret>	预约 周六 15:00-17:00 b253
+004246:2021-10-13 21:13:39.871327:	<InterpretResult>	(datetime.datetime(2021, 10, 16, 15, 0), datetime.datetime(2021, 10, 16, 17, 0), 'B253')
+004247:2021-10-13 21:13:39.886445:	<Reservation>	2021-10-16 15:00:00, 2021-10-16 17:00:00, B253, [<User op3adjuD_Ityf7XSI-9qi2ausckI 史博文 1 None>]
+004248:2021-10-13 21:13:39.907918:	<Reply>	
+	ToUserName : op3adjuD_Ityf7XSI-9qi2ausckI
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634130819
+	MsgType : text
+	Content : 您已预约 2021年10月16日 15:00~17:00 B253
+
+004249:2021-10-13 21:28:21.011972:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjuD_Ityf7XSI-9qi2ausckI
+	CreateTime : 1634131700
+	Content : 预约 周日 9:00-11:00 b253
+
+004250:2021-10-13 21:28:21.031777:	<Interpret>	预约 周日 9:00-11:00 b253
+004251:2021-10-13 21:28:21.039495:	<InterpretResult>	(datetime.datetime(2021, 10, 17, 9, 0), datetime.datetime(2021, 10, 17, 11, 0), 'B253')
+004252:2021-10-13 21:28:21.048203:	<Reservation>	2021-10-17 09:00:00, 2021-10-17 11:00:00, B253, [<User op3adjuD_Ityf7XSI-9qi2ausckI 史博文 1 None>]
+004253:2021-10-13 21:28:21.058748:	<Reply>	
+	ToUserName : op3adjuD_Ityf7XSI-9qi2ausckI
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634131700
+	MsgType : text
+	Content : 抱歉，每人最多持有 2 个预约。如需添加新的预约，请取消至少一个预约。
+
+004254:2021-10-13 21:36:15.621976:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	CreateTime : 1634132175
+	Content : 查看本月
+
+004255:2021-10-13 21:36:15.635018:	<Interpret>	查看本月
+004256:2021-10-13 21:36:15.641782:	<Warning>	Can't understand!
+004257:2021-10-13 21:36:15.648396:	<Reply>	
+	ToUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634132175
+	MsgType : text
+	Content : 嘤嘤嘤，你说的话有点模糊呢，小AI不太理解。输入“帮助”学习如何跟小AI交流
+
+004258:2021-10-13 21:36:21.084003:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	CreateTime : 1634132180
+	Content : 查询本月
+
+004259:2021-10-13 21:36:21.096838:	<Interpret>	查询本月
+004260:2021-10-13 21:36:21.107695:	<Warning>	Can't understand!
+004261:2021-10-13 21:36:21.114339:	<Reply>	
+	ToUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634132180
+	MsgType : text
+	Content : 嘤嘤嘤，你说的话有点模糊呢，小AI不太理解。输入“帮助”学习如何跟小AI交流
+
+004262:2021-10-13 21:36:32.645026:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	CreateTime : 1634132192
+	Content : 查询10月
+
+004263:2021-10-13 21:36:32.657004:	<Interpret>	查询10月
+004264:2021-10-13 21:36:32.664258:	<InterpretResult>	(None, None, 'B10')
+004265:2021-10-13 21:36:32.671505:	<Query>	None, None, B10
+004266:2021-10-13 21:36:32.678346:	<Error>	没有找到 B10 琴房
+004267:2021-10-13 21:36:32.684099:	<Reply>	
+	ToUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634132192
+	MsgType : text
+	Content : 没有找到 B10 琴房
+
+004268:2021-10-13 21:36:48.648349:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	CreateTime : 1634132208
+	Content : 查询2021年10月
+
+004269:2021-10-13 21:36:48.660605:	<Interpret>	查询2021年10月
+004270:2021-10-13 21:36:48.666574:	<InterpretResult>	(None, None, 'B2021')
+004271:2021-10-13 21:36:48.672238:	<Query>	None, None, B2021
+004272:2021-10-13 21:36:48.677753:	<Error>	没有找到 B2021 琴房
+004273:2021-10-13 21:36:48.682287:	<Reply>	
+	ToUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634132208
+	MsgType : text
+	Content : 没有找到 B2021 琴房
+
+004274:2021-10-13 21:37:02.931117:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	CreateTime : 1634132222
+	Content : 查询2021年10月到11月
+
+004275:2021-10-13 21:37:02.975762:	<Interpret>	查询2021年10月到11月
+004276:2021-10-13 21:37:02.983398:	<InterpretResult>	(None, None, 'B2021')
+004277:2021-10-13 21:37:03.009954:	<Query>	None, None, B2021
+004278:2021-10-13 21:37:03.051995:	<Error>	没有找到 B2021 琴房
+004279:2021-10-13 21:37:03.065405:	<Reply>	
+	ToUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634132222
+	MsgType : text
+	Content : 没有找到 B2021 琴房
+
+004280:2021-10-13 21:37:11.878425:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	CreateTime : 1634132231
+	Content : 查询10月到11月
+
+004281:2021-10-13 21:37:11.892745:	<Interpret>	查询10月到11月
+004282:2021-10-13 21:37:11.899832:	<InterpretResult>	(None, None, 'B10')
+004283:2021-10-13 21:37:11.906082:	<Query>	None, None, B10
+004284:2021-10-13 21:37:11.911673:	<Error>	没有找到 B10 琴房
+004285:2021-10-13 21:37:11.917432:	<Reply>	
+	ToUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634132231
+	MsgType : text
+	Content : 没有找到 B10 琴房
+
+004286:2021-10-13 21:38:06.593916:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	CreateTime : 1634132286
+	Content : 查询2021.10.1到2022.10.1
+
+004287:2021-10-13 21:38:06.614934:	<Interpret>	查询2021.10.1到2022.10.1
+004288:2021-10-13 21:38:06.622406:	<InterpretResult>	(datetime.datetime(2021, 10, 1, 0, 0), datetime.datetime(2021, 10, 2, 0, 0), None)
+004289:2021-10-13 21:38:06.628477:	<Query>	2021-10-01 00:00:00, 2021-10-02 00:00:00, None
+004290:2021-10-13 21:38:06.646373:	<Reply>	
+	ToUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634132286
+	MsgType : text
+	Content : 2021年10月1日至2021年10月2日
+		
+		2021年10月1日：
+		[B252]
+		08:30~09:30 吴宛睿
+		10:00~11:30 金泽楷
+		15:00~17:00 史博文
+		18:00~20:00 王逸飞
+
+004291:2021-10-13 21:38:45.521955:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	CreateTime : 1634132325
+	Content : 查询今天到2022.10.1
+
+004292:2021-10-13 21:38:45.536098:	<Interpret>	查询今天到2022.10.1
+004293:2021-10-13 21:38:45.542756:	<InterpretResult>	(datetime.datetime(2021, 10, 13, 0, 0), datetime.datetime(2022, 10, 1, 0, 0), None)
+004294:2021-10-13 21:38:45.548226:	<Query>	2021-10-13 00:00:00, 2022-10-01 00:00:00, None
+004295:2021-10-13 21:38:45.553046:	<Reply>	
+	ToUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634132325
+	MsgType : text
+	Content : 您查询的时间区间过长
+
+004296:2021-10-13 21:38:55.880834:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	CreateTime : 1634132335
+	Content : 查询今天到11.5
+
+004297:2021-10-13 21:38:55.893319:	<Interpret>	查询今天到11.5
+004298:2021-10-13 21:38:55.902911:	<InterpretResult>	(datetime.datetime(2021, 10, 13, 0, 0), datetime.datetime(2021, 11, 5, 0, 0), None)
+004299:2021-10-13 21:38:55.911608:	<Query>	2021-10-13 00:00:00, 2021-11-05 00:00:00, None
+004300:2021-10-13 21:38:55.975802:	<Reply>	
+	ToUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634132335
+	MsgType : text
+	Content : 2021年10月13日至2021年11月5日
+		
+		2021年10月13日：
+		[B252]
+		13:00~14:30 蔡子羽
+		19:00~21:00 蒋然
+		
+		[B253]
+		19:00~21:00 陈子儒
+		
+		[B250]
+		20:30~21:30 郑加毅
+		
+		2021年10月14日：
+		[B252]
+		10:00~12:00 王逸飞
+		15:00~17:00 李星霓
+		
+		[B253]
+		14:00~16:00 安博施
+		
+		2021年10月15日：
+		[B252]
+		14:00~16:00 蔡子羽
+		
+		2021年10月16日：
+		[B252]
+		08:00~10:00 李星霓
+		10:00~11:30 wdw
+		
+		[B253]
+		15:00~17:00 ...
+004301:2021-10-13 21:39:01.131827:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjiw27UhloxN4DTiscx7-_do
+	CreateTime : 1634132340
+	Content : 查询本周
+
+004302:2021-10-13 21:39:01.148847:	<Interpret>	查询本周
+004303:2021-10-13 21:39:01.159704:	<InterpretResult>	(datetime.datetime(2021, 10, 11, 0, 0), datetime.datetime(2021, 10, 18, 0, 0), None)
+004304:2021-10-13 21:39:01.168513:	<Query>	2021-10-11 00:00:00, 2021-10-18 00:00:00, None
+004305:2021-10-13 21:39:01.206528:	<Reply>	
+	ToUserName : op3adjiw27UhloxN4DTiscx7-_do
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634132340
+	MsgType : text
+	Content : 2021年10月11日至2021年10月18日
+		
+		2021年10月11日：
+		[B252]
+		19:00~21:00 张柏舟
+		
+		2021年10月12日：
+		[B252]
+		13:00~15:00 林汇平
+		19:00~20:30 张霄扬
+		20:30~21:30 要昌雨
+		
+		2021年10月13日：
+		[B252]
+		13:00~14:30 蔡子羽
+		19:00~21:00 蒋然
+		
+		[B253]
+		19:00~21:00 陈子儒
+		
+		[B250]
+		20:30~21:30 郑加毅
+		
+		2021年10月14日：
+		[B252]
+		10:00~12:00 王逸飞
+		15:00~17:00 李星霓
+		
+		[B253]
+		14:00~16:00 安博施
+		
+		20...
+004306:2021-10-13 21:39:27.361253:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjiw27UhloxN4DTiscx7-_do
+	CreateTime : 1634132367
+	Content : 预约后天14：00-16：00
+
+004307:2021-10-13 21:39:27.376345:	<Interpret>	预约后天14：00-16：00
+004308:2021-10-13 21:39:27.383133:	<InterpretResult>	(datetime.datetime(2021, 10, 15, 14, 0), datetime.datetime(2021, 10, 15, 16, 0), None)
+004309:2021-10-13 21:39:27.398238:	<Reservation>	2021-10-15 14:00:00, 2021-10-15 16:00:00, None, [<User op3adjiw27UhloxN4DTiscx7-_do 林梦颖 1 None>]
+004310:2021-10-13 21:39:27.419275:	<Reply>	
+	ToUserName : op3adjiw27UhloxN4DTiscx7-_do
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634132367
+	MsgType : text
+	Content : 您已预约 2021年10月15日 14:00~16:00 B253
+
+004311:2021-10-13 21:39:39.598293:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjiw27UhloxN4DTiscx7-_do
+	CreateTime : 1634132379
+	Content : 预约周天9：00-11：00
+
+004312:2021-10-13 21:39:39.614532:	<Interpret>	预约周天9：00-11：00
+004313:2021-10-13 21:39:39.624827:	<Warning>	Can't understand!
+004314:2021-10-13 21:39:39.633926:	<Reply>	
+	ToUserName : op3adjiw27UhloxN4DTiscx7-_do
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634132379
+	MsgType : text
+	Content : 嘤嘤嘤，你说的话有点模糊呢，小AI不太理解。输入“帮助”学习如何跟小AI交流
+
+004315:2021-10-13 21:39:57.874147:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjiw27UhloxN4DTiscx7-_do
+	CreateTime : 1634132397
+	Content : 预约10月17日 9：00-11：00
+
+004316:2021-10-13 21:39:57.885635:	<Interpret>	预约10月17日 9：00-11：00
+004317:2021-10-13 21:39:57.895839:	<InterpretResult>	(datetime.datetime(2021, 10, 17, 9, 0), datetime.datetime(2021, 10, 17, 11, 0), None)
+004318:2021-10-13 21:39:57.904316:	<Reservation>	2021-10-17 09:00:00, 2021-10-17 11:00:00, None, [<User op3adjiw27UhloxN4DTiscx7-_do 林梦颖 1 None>]
+004319:2021-10-13 21:39:57.923190:	<Reply>	
+	ToUserName : op3adjiw27UhloxN4DTiscx7-_do
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634132397
+	MsgType : text
+	Content : 您已预约 2021年10月17日 9:00~11:00 B252
+
+004320:2021-10-13 21:40:05.532494:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjuLmLuv1CuTqKzvGv2Hok0Q
+	CreateTime : 1634132405
+	Content : 预约周日上午九点到十一点
+
+004321:2021-10-13 21:40:05.547478:	<Interpret>	预约周日上午九点到十一点
+004322:2021-10-13 21:40:05.560179:	<InterpretResult>	(datetime.datetime(2021, 10, 17, 9, 0), datetime.datetime(2021, 10, 17, 11, 0), None)
+004323:2021-10-13 21:40:05.567045:	<Reservation>	2021-10-17 09:00:00, 2021-10-17 11:00:00, None, [<User op3adjuLmLuv1CuTqKzvGv2Hok0Q 张煜豪 1 None>]
+004324:2021-10-13 21:40:05.585081:	<Reply>	
+	ToUserName : op3adjuLmLuv1CuTqKzvGv2Hok0Q
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634132405
+	MsgType : text
+	Content : 您已预约 2021年10月17日 9:00~11:00 B253
+
+004325:2021-10-13 21:40:17.010597:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjuLmLuv1CuTqKzvGv2Hok0Q
+	CreateTime : 1634132416
+	Content : 查询本周
+
+004326:2021-10-13 21:40:17.113313:	<Interpret>	查询本周
+004327:2021-10-13 21:40:17.142035:	<InterpretResult>	(datetime.datetime(2021, 10, 11, 0, 0), datetime.datetime(2021, 10, 18, 0, 0), None)
+004328:2021-10-13 21:40:17.166104:	<Query>	2021-10-11 00:00:00, 2021-10-18 00:00:00, None
+004329:2021-10-13 21:40:17.226070:	<Reply>	
+	ToUserName : op3adjuLmLuv1CuTqKzvGv2Hok0Q
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634132416
+	MsgType : text
+	Content : 2021年10月11日至2021年10月18日
+		
+		2021年10月11日：
+		[B252]
+		19:00~21:00 张柏舟
+		
+		2021年10月12日：
+		[B252]
+		13:00~15:00 林汇平
+		19:00~20:30 张霄扬
+		20:30~21:30 要昌雨
+		
+		2021年10月13日：
+		[B252]
+		13:00~14:30 蔡子羽
+		19:00~21:00 蒋然
+		
+		[B253]
+		19:00~21:00 陈子儒
+		
+		[B250]
+		20:30~21:30 郑加毅
+		
+		2021年10月14日：
+		[B252]
+		10:00~12:00 王逸飞
+		15:00~17:00 李星霓
+		
+		[B253]
+		14:00~16:00 安博施
+		
+		20...
+004330:2021-10-13 21:40:47.504467:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjiw27UhloxN4DTiscx7-_do
+	CreateTime : 1634132447
+	Content : 取消预约10月17日 9：00-11：00
+
+004331:2021-10-13 21:40:47.516448:	<Interpret>	取消预约10月17日 9：00-11：00
+004332:2021-10-13 21:40:47.523604:	<InterpretResult>	(datetime.datetime(2021, 10, 17, 9, 0), datetime.datetime(2021, 10, 17, 11, 0), None)
+004333:2021-10-13 21:40:47.533960:	<Cancellation>	2021-10-17 09:00:00, 2021-10-17 11:00:00, None
+004334:2021-10-13 21:40:47.565540:	<Reply>	
+	ToUserName : op3adjiw27UhloxN4DTiscx7-_do
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634132447
+	MsgType : text
+	Content : 您已取消2021年10月17日 9:00~11:00 B252
+
+004335:2021-10-13 21:40:56.297278:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjiw27UhloxN4DTiscx7-_do
+	CreateTime : 1634132455
+	Content : 预约10月17日 9：00-11：00 b253
+
+004336:2021-10-13 21:40:56.310223:	<Interpret>	预约10月17日 9：00-11：00 b253
+004337:2021-10-13 21:40:56.319027:	<InterpretResult>	(datetime.datetime(2021, 10, 17, 9, 0), datetime.datetime(2021, 10, 17, 11, 0), 'B253')
+004338:2021-10-13 21:40:56.326983:	<Reservation>	2021-10-17 09:00:00, 2021-10-17 11:00:00, B253, [<User op3adjiw27UhloxN4DTiscx7-_do 林梦颖 1 None>]
+004339:2021-10-13 21:40:56.338648:	<Reply>	
+	ToUserName : op3adjiw27UhloxN4DTiscx7-_do
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634132455
+	MsgType : text
+	Content : 此时段的 B253 预约已满
+
+004340:2021-10-13 23:51:58.558010:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjgpqHcaJW_oxFi7bM-dos_g
+	CreateTime : 1634140317
+	Content : 我是蔡鑫榆
+
+004341:2021-10-13 23:51:58.596565:	<Interpret>	我是蔡鑫榆
+004342:2021-10-13 23:51:58.603628:	<InterpretResult>	('蔡鑫榆',)
+004343:2021-10-13 23:51:58.617124:	<Reply>	
+	ToUserName : op3adjgpqHcaJW_oxFi7bM-dos_g
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634140317
+	MsgType : text
+	Content : 您即将设置姓名为 蔡鑫榆。请再输入一次，请注意，一旦设置后不可更改。
+
+004344:2021-10-13 23:51:59.885879:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjstms6plGLi82HI27ycJ2aQ
+	CreateTime : 1634140319
+	Content : 查询本周
+
+004345:2021-10-13 23:51:59.897014:	<Interpret>	查询本周
+004346:2021-10-13 23:51:59.903636:	<InterpretResult>	(datetime.datetime(2021, 10, 11, 0, 0), datetime.datetime(2021, 10, 18, 0, 0), None)
+004347:2021-10-13 23:51:59.911060:	<Query>	2021-10-11 00:00:00, 2021-10-18 00:00:00, None
+004348:2021-10-13 23:51:59.950437:	<Reply>	
+	ToUserName : op3adjstms6plGLi82HI27ycJ2aQ
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634140319
+	MsgType : text
+	Content : 2021年10月11日至2021年10月18日
+		
+		2021年10月11日：
+		[B252]
+		19:00~21:00 张柏舟
+		
+		2021年10月12日：
+		[B252]
+		13:00~15:00 林汇平
+		19:00~20:30 张霄扬
+		20:30~21:30 要昌雨
+		
+		2021年10月13日：
+		[B252]
+		13:00~14:30 蔡子羽
+		19:00~21:00 蒋然
+		
+		[B253]
+		19:00~21:00 陈子儒
+		
+		[B250]
+		20:30~21:30 郑加毅
+		
+		2021年10月14日：
+		[B252]
+		10:00~12:00 王逸飞
+		15:00~17:00 李星霓
+		
+		[B253]
+		14:00~16:00 安博施
+		
+		20...
+004349:2021-10-13 23:52:07.384426:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjgpqHcaJW_oxFi7bM-dos_g
+	CreateTime : 1634140327
+	Content : 我是蔡鑫榆
+
+004350:2021-10-13 23:52:07.399310:	<Interpret>	我是蔡鑫榆
+004351:2021-10-13 23:52:07.410266:	<InterpretResult>	('蔡鑫榆',)
+004352:2021-10-13 23:52:07.432457:	<Reply>	
+	ToUserName : op3adjgpqHcaJW_oxFi7bM-dos_g
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634140327
+	MsgType : text
+	Content : 您已设置姓名为 蔡鑫榆
+
+004353:2021-10-13 23:52:19.297306:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjgpqHcaJW_oxFi7bM-dos_g
+	CreateTime : 1634140339
+	Content : 查询本周
+
+004354:2021-10-13 23:52:19.313168:	<Interpret>	查询本周
+004355:2021-10-13 23:52:19.318957:	<InterpretResult>	(datetime.datetime(2021, 10, 11, 0, 0), datetime.datetime(2021, 10, 18, 0, 0), None)
+004356:2021-10-13 23:52:19.325387:	<Query>	2021-10-11 00:00:00, 2021-10-18 00:00:00, None
+004357:2021-10-13 23:52:19.365827:	<Reply>	
+	ToUserName : op3adjgpqHcaJW_oxFi7bM-dos_g
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634140339
+	MsgType : text
+	Content : 2021年10月11日至2021年10月18日
+		
+		2021年10月11日：
+		[B252]
+		19:00~21:00 张柏舟
+		
+		2021年10月12日：
+		[B252]
+		13:00~15:00 林汇平
+		19:00~20:30 张霄扬
+		20:30~21:30 要昌雨
+		
+		2021年10月13日：
+		[B252]
+		13:00~14:30 蔡子羽
+		19:00~21:00 蒋然
+		
+		[B253]
+		19:00~21:00 陈子儒
+		
+		[B250]
+		20:30~21:30 郑加毅
+		
+		2021年10月14日：
+		[B252]
+		10:00~12:00 王逸飞
+		15:00~17:00 李星霓
+		
+		[B253]
+		14:00~16:00 安博施
+		
+		20...
+004358:2021-10-13 23:54:36.905549:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjubOPIz7zawnRR80Tr7mHeg
+	CreateTime : 1634140476
+	Content : 查询本周
+
+004359:2021-10-13 23:54:36.927211:	<Interpret>	查询本周
+004360:2021-10-13 23:54:36.946581:	<InterpretResult>	(datetime.datetime(2021, 10, 11, 0, 0), datetime.datetime(2021, 10, 18, 0, 0), None)
+004361:2021-10-13 23:54:36.957075:	<Query>	2021-10-11 00:00:00, 2021-10-18 00:00:00, None
+004362:2021-10-13 23:54:36.998691:	<Reply>	
+	ToUserName : op3adjubOPIz7zawnRR80Tr7mHeg
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634140476
+	MsgType : text
+	Content : 2021年10月11日至2021年10月18日
+		
+		2021年10月11日：
+		[B252]
+		19:00~21:00 张柏舟
+		
+		2021年10月12日：
+		[B252]
+		13:00~15:00 林汇平
+		19:00~20:30 张霄扬
+		20:30~21:30 要昌雨
+		
+		2021年10月13日：
+		[B252]
+		13:00~14:30 蔡子羽
+		19:00~21:00 蒋然
+		
+		[B253]
+		19:00~21:00 陈子儒
+		
+		[B250]
+		20:30~21:30 郑加毅
+		
+		2021年10月14日：
+		[B252]
+		10:00~12:00 王逸飞
+		15:00~17:00 李星霓
+		
+		[B253]
+		14:00~16:00 安博施
+		
+		20...
+004363:2021-10-14 00:07:35.400816:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	CreateTime : 1634141254
+	Content : 查询今天B252
+
+004364:2021-10-14 00:07:35.430576:	<Interpret>	查询今天B252
+004365:2021-10-14 00:07:35.442961:	<InterpretResult>	(datetime.datetime(2021, 10, 14, 0, 0), None, 'B252')
+004366:2021-10-14 00:07:35.451766:	<Query>	2021-10-14 00:00:00, None, B252
+004367:2021-10-14 00:07:35.465182:	<Reply>	
+	ToUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1634141254
+	MsgType : text
+	Content : 2021年10月14日0:00的B252没有预约
+
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 21321)
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 23329)
+spawned uWSGI worker 1 (pid: 23330, cores: 1)
+spawned uWSGI http 1 (pid: 23331)
