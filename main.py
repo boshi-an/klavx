@@ -111,7 +111,7 @@ def checkEcho():
 # 关于后台收到的消息的XML数据包结构，可以参考微信官方网页：
 # https://developers.weixin.qq.com/doc/offiaccount/Message_Management/Receiving_standard_messages.html
 def processMessage():
-	try: e = etree.fromstring(request.data)#etree: html解析工具
+	try: e = etree.fromstring(request.data) #etree: html解析工具
 	except etree.XMLSyntaxError: abort(BAD_REQUEST)
 
 	ToUserName = e.findtext('ToUserName')
@@ -140,18 +140,29 @@ def processMessage():
 	# 公众号，则生成replyDict，将其转换为相应的xml格式并返回
 	if MsgType.lower()=='event' :
 		if e.findtext('Event').lower()=='subscribe':
-			replyDict['Content'] = '感谢关注钢琴社公众号~'
+			replyDict['Content'] = '感谢关注钢琴社公众号~，快输入“你好”跟我打招呼吧！'
 		else :
 			replyDict['Content'] = ''
+	
+	elif MsgId is None :
+		# 鬼知道发生什么了，微信最近总是给我们发奇怪的消息，在这里加了几个过滤
+		# 2021.10.25
+		replyDict['Content'] = '奇怪的错误发生了\n'
 
 	# 用户发来的是文本或语音
 	elif MsgType in ('text','voice'):
 		try:
+			# 鬼知道发生什么了，微信最近总是给我们发奇怪的消息，在这里加了几个过滤
+			# 之前加的似乎没用，又崩了一次
+			# 2021.11.7
+			if db.Message.query.filter_by(msgId=int(MsgId)).first() is not None :
+				raise Exception('消息已处理，或者不存在MsgId')
 			db.db.session.add(db.Message(msgId=int(MsgId)))
 			db.db.session.commit()
-		except IntegrityError:
-			#消息已处理，或者不存在MsgId
-			replyDict['Content'] = 'IntegrityError: 消息已处理，或者不存在MsgId'
+		except Exception as e:
+			# 鬼知道发生什么了，微信最近总是给我们发奇怪的消息，在这里加了几个过滤
+			# 2021.10.25
+			replyDict['Content'] = '奇怪的错误发生了\n'+str(e)
 		else :
 			# 是一条正常的文字消息或语音消息
 			replyDict['Content'] = processText(Content)
@@ -169,7 +180,7 @@ def processText(Content):
 	# 调用AI.doInterprete来处理内容，转换为相应的etree:reply
 	try:
 		reply = AI.doInterprete(Content)
-	except MyException as e:
+	except Exception as e:
 		reply = str(e)
 
 	return reply

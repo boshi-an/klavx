@@ -208,7 +208,7 @@ def initPatterns() :
 
 	# Defining date
 	pDate.appendSubPatternSeq(
-		[r'今天'],
+		[r'今天|今日'],
 		lambda x : None if x==None else (datetime.date.today(),)
 	)
 	pDate.appendSubPatternSeq(

@@ -85,7 +85,6 @@ def queryOccupations(start, end, room):
 	return (reservations, courses)
 
 def formatOccupation(date, reservations, courses):
-	print(date, reservations, courses)
 	dateRepr = utils.formatDate(date)
 	resultList = reservations + courses
 	resultList.sort(key=lambda x:(x['room'], x['start'], x['end']))
@@ -357,14 +356,21 @@ def makeAdmin(name) :
 
 def about() :
 
-	return '这里是北京大学钢琴社,欢迎关注钢琴社公众号\n（づ￣3￣）づ╭❤～\n\n输入“帮助”可以获得操作指南'
+	return '这里是北京大学钢琴社,欢迎关注钢琴社公众号\n（づ￣3￣）づ╭❤～\n\n\
+		输入“我是xxx”可以注册新用户，让小AI知道你是谁\n\n\
+		你还可以在这里留言（后台有人定期回复）\n\n\
+		输入“帮助”可以获得操作指南'
 
 def easterEgg() :
 
 	return '今天你练琴了吗' + randomEmoji()
 
 def help() :
-	return '你可以在这里留言（后台应该不会有人看到的），在这里预约琴房（仅供排练用哦，平时练琴不需要也不应该预约），也可以查询预约情况\n\n预约的格式为“预约+<时间起点>+到/至+<时间终点>+琴房名”，后面两项可以省略，默认预约一个小时\n\n查询的格式类似哦~\n\n输入“我是xxx”注册新用户'
+
+	return '你可以在这里留言（后台有人定期回复），在这里预约琴房（仅供演奏部排练用哦，平时练琴不需要也不应该预约），也可以查询预约情况\n\n\
+		预约的格式为：“预约+[时间起点]+到/至+[时间终点]+琴房名”，后面两项可以省略\n\n\
+		查询的格式为：“查询+[时间起点]+到/至+[时间终点]+琴房名”，后面两项可以省略\n\n\
+		注册的格式为：“我是xxx”'
 
 @isAdmin
 def checkLog() :

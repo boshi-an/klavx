@@ -1,4 +1,4 @@
-
+# encoding=utf-8
 import datetime
 import hashlib
 import os
@@ -20,9 +20,7 @@ from sqlalchemy import create_engine
 
 from exception import MyException
 
-# 使用Flask构建web对象app
 app = Flask(__name__)
-# 激活app环境(with app_context()也行)
 app.app_context().push()
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -44,8 +42,8 @@ if __name__ == '__main__' :
 	# u = Logs.query.delete()
 	# db.session.commit()
 	# u = Logs.query.all()
-	u = User.query.filter(User.name=='程陶然\n')
+	u = User.query.filter(User.name=='肖邦')
 	u.delete()
 	# u.authorized = 1
 
-	db.session.commit()	
+	db.session.commit()
