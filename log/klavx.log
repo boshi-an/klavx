@@ -45718,3 +45718,558 @@ spawned uWSGI http 1 (pid: 1384)
 		
 		(*)钢琴课
 
+008522:2021-11-11 16:07:16.565915:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjuLmLuv1CuTqKzvGv2Hok0Q
+	CreateTime : 1636618036
+	Content : 查询今天
+
+008523:2021-11-11 16:07:16.590733:	<Interpret>	查询今天
+008524:2021-11-11 16:07:16.597163:	<InterpretResult>	(datetime.datetime(2021, 11, 11, 0, 0), datetime.datetime(2021, 11, 12, 0, 0), None)
+008525:2021-11-11 16:07:16.603392:	<Query>	2021-11-11 00:00:00, 2021-11-12 00:00:00, None, None
+008526:2021-11-11 16:07:16.629181:	<Reply>	
+	ToUserName : op3adjuLmLuv1CuTqKzvGv2Hok0Q
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1636618036
+	MsgType : text
+	Content : 2021年11月11日至2021年11月12日
+		
+		2021年11月11日：
+		[B252]
+		10:00~12:00 王逸飞
+		15:00~17:00 李星霓
+		
+		[B250]
+		13:00~14:00 贾维宸 (*)
+		16:00~17:00 史大譞 (*)
+		19:00~20:00 林汇平 (*)
+		20:00~21:00 金泽楷 (*)
+		
+		2021年11月12日：
+		[B252]
+		18:00~20:00 金泽楷
+		
+		[B253]
+		20:00~21:30 张煜豪
+		
+		[B250]
+		17:00~18:00 张安 (*)
+		19:00~20:00 陈淑晖 (*)
+		20:00~21:00 林汇平 (*)
+		
+		(*)钢琴课
+
+008527:2021-11-11 16:14:53.905807:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjiw27UhloxN4DTiscx7-_do
+	CreateTime : 1636618493
+	Content : 查询今天
+
+008528:2021-11-11 16:14:53.922879:	<Interpret>	查询今天
+008529:2021-11-11 16:14:53.929678:	<InterpretResult>	(datetime.datetime(2021, 11, 11, 0, 0), datetime.datetime(2021, 11, 12, 0, 0), None)
+008530:2021-11-11 16:14:53.942490:	<Query>	2021-11-11 00:00:00, 2021-11-12 00:00:00, None, None
+008531:2021-11-11 16:14:53.963756:	<Reply>	
+	ToUserName : op3adjiw27UhloxN4DTiscx7-_do
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1636618493
+	MsgType : text
+	Content : 2021年11月11日至2021年11月12日
+		
+		2021年11月11日：
+		[B252]
+		10:00~12:00 王逸飞
+		15:00~17:00 李星霓
+		
+		[B250]
+		13:00~14:00 贾维宸 (*)
+		16:00~17:00 史大譞 (*)
+		19:00~20:00 林汇平 (*)
+		20:00~21:00 金泽楷 (*)
+		
+		2021年11月12日：
+		[B252]
+		18:00~20:00 金泽楷
+		
+		[B253]
+		20:00~21:30 张煜豪
+		
+		[B250]
+		17:00~18:00 张安 (*)
+		19:00~20:00 陈淑晖 (*)
+		20:00~21:00 林汇平 (*)
+		
+		(*)钢琴课
+
+008532:2021-11-11 16:31:38.460709:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjpf0w9eILQ-dtxyx6pBdo1g
+	CreateTime : 1636619498
+	Content : 查询本周
+
+008533:2021-11-11 16:31:38.478978:	<Interpret>	查询本周
+008534:2021-11-11 16:31:38.485241:	<InterpretResult>	(datetime.datetime(2021, 11, 8, 0, 0), datetime.datetime(2021, 11, 15, 0, 0), None)
+008535:2021-11-11 16:31:38.494217:	<Query>	2021-11-08 00:00:00, 2021-11-15 00:00:00, None, None
+008536:2021-11-11 16:31:38.560583:	<Reply>	
+	ToUserName : op3adjpf0w9eILQ-dtxyx6pBdo1g
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1636619498
+	MsgType : text
+	Content : 2021年11月8日至2021年11月15日
+		
+		2021年11月8日：
+		[B252]
+		21:00~22:00 朱睿
+		22:00~22:30 王文涵
+		
+		[B250]
+		19:00~20:00 周镕哲 (*)
+		20:00~21:00 戴安方 (*)
+		
+		2021年11月9日：
+		[B252]
+		15:00~16:30 wdw
+		21:00~22:30 王文涵
+		
+		[B253]
+		16:00~17:00 林梦颖
+		20:30~21:30 要昌雨
+		
+		[B250]
+		19:00~20:00 文润美 (*)
+		20:00~21:00 王文涵 (*)
+		
+		2021年11月10日：
+		[B252]
+		13:00~14:00 陈远洲
+		14:00~16:00 蔡子羽
+		1...
+008537:2021-11-11 16:57:11.708978:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjiw27UhloxN4DTiscx7-_do
+	CreateTime : 1636621031
+	Content : 预约今天20：30-22：00 b253
+
+008538:2021-11-11 16:57:11.736695:	<Interpret>	预约今天20：30-22：00 b253
+008539:2021-11-11 16:57:11.746749:	<InterpretResult>	(datetime.datetime(2021, 11, 11, 20, 30), datetime.datetime(2021, 11, 11, 22, 0), 'B253')
+008540:2021-11-11 16:57:11.758757:	<Reservation>	2021-11-11 20:30:00, 2021-11-11 22:00:00, B253, [<User op3adjiw27UhloxN4DTiscx7-_do 林梦颖 1 None>]
+008541:2021-11-11 16:57:11.793100:	<Reply>	
+	ToUserName : op3adjiw27UhloxN4DTiscx7-_do
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1636621031
+	MsgType : text
+	Content : 您已预约 2021年11月11日 20:30~22:00 B253
+
+008542:2021-11-11 17:06:30.824085:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjtKG451nHgUeq1ZyWIJzNtk
+	CreateTime : 1636621590
+	Content : 查询 明天
+
+008543:2021-11-11 17:06:30.837176:	<Interpret>	查询 明天
+008544:2021-11-11 17:06:30.846539:	<InterpretResult>	(datetime.datetime(2021, 11, 12, 0, 0), datetime.datetime(2021, 11, 13, 0, 0), None)
+008545:2021-11-11 17:06:30.853711:	<Query>	2021-11-12 00:00:00, 2021-11-13 00:00:00, None, None
+008546:2021-11-11 17:06:30.877971:	<Reply>	
+	ToUserName : op3adjtKG451nHgUeq1ZyWIJzNtk
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1636621590
+	MsgType : text
+	Content : 2021年11月12日至2021年11月13日
+		
+		2021年11月12日：
+		[B252]
+		18:00~20:00 金泽楷
+		
+		[B253]
+		20:00~21:30 张煜豪
+		
+		[B250]
+		17:00~18:00 张安 (*)
+		19:00~20:00 陈淑晖 (*)
+		20:00~21:00 林汇平 (*)
+		
+		2021年11月13日：
+		[B253]
+		11:00~12:00 金泽楷
+		
+		[B250]
+		09:00~10:00 赵孜硕 (*)
+		10:00~11:00 李星霓 (*)
+		11:00~12:00 袁梓峰 (*)
+		14:00~15:00 王逸飞 (*)
+		15:00~16:00 敖翔 (*)
+		17:00~18:00 苏家瑗 (*)
+		19:00~...
+008547:2021-11-11 18:03:09.932620:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjk2URZnhLc76FF0Fd4ZS65A
+	CreateTime : 1636624989
+	Content : 预约周五16:00至18:00
+
+008548:2021-11-11 18:03:09.947816:	<Interpret>	预约周五16:00至18:00
+008549:2021-11-11 18:03:09.955572:	<Error>	Value error occured!
+008550:2021-11-11 18:03:09.965915:	<Reply>	
+	ToUserName : op3adjk2URZnhLc76FF0Fd4ZS65A
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1636624989
+	MsgType : text
+	Content : substring not found
+
+008551:2021-11-11 18:03:31.449128:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjk2URZnhLc76FF0Fd4ZS65A
+	CreateTime : 1636625011
+	Content : 预约16:00至18:00
+
+008552:2021-11-11 18:03:31.470530:	<Interpret>	预约16:00至18:00
+008553:2021-11-11 18:03:31.477112:	<Warning>	Can't understand!
+008554:2021-11-11 18:03:31.482974:	<Reply>	
+	ToUserName : op3adjk2URZnhLc76FF0Fd4ZS65A
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1636625011
+	MsgType : text
+	Content : 嘤嘤嘤，你说的话有点模糊呢，小AI不太理解。输入“帮助”学习如何跟小AI交流
+
+008555:2021-11-11 18:04:12.122897:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjk2URZnhLc76FF0Fd4ZS65A
+	CreateTime : 1636625051
+	Content : 预约<周五16:00>至<周五18:00>
+
+008556:2021-11-11 18:04:12.143003:	<Interpret>	预约<周五16:00>至<周五18:00>
+008557:2021-11-11 18:04:12.149062:	<Error>	Value error occured!
+008558:2021-11-11 18:04:12.158221:	<Reply>	
+	ToUserName : op3adjk2URZnhLc76FF0Fd4ZS65A
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1636625051
+	MsgType : text
+	Content : substring not found
+
+008559:2021-11-11 18:04:44.339692:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjk2URZnhLc76FF0Fd4ZS65A
+	CreateTime : 1636625084
+	Content : 预约+<周五16:00>+到/至+<周五18:00>
+
+008560:2021-11-11 18:04:44.363659:	<Interpret>	预约+<周五16:00>+到/至+<周五18:00>
+008561:2021-11-11 18:04:44.369549:	<Error>	Value error occured!
+008562:2021-11-11 18:04:44.376968:	<Reply>	
+	ToUserName : op3adjk2URZnhLc76FF0Fd4ZS65A
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1636625084
+	MsgType : text
+	Content : substring not found
+
+008563:2021-11-11 18:05:00.031731:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjk2URZnhLc76FF0Fd4ZS65A
+	CreateTime : 1636625099
+	Content : 预约16:00到18:00
+
+008564:2021-11-11 18:05:00.053465:	<Interpret>	预约16:00到18:00
+008565:2021-11-11 18:05:00.063401:	<Warning>	Can't understand!
+008566:2021-11-11 18:05:00.070294:	<Reply>	
+	ToUserName : op3adjk2URZnhLc76FF0Fd4ZS65A
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1636625099
+	MsgType : text
+	Content : 嘤嘤嘤，你说的话有点模糊呢，小AI不太理解。输入“帮助”学习如何跟小AI交流
+
+008567:2021-11-11 18:05:04.728692:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjk2URZnhLc76FF0Fd4ZS65A
+	CreateTime : 1636625104
+	Content : 帮助
+
+008568:2021-11-11 18:05:04.750884:	<Interpret>	帮助
+008569:2021-11-11 18:05:04.757758:	<InterpretResult>	[]
+008570:2021-11-11 18:05:04.767979:	<Reply>	
+	ToUserName : op3adjk2URZnhLc76FF0Fd4ZS65A
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1636625104
+	MsgType : text
+	Content : 你可以在这里留言（后台有人定期回复），在这里预约琴房（仅供演奏部排练用哦，平时练琴不需要也不应该预约），也可以查询预约情况
+		
+				预约的格式为：“预约+[时间起点]+到/至+[时间终点]+琴房名”，后面两项可以省略
+		
+				查询的格式为：“查询+[时间起点]+到/至+[时间终点]+琴房名”，后面两项可以省略
+		
+				注册的格式为：“我是xxx”
+
+008571:2021-11-11 18:05:34.225129:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjk2URZnhLc76FF0Fd4ZS65A
+	CreateTime : 1636625133
+	Content : 预约 周五16:00 至 18:00
+
+008572:2021-11-11 18:05:34.243184:	<Interpret>	预约 周五16:00 至 18:00
+008573:2021-11-11 18:05:34.248407:	<Error>	Value error occured!
+008574:2021-11-11 18:05:34.254046:	<Reply>	
+	ToUserName : op3adjk2URZnhLc76FF0Fd4ZS65A
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1636625133
+	MsgType : text
+	Content : substring not found
+
+008575:2021-11-11 18:05:43.254729:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjk2URZnhLc76FF0Fd4ZS65A
+	CreateTime : 1636625142
+	Content : 我是李丁一城
+
+008576:2021-11-11 18:05:43.276237:	<Interpret>	我是李丁一城
+008577:2021-11-11 18:05:43.326586:	<InterpretResult>	('李丁一城',)
+008578:2021-11-11 18:05:43.345974:	<Reply>	
+	ToUserName : op3adjk2URZnhLc76FF0Fd4ZS65A
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1636625142
+	MsgType : text
+	Content : 您已设置姓名为 李丁一城
+
+008579:2021-11-11 18:06:04.459593:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjk2URZnhLc76FF0Fd4ZS65A
+	CreateTime : 1636625164
+	Content : 预约 16:00 至 18:00
+
+008580:2021-11-11 18:06:04.481654:	<Interpret>	预约 16:00 至 18:00
+008581:2021-11-11 18:06:04.503731:	<Warning>	Can't understand!
+008582:2021-11-11 18:06:04.516201:	<Reply>	
+	ToUserName : op3adjk2URZnhLc76FF0Fd4ZS65A
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1636625164
+	MsgType : text
+	Content : 嘤嘤嘤，你说的话有点模糊呢，小AI不太理解。输入“帮助”学习如何跟小AI交流
+
+008583:2021-11-11 18:06:15.326441:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjk2URZnhLc76FF0Fd4ZS65A
+	CreateTime : 1636625174
+	Content : 查询
+
+008584:2021-11-11 18:06:15.348837:	<Interpret>	查询
+008585:2021-11-11 18:06:15.355489:	<InterpretResult>	(None, None, None)
+008586:2021-11-11 18:06:15.367520:	<Query>	None, None, None, None
+008587:2021-11-11 18:06:15.638602:	<Reply>	
+	ToUserName : op3adjk2URZnhLc76FF0Fd4ZS65A
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1636625174
+	MsgType : text
+	Content : 2021年11月11日18:06没有预约
+
+008588:2021-11-11 18:14:37.177435:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjk2URZnhLc76FF0Fd4ZS65A
+	CreateTime : 1636625676
+	Content : 查询
+
+008589:2021-11-11 18:14:37.261023:	<Interpret>	查询
+008590:2021-11-11 18:14:37.269039:	<InterpretResult>	(None, None, None)
+008591:2021-11-11 18:14:37.276501:	<Query>	None, None, None, None
+008592:2021-11-11 18:14:37.297630:	<Reply>	
+	ToUserName : op3adjk2URZnhLc76FF0Fd4ZS65A
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1636625676
+	MsgType : text
+	Content : 2021年11月11日18:14没有预约
+
+008593:2021-11-11 18:14:44.741333:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjk2URZnhLc76FF0Fd4ZS65A
+	CreateTime : 1636625684
+	Content : 预约 19:00 至 19:01
+
+008594:2021-11-11 18:14:44.772842:	<Interpret>	预约 19:00 至 19:01
+008595:2021-11-11 18:14:44.779227:	<Warning>	Can't understand!
+008596:2021-11-11 18:14:44.792453:	<Reply>	
+	ToUserName : op3adjk2URZnhLc76FF0Fd4ZS65A
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1636625684
+	MsgType : text
+	Content : 嘤嘤嘤，你说的话有点模糊呢，小AI不太理解。输入“帮助”学习如何跟小AI交流
+
+008597:2021-11-11 18:15:21.176422:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjk2URZnhLc76FF0Fd4ZS65A
+	CreateTime : 1636625720
+	Content : 预约 2021年11月12日16:00 至 2021年11月12日18:00
+
+008598:2021-11-11 18:15:21.192200:	<Interpret>	预约 2021年11月12日16:00 至 2021年11月12日18:00
+008599:2021-11-11 18:15:21.201599:	<Warning>	Can't understand!
+008600:2021-11-11 18:15:21.213291:	<Reply>	
+	ToUserName : op3adjk2URZnhLc76FF0Fd4ZS65A
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1636625720
+	MsgType : text
+	Content : 嘤嘤嘤，你说的话有点模糊呢，小AI不太理解。输入“帮助”学习如何跟小AI交流
+
+008601:2021-11-11 18:15:33.586626:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjk2URZnhLc76FF0Fd4ZS65A
+	CreateTime : 1636625733
+	Content : 预约2021年11月12日16:00至2021年11月12日18:00
+
+008602:2021-11-11 18:15:33.609179:	<Interpret>	预约2021年11月12日16:00至2021年11月12日18:00
+008603:2021-11-11 18:15:33.625132:	<Warning>	Can't understand!
+008604:2021-11-11 18:15:33.633614:	<Reply>	
+	ToUserName : op3adjk2URZnhLc76FF0Fd4ZS65A
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1636625733
+	MsgType : text
+	Content : 嘤嘤嘤，你说的话有点模糊呢，小AI不太理解。输入“帮助”学习如何跟小AI交流
+
+008605:2021-11-11 18:17:43.639952:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjk2URZnhLc76FF0Fd4ZS65A
+	CreateTime : 1636625863
+	Content : 查询
+
+008606:2021-11-11 18:17:43.667682:	<Interpret>	查询
+008607:2021-11-11 18:17:43.673805:	<InterpretResult>	(None, None, None)
+008608:2021-11-11 18:17:43.684182:	<Query>	None, None, None, None
+008609:2021-11-11 18:17:43.691383:	<Reply>	
+	ToUserName : op3adjk2URZnhLc76FF0Fd4ZS65A
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1636625863
+	MsgType : text
+	Content : 2021年11月11日18:17没有预约
+
+008610:2021-11-11 18:18:29.634072:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjk2URZnhLc76FF0Fd4ZS65A
+	CreateTime : 1636625909
+	Content : 预约 2021年11月12日16:0 至 2021年11月12日18:00
+
+008611:2021-11-11 18:18:29.660283:	<Interpret>	预约 2021年11月12日16:0 至 2021年11月12日18:00
+008612:2021-11-11 18:18:29.670518:	<Warning>	Can't understand!
+008613:2021-11-11 18:18:29.678093:	<Reply>	
+	ToUserName : op3adjk2URZnhLc76FF0Fd4ZS65A
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1636625909
+	MsgType : text
+	Content : 嘤嘤嘤，你说的话有点模糊呢，小AI不太理解。输入“帮助”学习如何跟小AI交流
+
+008614:2021-11-11 18:18:35.579969:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjk2URZnhLc76FF0Fd4ZS65A
+	CreateTime : 1636625915
+	Content : 预约 2021年11月12日16:00 至 2021年11月12日18:00
+
+008615:2021-11-11 18:18:35.601515:	<Interpret>	预约 2021年11月12日16:00 至 2021年11月12日18:00
+008616:2021-11-11 18:18:35.608395:	<Warning>	Can't understand!
+008617:2021-11-11 18:18:35.615919:	<Reply>	
+	ToUserName : op3adjk2URZnhLc76FF0Fd4ZS65A
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1636625915
+	MsgType : text
+	Content : 嘤嘤嘤，你说的话有点模糊呢，小AI不太理解。输入“帮助”学习如何跟小AI交流
+
+008618:2021-11-11 18:18:46.900464:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjk2URZnhLc76FF0Fd4ZS65A
+	CreateTime : 1636625926
+	Content : 预约 11月12日16:0 至 11月12日18:00
+
+008619:2021-11-11 18:18:46.918450:	<Interpret>	预约 11月12日16:0 至 11月12日18:00
+008620:2021-11-11 18:18:46.927665:	<InterpretResult>	(datetime.datetime(2021, 11, 12, 16, 0), datetime.datetime(2021, 11, 12, 11, 0), None)
+008621:2021-11-11 18:18:46.940829:	<Reservation>	2021-11-12 16:00:00, 2021-11-12 11:00:00, None, [<User op3adjk2URZnhLc76FF0Fd4ZS65A 李丁一城 1 None>]
+008622:2021-11-11 18:18:46.947984:	<Reply>	
+	ToUserName : op3adjk2URZnhLc76FF0Fd4ZS65A
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1636625926
+	MsgType : text
+	Content : 抱歉，单次预约时长不能超过 2 个小时。
+
+008623:2021-11-11 18:18:56.083478:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjk2URZnhLc76FF0Fd4ZS65A
+	CreateTime : 1636625935
+	Content : 预约 11月12日16:01 至 11月12日18:00
+
+008624:2021-11-11 18:18:56.103571:	<Interpret>	预约 11月12日16:01 至 11月12日18:00
+008625:2021-11-11 18:18:56.110140:	<InterpretResult>	(datetime.datetime(2021, 11, 12, 16, 1), datetime.datetime(2021, 11, 12, 11, 0), None)
+008626:2021-11-11 18:18:56.119297:	<Reservation>	2021-11-12 16:01:00, 2021-11-12 11:00:00, None, [<User op3adjk2URZnhLc76FF0Fd4ZS65A 李丁一城 1 None>]
+008627:2021-11-11 18:18:56.126321:	<Reply>	
+	ToUserName : op3adjk2URZnhLc76FF0Fd4ZS65A
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1636625935
+	MsgType : text
+	Content : 抱歉，单次预约时长不能超过 2 个小时。
+
+008628:2021-11-11 18:19:19.188773:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjk2URZnhLc76FF0Fd4ZS65A
+	CreateTime : 1636625958
+	Content : 预约 11月12日16:00 至 11月12日17:59
+
+008629:2021-11-11 18:19:19.217384:	<Interpret>	预约 11月12日16:00 至 11月12日17:59
+008630:2021-11-11 18:19:19.241317:	<InterpretResult>	(datetime.datetime(2021, 11, 12, 16, 0), datetime.datetime(2021, 11, 12, 11, 59), None)
+008631:2021-11-11 18:19:19.249253:	<Reservation>	2021-11-12 16:00:00, 2021-11-12 11:59:00, None, [<User op3adjk2URZnhLc76FF0Fd4ZS65A 李丁一城 1 None>]
+008632:2021-11-11 18:19:19.262662:	<Reply>	
+	ToUserName : op3adjk2URZnhLc76FF0Fd4ZS65A
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1636625958
+	MsgType : text
+	Content : 抱歉，单次预约时长不能超过 2 个小时。
+
+008633:2021-11-11 18:19:28.692251:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjk2URZnhLc76FF0Fd4ZS65A
+	CreateTime : 1636625968
+	Content : 预约 11月12日16:00 至 11月12日17:00
+
+008634:2021-11-11 18:19:28.711759:	<Interpret>	预约 11月12日16:00 至 11月12日17:00
+008635:2021-11-11 18:19:28.718567:	<InterpretResult>	(datetime.datetime(2021, 11, 12, 16, 0), datetime.datetime(2021, 11, 12, 11, 0), None)
+008636:2021-11-11 18:19:28.724938:	<Reservation>	2021-11-12 16:00:00, 2021-11-12 11:00:00, None, [<User op3adjk2URZnhLc76FF0Fd4ZS65A 李丁一城 1 None>]
+008637:2021-11-11 18:19:28.732543:	<Reply>	
+	ToUserName : op3adjk2URZnhLc76FF0Fd4ZS65A
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1636625968
+	MsgType : text
+	Content : 抱歉，单次预约时长不能超过 2 个小时。
+
+gateway "uWSGI http 1" has been buried (pid: 1384)
+...brutally killing workers...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /var/www/klavx
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (127.0.0.1:39519)
+running /var/www/klavx/venv/bin/uwsgi
+[uWSGI] getting INI configuration from /var/www/klavx/new.ini
+*** Starting uWSGI 2.0.19.1 (64bit) on [Thu Nov 11 18:27:54 2021] ***
+compiled with version: 7.5.0 on 30 August 2021 06:16:19
+os: Linux-4.15.0-142-generic #146-Ubuntu SMP Tue Apr 13 01:11:19 UTC 2021
+nodename: VM-0-6-ubuntu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/klavx
+detected binary path: /var/www/klavx/venv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 7192
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 127.0.0.1:5000 fd 5
+uwsgi socket 0 bound to TCP address 127.0.0.1:41349 (port auto-assigned) fd 4
+Python version: 3.6.9 (default, Jan 26 2021, 15:33:00)  [GCC 8.4.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x557d639b9520
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145808 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x557d639b9520 pid: 1382 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 1382)
+spawned uWSGI worker 1 (pid: 13401, cores: 1)
+spawned uWSGI http 1 (pid: 13402)
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 13402)
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 15477)
+spawned uWSGI worker 1 (pid: 15478, cores: 1)
+spawned uWSGI http 1 (pid: 15479)
