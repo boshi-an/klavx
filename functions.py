@@ -323,6 +323,13 @@ def getCreateUser(name):
 	return user
 
 def refreshCourses(fileName):
+	if datetime.datetime.now().month < 8 :
+		startDate = datetime.date(year=2021, month=3, day=1)
+		endDate = datetime.date(year=2022, month=7, day=1)
+	else :
+		startDate = datetime.date(year=2021, month=9, day=1)
+		endDate = datetime.date(year=2022, month=1, day=1)
+	
 	B252 = getRoom('B252')
 	B250 = getRoom('B250')
 	B253 = getRoom('B253')
@@ -333,8 +340,6 @@ def refreshCourses(fileName):
 		weekday = '周一 周二 周三 周四 周五 周六 周日'.split().index(weekday)
 		startTime = datetime.time(hour=int(startHour))
 		endTime = datetime.time(hour=int(endHour))
-		startDate = datetime.date(year=2021, month=3, day=1)
-		endDate = datetime.date(year=2021, month=7, day=1)
 		teacher = getCreateUser(teacherName)
 		room = B250
 		course = Course(teacher=teacher, room=room, weekday=weekday,
