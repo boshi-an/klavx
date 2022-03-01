@@ -152,6 +152,7 @@ pNumber_adj = Pattern()	# numbers that have no preceeding letters
 pSparseTime = Pattern()
 pEasterEgg = Pattern()
 pCheckLog = Pattern()
+pFrequent = Pattern()
 pAbout = Pattern()
 pHelp = Pattern()
 
@@ -396,6 +397,12 @@ def initPatterns() :
 	pCancel.appendSubPatternSeq(
 		['^取消', pLocation],
 		lambda _,x : None if haveNone(_,x) else (None, None, *x)
+	)
+
+	# Defining Frequently Asked Questions
+	pFrequent.appendSubPatternSeq(
+		['^常见问题'],
+		lambda x : None if x==None else []
 	)
 
 	# Defining I am
