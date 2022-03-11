@@ -42,8 +42,9 @@ if __name__ == '__main__' :
 	# u = Logs.query.delete()
 	# db.session.commit()
 	# u = Logs.query.all()
-	u = User.query.filter(User.name=='肖邦')
-	u.delete()
+	u = User.query.filter_by(openId='op3adjrNJMrRB5oWdvDbuSOkL6Kg')
+	print(u.all())
+	u.all()[0].name = "假的安博施"
 	# u.authorized = 1
 
 	db.session.commit()

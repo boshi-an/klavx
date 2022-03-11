@@ -110,10 +110,16 @@ def vagueRequest() :
 	return '嘤嘤嘤，你说的话有点模糊呢，小AI不太理解。输入“帮助”学习如何跟小AI交流'
 
 def processIam(name) :
+	if len(name) > 10 :
+		return '“{}”这个名字太长啦'.format(name)
+	if len(name) < 1 :
+		return '“{}”这个名字太短啦'.format(name)
 	user = User.query.filter_by(openId=g.openId).first()
 	if user is not None:
 		if user.name == name:
 			return '您已设置姓名为 {}'.format(name)
+		elif name == '谁' :
+			return '您的姓名为 {}'.format(user.name)
 
 	registration = Registration.query.filter_by(openId=g.openId).first()
 	if registration is None:
@@ -129,22 +135,31 @@ def processIam(name) :
 		return '两次输入不一致，请重新输入'
 	else:
 		cur_user = User.query.filter_by(openId=g.openId).all()
+		users_by_name = User.query.filter_by(name=name).all()
 		if len(cur_user) >= 1 :	# 改名
 			if len(cur_user) != 1 :
 				# ??? 出故障了，出现重复的openId
 				raise MyException('出现重复openId, 请联系技术部负责人')
+			if len(users_by_name) != 0 :
+				# 重名了
+				db.session.delete(registration)
+				db.session.commit()
+				return '该用户名已经存在啦'
 			cur_user[0].name = name
 			db.session.delete(registration)
 			db.session.commit()
 			return '您已设置姓名为 {}'.format(name)
 		else :	# 新增用户
 			#如果当前仅有一个重名用户且此人没有openId，则将其视为预先录入的老师，二者为同一人
-			users = User.query.filter_by(name=name).all()
-			if len(users)==1 and users[0].openId is None:
-				users[0].openId = g.openId
-				db.session.add(users[0])
-			else:
+			if len(users_by_name)==1 and users_by_name[0].openId is None:
+				users_by_name[0].openId = g.openId
+				db.session.add(users_by_name[0])
+			elif len(users_by_name) == 0 :
 				db.session.add(User(openId=g.openId, name=name))
+			else:
+				db.session.delete(registration)
+				db.session.commit()
+				return '该用户名已经存在啦'
 			db.session.delete(registration)
 			db.session.commit()
 			return '您已设置姓名为 {}'.format(name)
