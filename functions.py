@@ -114,28 +114,40 @@ def processIam(name) :
 	if user is not None:
 		if user.name == name:
 			return '您已设置姓名为 {}'.format(name)
-		return '您已设置姓名为 {}，不可更改'.format(user.name)
 
 	registration = Registration.query.filter_by(openId=g.openId).first()
 	if registration is None:
 		db.session.add(Registration(openId=g.openId, name=name))
 		db.session.commit()
-		return '您即将设置姓名为 {}。请再输入一次，请注意，一旦设置后不可更改。'.format(name)
+		if user is not None:
+			return '您已设置姓名为 {}。再输入一次“我是{}”将更改用户名'.format(user.name, name)
+		else :
+			return '您即将设置姓名为 {}。请再输入一次“我是{}”将确认该身份。'.format(name, name)
 	elif registration.name != name:
 		db.session.delete(registration)
 		db.session.commit()
 		return '两次输入不一致，请重新输入'
 	else:
-		#如果当前仅有一个重名用户且此人没有openId，则将其视为预先录入的老师，二者为同一人
-		users = User.query.filter_by(name=name).all()
-		if len(users)==1 and users[0].openId is None:
-			users[0].openId = g.openId
-			db.session.add(users[0])
-		else:
-			db.session.add(User(openId=g.openId, name=name))
-		db.session.delete(registration)
-		db.session.commit()
-		return '您已设置姓名为 {}'.format(name)
+		cur_user = User.query.filter_by(openId=g.openId).all()
+		if len(cur_user) >= 1 :	# 改名
+			if len(cur_user) != 1 :
+				# ??? 出故障了，出现重复的openId
+				raise MyException('出现重复openId, 请联系技术部负责人')
+			cur_user[0].name = name
+			db.session.delete(registration)
+			db.session.commit()
+			return '您已设置姓名为 {}'.format(name)
+		else :	# 新增用户
+			#如果当前仅有一个重名用户且此人没有openId，则将其视为预先录入的老师，二者为同一人
+			users = User.query.filter_by(name=name).all()
+			if len(users)==1 and users[0].openId is None:
+				users[0].openId = g.openId
+				db.session.add(users[0])
+			else:
+				db.session.add(User(openId=g.openId, name=name))
+			db.session.delete(registration)
+			db.session.commit()
+			return '您已设置姓名为 {}'.format(name)
 
 @authenticated
 def processReservation(start, end, roomName):
@@ -250,7 +262,7 @@ def processCancel(start, end, roomName):
 		elif start is not None and end is None :
 			return '您没有包含{} '.format(start) + (roomName if roomName is not None else '') + '的预约'
 		elif roomName is not None :
-			 return '您没有{} '.format(roomName) + '的预约'
+			return '您没有{} '.format(roomName) + '的预约'
 	query.delete()
 	db.session.commit()
 	return '您已取消{}{}'.format('\n'*(len(resultList)>1), '\n'.join(resultList))
@@ -362,19 +374,19 @@ def makeAdmin(name) :
 def about() :
 
 	return '这里是北京大学钢琴社,欢迎关注钢琴社公众号\n（づ￣3￣）づ╭❤～\n\n\
-		输入“我是xxx”可以注册新用户，让小AI知道你是谁\n\n\
-		你还可以在这里留言（后台有人定期回复）\n\n\
-		输入“帮助”可以获得操作指南\n\n\
-		输入“常见问题”了解更多'
+输入“我是xxx”可以注册新用户，让小AI知道你是谁\n\n\
+你还可以在这里留言（后台有人定期回复）\n\n\
+输入“帮助”可以获得操作指南\n\n\
+输入“常见问题”了解更多'
 
 def frequentQuestions() :
 
-	return 'Q:钢琴课下个学期开吗？什么时候报名？\n\
-			A:每个学期都开的，社团招新的时候报名\n\n\
-			Q:演奏部什么时候招新？\n\
-			A:每个学期社团招新时都可以报名参加面试进入演奏部\n\n\
-			Q:学校里有地方练琴吗？\n\
-			A:北京大学没有提供公共琴房，新太阳学生中心地下的琴房仅供演奏部成员排练使用'
+	return 'Q:钢琴社开设钢琴课吗？什么时候报名？\n\
+A:钢琴社每个学期都会开设钢琴课，\
+针对从零基础到高基础的同学开设了一期班、二期班、提高班。\
+钢琴课将在百团大战社团招新的时候报名，有意愿报名的同学请留意公众号的后续推送。\n\n\
+Q:钢琴社什么时候招新？\n\
+A:每个学期的百团大战期间，钢琴社都会招新～具体的时间和地点请留意公众号的后续推送。'
 
 def easterEgg() :
 
@@ -383,9 +395,10 @@ def easterEgg() :
 def help() :
 
 	return '你可以在这里留言（后台有人定期回复），在这里预约琴房（仅供演奏部排练用哦，平时练琴不需要也不应该预约），也可以查询预约情况\n\n\
-		预约的格式为：“预约+[时间起点]+到/至+[时间终点]+琴房名”，后面两项可以省略\n\n\
-		查询的格式为：“查询+[时间起点]+到/至+[时间终点]+琴房名”，后面两项可以省略\n\n\
-		注册的格式为：“我是xxx”'
+预约的格式为：“预约+[时间起点]+到/至+[时间终点]+琴房名”，后面两项可以省略\n\n\
+查询的格式为：“查询+[时间起点]+到/至+[时间终点]+琴房名”，后面两项可以省略\n\n\
+注册的格式为：“我是xxx”\n\n\
+输入“常见问题”了解更多'
 
 @isAdmin
 def checkLog() :

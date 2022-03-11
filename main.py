@@ -54,7 +54,7 @@ AI.registerPattern(interpreter.pQuery, func.processQuery)
 AI.registerPattern(interpreter.pAbout, func.about)
 AI.registerPattern(interpreter.pEasterEgg, func.easterEgg)
 AI.registerPattern(interpreter.pHelp, func.help)
-AI.registerPattern(interpreter.pFrequent, func.)
+AI.registerPattern(interpreter.pFrequent, func.frequentQuestions)
 AI.registerPattern(interpreter.pCheckLog, func.checkLog)
 
 # 微信段设置的token，用于验证服务器是否正确运行
