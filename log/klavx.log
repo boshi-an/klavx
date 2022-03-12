@@ -80860,3 +80860,622 @@ spawned uWSGI http 1 (pid: 25956)
 	MsgType : text
 	Content : 您已设置姓名为 安博施
 
+015045:2022-03-12 00:41:50.693657:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adji2bNTqGIbxBu58Ur8X0IeQ
+	CreateTime : 1647016910
+	Content : 查询 今天
+
+015046:2022-03-12 00:41:50.708552:	<Interpret>	查询 今天
+015047:2022-03-12 00:41:50.714209:	<InterpretResult>	(datetime.datetime(2022, 3, 12, 0, 0), datetime.datetime(2022, 3, 13, 0, 0), None)
+015048:2022-03-12 00:41:50.719904:	<Query>	2022-03-12 00:00:00, 2022-03-13 00:00:00, None, None
+015049:2022-03-12 00:41:50.757626:	<Reply>	
+	ToUserName : op3adji2bNTqGIbxBu58Ur8X0IeQ
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1647016910
+	MsgType : text
+	Content : 2022年3月12日至2022年3月13日
+		
+		2022年3月12日：
+		[B252]
+		02:00~03:00 小飞飞
+		10:00~11:30 刘会览
+		
+		[B253]
+		08:00~09:00 金晟治
+		10:00~11:30 刘会览
+		15:30~16:30 文雯
+		19:00~21:00 张皓玥
+		
+		2022年3月13日：
+		[B252]
+		19:00~21:00 文雯
+		
+		[B253]
+		14:10~15:40 林梦颖
+		18:00~20:00 刘逸飞
+
+015050:2022-03-12 00:42:03.443613:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adji2bNTqGIbxBu58Ur8X0IeQ
+	CreateTime : 1647016923
+	Content : 查询 本周
+
+015051:2022-03-12 00:42:03.470605:	<Interpret>	查询 本周
+015052:2022-03-12 00:42:03.477042:	<Warning>	Can't understand!
+015053:2022-03-12 00:42:03.484389:	<Reply>	
+	ToUserName : op3adji2bNTqGIbxBu58Ur8X0IeQ
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1647016923
+	MsgType : text
+	Content : 嘤嘤嘤，你说的话有点模糊呢，小AI不太理解。输入“帮助”学习如何跟小AI交流
+
+015054:2022-03-12 00:48:34.594908:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjpT1qtzB2OggYf-FzfIUHrE
+	CreateTime : 1647017314
+	Content : None
+
+015055:2022-03-12 00:48:34.602098:	<Reply>	
+	ToUserName : op3adjpT1qtzB2OggYf-FzfIUHrE
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1647017314
+	MsgType : text
+	Content : 
+
+015056:2022-03-12 08:36:39.664111:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjkVH7ASeAo_iUoX5Ennc2H4
+	CreateTime : 1647045399
+	Content : 预约
+
+015057:2022-03-12 08:36:39.678484:	<Interpret>	预约
+015058:2022-03-12 08:36:39.685000:	<Warning>	Can't understand!
+015059:2022-03-12 08:36:39.691375:	<Reply>	
+	ToUserName : op3adjkVH7ASeAo_iUoX5Ennc2H4
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1647045399
+	MsgType : text
+	Content : 嘤嘤嘤，你说的话有点模糊呢，小AI不太理解。输入“帮助”学习如何跟小AI交流
+
+015060:2022-03-12 08:36:46.102215:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjkVH7ASeAo_iUoX5Ennc2H4
+	CreateTime : 1647045405
+	Content : 帮助
+
+015061:2022-03-12 08:36:46.113754:	<Interpret>	帮助
+015062:2022-03-12 08:36:46.119552:	<InterpretResult>	[]
+015063:2022-03-12 08:36:46.124758:	<Reply>	
+	ToUserName : op3adjkVH7ASeAo_iUoX5Ennc2H4
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1647045405
+	MsgType : text
+	Content : 你可以在这里留言（后台有人定期回复），在这里预约琴房（仅供演奏部排练用哦，平时练琴不需要也不应该预约），也可以查询预约情况
+		
+		预约的格式为：“预约+[时间起点]+到/至+[时间终点]+琴房名”，后面两项可以省略
+		
+		查询的格式为：“查询+[时间起点]+到/至+[时间终点]+琴房名”，后面两项可以省略
+		
+		注册的格式为：“我是xxx”
+		
+		输入“常见问题”了解更多
+
+015064:2022-03-12 09:18:18.724041:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjuXR3_uwl_4L0pfpWdBAB3o
+	CreateTime : 1647047898
+	Content : None
+
+015065:2022-03-12 09:18:18.731167:	<Reply>	
+	ToUserName : op3adjuXR3_uwl_4L0pfpWdBAB3o
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1647047898
+	MsgType : text
+	Content : 感谢关注钢琴社公众号~，快输入“你好”跟我打招呼吧！
+
+015066:2022-03-12 10:34:10.671407:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjnzpsszh4-mSYRflvB605eA
+	CreateTime : 1647052450
+	Content : None
+
+015067:2022-03-12 10:34:10.678404:	<Reply>	
+	ToUserName : op3adjnzpsszh4-mSYRflvB605eA
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1647052450
+	MsgType : text
+	Content : 感谢关注钢琴社公众号~，快输入“你好”跟我打招呼吧！
+
+015068:2022-03-12 10:34:22.528429:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjq_I1_R1vzjPwxnSgKGPcR0
+	CreateTime : 1647052462
+	Content : None
+
+015069:2022-03-12 10:34:22.536145:	<Reply>	
+	ToUserName : op3adjq_I1_R1vzjPwxnSgKGPcR0
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1647052462
+	MsgType : text
+	Content : 感谢关注钢琴社公众号~，快输入“你好”跟我打招呼吧！
+
+015070:2022-03-12 10:48:25.168542:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjoP9LUQdOpidpzF5_m15wlI
+	CreateTime : 1647053305
+	Content : None
+
+015071:2022-03-12 10:48:25.177398:	<Reply>	
+	ToUserName : op3adjoP9LUQdOpidpzF5_m15wlI
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1647053305
+	MsgType : text
+	Content : 感谢关注钢琴社公众号~，快输入“你好”跟我打招呼吧！
+
+015072:2022-03-12 11:17:33.386929:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjqhxYCzwuGMxAH_na-XBJEY
+	CreateTime : 1647055053
+	Content : None
+
+015073:2022-03-12 11:17:33.394252:	<Reply>	
+	ToUserName : op3adjqhxYCzwuGMxAH_na-XBJEY
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1647055053
+	MsgType : text
+	Content : 感谢关注钢琴社公众号~，快输入“你好”跟我打招呼吧！
+
+015074:2022-03-12 11:31:08.563211:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adju3w3EFiAs3VijVsomHpCNY
+	CreateTime : 1647055868
+	Content : 呜呜呜
+
+015075:2022-03-12 11:31:08.584278:	<Interpret>	呜呜呜
+015076:2022-03-12 11:31:08.590500:	<Warning>	Can't understand!
+015077:2022-03-12 11:31:08.605445:	<Reply>	
+	ToUserName : op3adju3w3EFiAs3VijVsomHpCNY
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1647055868
+	MsgType : text
+	Content : 嘤嘤嘤，你说的话有点模糊呢，小AI不太理解。输入“帮助”学习如何跟小AI交流
+
+015078:2022-03-12 11:31:13.359911:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adju3w3EFiAs3VijVsomHpCNY
+	CreateTime : 1647055873
+	Content : 帮助
+
+015079:2022-03-12 11:31:13.373988:	<Interpret>	帮助
+015080:2022-03-12 11:31:13.383260:	<InterpretResult>	[]
+015081:2022-03-12 11:31:13.389202:	<Reply>	
+	ToUserName : op3adju3w3EFiAs3VijVsomHpCNY
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1647055873
+	MsgType : text
+	Content : 你可以在这里留言（后台有人定期回复），在这里预约琴房（仅供演奏部排练用哦，平时练琴不需要也不应该预约），也可以查询预约情况
+		
+		预约的格式为：“预约+[时间起点]+到/至+[时间终点]+琴房名”，后面两项可以省略
+		
+		查询的格式为：“查询+[时间起点]+到/至+[时间终点]+琴房名”，后面两项可以省略
+		
+		注册的格式为：“我是xxx”
+		
+		输入“常见问题”了解更多
+
+015082:2022-03-12 11:31:23.932905:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adju3w3EFiAs3VijVsomHpCNY
+	CreateTime : 1647055883
+	Content : 常见问题
+
+015083:2022-03-12 11:31:23.947201:	<Interpret>	常见问题
+015084:2022-03-12 11:31:23.953918:	<InterpretResult>	[]
+015085:2022-03-12 11:31:23.961136:	<Reply>	
+	ToUserName : op3adju3w3EFiAs3VijVsomHpCNY
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1647055883
+	MsgType : text
+	Content : Q:钢琴社开设钢琴课吗？什么时候报名？
+		A:钢琴社每个学期都会开设钢琴课，针对从零基础到高基础的同学开设了一期班、二期班、提高班。钢琴课将在百团大战社团招新的时候报名，有意愿报名的同学请留意公众号的后续推送。
+		
+		Q:钢琴社什么时候招新？
+		A:每个学期的百团大战期间，钢琴社都会招新～具体的时间和地点请留意公众号的后续推送。
+
+015086:2022-03-12 11:33:16.888122:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjpCrm1P13o8M-mO2SlEBphc
+	CreateTime : 1647055996
+	Content : None
+
+015087:2022-03-12 11:33:16.896678:	<Reply>	
+	ToUserName : op3adjpCrm1P13o8M-mO2SlEBphc
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1647055996
+	MsgType : text
+	Content : 感谢关注钢琴社公众号~，快输入“你好”跟我打招呼吧！
+
+015088:2022-03-12 11:34:55.542500:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adju3w3EFiAs3VijVsomHpCNY
+	CreateTime : 1647056095
+	Content : 【收到不支持的消息类型，暂无法显示】
+
+015089:2022-03-12 11:34:55.557742:	<Interpret>	【收到不支持的消息类型，暂无法显示】
+015090:2022-03-12 11:34:55.568043:	<Warning>	Can't understand!
+015091:2022-03-12 11:34:55.573693:	<Reply>	
+	ToUserName : op3adju3w3EFiAs3VijVsomHpCNY
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1647056095
+	MsgType : text
+	Content : 嘤嘤嘤，你说的话有点模糊呢，小AI不太理解。输入“帮助”学习如何跟小AI交流
+
+015092:2022-03-12 11:35:09.807817:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adju3w3EFiAs3VijVsomHpCNY
+	CreateTime : 1647056109
+	Content : 【收到不支持的消息类型，暂无法显示】
+
+015093:2022-03-12 11:35:09.822476:	<Interpret>	【收到不支持的消息类型，暂无法显示】
+015094:2022-03-12 11:35:09.830905:	<Warning>	Can't understand!
+015095:2022-03-12 11:35:09.836883:	<Reply>	
+	ToUserName : op3adju3w3EFiAs3VijVsomHpCNY
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1647056109
+	MsgType : text
+	Content : 嘤嘤嘤，你说的话有点模糊呢，小AI不太理解。输入“帮助”学习如何跟小AI交流
+
+015096:2022-03-12 11:36:37.407054:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjhBoExDvltTFZRaDbUMEfe0
+	CreateTime : 1647056197
+	Content : None
+
+015097:2022-03-12 11:36:37.414317:	<Reply>	
+	ToUserName : op3adjhBoExDvltTFZRaDbUMEfe0
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1647056197
+	MsgType : text
+	Content : 感谢关注钢琴社公众号~，快输入“你好”跟我打招呼吧！
+
+015098:2022-03-12 12:09:56.557284:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjnqihOJnEd_lEFOwkdpwJn4
+	CreateTime : 1647058196
+	Content : None
+
+015099:2022-03-12 12:09:56.567036:	<Reply>	
+	ToUserName : op3adjnqihOJnEd_lEFOwkdpwJn4
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1647058196
+	MsgType : text
+	Content : 感谢关注钢琴社公众号~，快输入“你好”跟我打招呼吧！
+
+015100:2022-03-12 12:10:05.782491:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjnqihOJnEd_lEFOwkdpwJn4
+	CreateTime : 1647058205
+	Content : 你好
+
+015101:2022-03-12 12:10:05.799424:	<Interpret>	你好
+015102:2022-03-12 12:10:05.806698:	<InterpretResult>	[]
+015103:2022-03-12 12:10:05.813505:	<Reply>	
+	ToUserName : op3adjnqihOJnEd_lEFOwkdpwJn4
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1647058205
+	MsgType : text
+	Content : 这里是北京大学钢琴社,欢迎关注钢琴社公众号
+		（づ￣3￣）づ╭❤～
+		
+		输入“我是xxx”可以注册新用户，让小AI知道你是谁
+		
+		你还可以在这里留言（后台有人定期回复）
+		
+		输入“帮助”可以获得操作指南
+		
+		输入“常见问题”了解更多
+
+015104:2022-03-12 12:16:02.816461:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjsbw7eT2QVg4CtXZtRspsuI
+	CreateTime : 1647058562
+	Content : None
+
+015105:2022-03-12 12:16:02.825671:	<Reply>	
+	ToUserName : op3adjsbw7eT2QVg4CtXZtRspsuI
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1647058562
+	MsgType : text
+	Content : 感谢关注钢琴社公众号~，快输入“你好”跟我打招呼吧！
+
+015106:2022-03-12 12:21:53.919204:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjmQhbkXYAT5rZhNHJxKN7uE
+	CreateTime : 1647058913
+	Content : None
+
+015107:2022-03-12 12:21:53.929090:	<Reply>	
+	ToUserName : op3adjmQhbkXYAT5rZhNHJxKN7uE
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1647058913
+	MsgType : text
+	Content : 感谢关注钢琴社公众号~，快输入“你好”跟我打招呼吧！
+
+015108:2022-03-12 13:01:12.580883:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjudcuaVLZGplFG0EWNlpG-U
+	CreateTime : 1647061272
+	Content : None
+
+015109:2022-03-12 13:01:12.589662:	<Reply>	
+	ToUserName : op3adjudcuaVLZGplFG0EWNlpG-U
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1647061272
+	MsgType : text
+	Content : 感谢关注钢琴社公众号~，快输入“你好”跟我打招呼吧！
+
+015110:2022-03-12 13:16:12.884191:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjshpKsT_V9BY9DRl8XIn_ps
+	CreateTime : 1647062172
+	Content : None
+
+015111:2022-03-12 13:16:12.894214:	<Reply>	
+	ToUserName : op3adjshpKsT_V9BY9DRl8XIn_ps
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1647062172
+	MsgType : text
+	Content : 感谢关注钢琴社公众号~，快输入“你好”跟我打招呼吧！
+
+015112:2022-03-12 13:19:13.792870:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjnQNylidUEBGA562DRkjMOs
+	CreateTime : 1647062353
+	Content : None
+
+015113:2022-03-12 13:19:13.799862:	<Reply>	
+	ToUserName : op3adjnQNylidUEBGA562DRkjMOs
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1647062353
+	MsgType : text
+	Content : 感谢关注钢琴社公众号~，快输入“你好”跟我打招呼吧！
+
+015114:2022-03-12 13:29:29.239040:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjrauD-KtgUH2teXE_Je5nLs
+	CreateTime : 1647062969
+	Content : None
+
+015115:2022-03-12 13:29:29.248814:	<Reply>	
+	ToUserName : op3adjrauD-KtgUH2teXE_Je5nLs
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1647062969
+	MsgType : text
+	Content : 感谢关注钢琴社公众号~，快输入“你好”跟我打招呼吧！
+
+015116:2022-03-12 13:36:24.796914:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjlUchlUp0uN17hqpzkvrObs
+	CreateTime : 1647063384
+	Content : 请问想要使用琴房的话，必须加入演奏部是吗？
+
+015117:2022-03-12 13:36:24.813144:	<Interpret>	请问想要使用琴房的话，必须加入演奏部是吗？
+015118:2022-03-12 13:36:24.825115:	<Warning>	Can't understand!
+015119:2022-03-12 13:36:24.833291:	<Reply>	
+	ToUserName : op3adjlUchlUp0uN17hqpzkvrObs
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1647063384
+	MsgType : text
+	Content : 嘤嘤嘤，你说的话有点模糊呢，小AI不太理解。输入“帮助”学习如何跟小AI交流
+
+015120:2022-03-12 13:36:32.952005:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjlUchlUp0uN17hqpzkvrObs
+	CreateTime : 1647063392
+	Content : 帮助
+
+015121:2022-03-12 13:36:32.970578:	<Interpret>	帮助
+015122:2022-03-12 13:36:32.977338:	<InterpretResult>	[]
+015123:2022-03-12 13:36:32.983316:	<Reply>	
+	ToUserName : op3adjlUchlUp0uN17hqpzkvrObs
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1647063392
+	MsgType : text
+	Content : 你可以在这里留言（后台有人定期回复），在这里预约琴房（仅供演奏部排练用哦，平时练琴不需要也不应该预约），也可以查询预约情况
+		
+		预约的格式为：“预约+[时间起点]+到/至+[时间终点]+琴房名”，后面两项可以省略
+		
+		查询的格式为：“查询+[时间起点]+到/至+[时间终点]+琴房名”，后面两项可以省略
+		
+		注册的格式为：“我是xxx”
+		
+		输入“常见问题”了解更多
+
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 25956)
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 3776)
+spawned uWSGI worker 1 (pid: 3777, cores: 1)
+spawned uWSGI http 1 (pid: 3778)
+015124:2022-03-12 13:40:14.582652:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	CreateTime : 1647063614
+	Content : 查询本周
+
+015125:2022-03-12 13:40:14.605259:	<Interpret>	查询本周
+015126:2022-03-12 13:40:14.612058:	<InterpretResult>	(datetime.datetime(2022, 3, 7, 0, 0), datetime.datetime(2022, 3, 14, 0, 0), None)
+015127:2022-03-12 13:40:14.619618:	<Query>	2022-03-07 00:00:00, 2022-03-14 00:00:00, None, None
+015128:2022-03-12 13:40:14.673809:	<Reply>	
+	ToUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1647063614
+	MsgType : text
+	Content : 2022年3月7日至2022年3月14日
+		
+		2022年3月7日：
+		[B252]
+		13:00~14:00 林梦颖
+		17:00~19:00 金泽楷
+		
+		[B253]
+		19:00~21:00 安博施
+		
+		2022年3月8日：
+		[B252]
+		18:00~19:00 银锤侠
+		19:00~20:30 银锤侠
+		
+		[B253]
+		20:30~22:30 蒋然
+		
+		[B250]
+		20:30~21:30 小飞飞
+		
+		2022年3月9日：
+		[B252]
+		19:00~21:00 蔡宝
+		
+		[B253]
+		20:45~21:45 张柏舟
+		
+		2022年3月10日：
+		[B252]
+		19:00~21:00 蔡宝
+		
+		[B253]
+		20:00~22:00...
+015129:2022-03-12 13:40:25.313564:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	CreateTime : 1647063624
+	Content : 查询今天
+
+015130:2022-03-12 13:40:25.325445:	<Interpret>	查询今天
+015131:2022-03-12 13:40:25.331146:	<InterpretResult>	(datetime.datetime(2022, 3, 12, 0, 0), datetime.datetime(2022, 3, 13, 0, 0), None)
+015132:2022-03-12 13:40:25.337483:	<Query>	2022-03-12 00:00:00, 2022-03-13 00:00:00, None, None
+015133:2022-03-12 13:40:25.356047:	<Reply>	
+	ToUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1647063624
+	MsgType : text
+	Content : 2022年3月12日至2022年3月13日
+		
+		2022年3月12日：
+		[B252]
+		02:00~03:00 小飞飞
+		10:00~11:30 刘会览
+		
+		[B253]
+		08:00~09:00 金晟治
+		10:00~11:30 刘会览
+		15:30~16:30 文雯
+		19:00~21:00 张皓玥
+		
+		2022年3月13日：
+		[B252]
+		19:00~21:00 文雯
+		
+		[B253]
+		14:10~15:40 林梦颖
+		18:00~20:00 刘逸飞
+
+015134:2022-03-12 13:42:37.269205:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	CreateTime : 1647063756
+	Content : 查询本周
+
+015135:2022-03-12 13:42:37.281753:	<Interpret>	查询本周
+015136:2022-03-12 13:42:37.288211:	<InterpretResult>	(datetime.datetime(2022, 3, 7, 0, 0), datetime.datetime(2022, 3, 14, 0, 0), None)
+015137:2022-03-12 13:42:37.294604:	<Query>	2022-03-07 00:00:00, 2022-03-14 00:00:00, None, None
+015138:2022-03-12 13:42:37.341152:	<Reply>	
+	ToUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1647063756
+	MsgType : text
+	Content : 2022年3月7日至2022年3月14日
+		
+		2022年3月7日：
+		[B252]
+		13:00~14:00 林梦颖
+		17:00~19:00 金泽楷
+		
+		[B253]
+		19:00~21:00 安博施
+		
+		2022年3月8日：
+		[B252]
+		18:00~19:00 银锤侠
+		19:00~20:30 银锤侠
+		
+		[B253]
+		20:30~22:30 蒋然
+		
+		[B250]
+		20:30~21:30 小飞飞
+		
+		2022年3月9日：
+		[B252]
+		19:00~21:00 蔡宝
+		
+		[B253]
+		20:45~21:45 张柏舟
+		
+		2022年3月10日：
+		[B252]
+		19:00~21:00 蔡宝
+		
+		[B253]
+		20:00~22:00...
+015139:2022-03-12 13:42:52.980373:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjo_ZLYFafp5-qxYJmK2ozoI
+	CreateTime : 1647063772
+	Content : None
+
+015140:2022-03-12 13:42:52.989155:	<Reply>	
+	ToUserName : op3adjo_ZLYFafp5-qxYJmK2ozoI
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1647063772
+	MsgType : text
+	Content : 感谢关注钢琴社公众号~，快输入“你好”跟我打招呼吧！
+
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 3778)
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 4756)
+spawned uWSGI worker 1 (pid: 4757, cores: 1)
+spawned uWSGI http 1 (pid: 4758)
+015141:2022-03-12 13:45:34.616226:	<Receive>	
+	ToUserName : gh_e55ff3051e1d
+	FromUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	CreateTime : 1647063934
+	Content : 查询今天
+
+015142:2022-03-12 13:45:34.642163:	<Interpret>	查询今天
+015143:2022-03-12 13:45:34.650625:	<InterpretResult>	(datetime.datetime(2022, 3, 12, 0, 0), datetime.datetime(2022, 3, 12, 23, 59, 59), None)
+015144:2022-03-12 13:45:34.664264:	<Query>	2022-03-12 00:00:00, 2022-03-12 23:59:59, None, None
+015145:2022-03-12 13:45:34.689438:	<Reply>	
+	ToUserName : op3adjpkIjN9WPDSOl0E8sc5HN2M
+	FromUserName : gh_e55ff3051e1d
+	CreateTime : 1647063934
+	MsgType : text
+	Content : 2022年3月12日至2022年3月12日
+		
+		2022年3月12日：
+		[B252]
+		02:00~03:00 小飞飞
+		10:00~11:30 刘会览
+		
+		[B253]
+		08:00~09:00 金晟治
+		10:00~11:30 刘会览
+		15:30~16:30 文雯
+		19:00~21:00 张皓玥
+

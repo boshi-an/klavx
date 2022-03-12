@@ -185,7 +185,7 @@ def initPatterns() :
 				return t[0]*10 + t[2]
 
 	def nextMonday() :
-		for i in range(10) :
+		for i in range(1, 10) :
 			day = datetime.date.today() + datetime.timedelta(days=i)
 			if day.weekday() == 0 :
 				return day
@@ -346,11 +346,13 @@ def initPatterns() :
 	)
 	pQuery.appendSubPatternSeq(
 		['^查询', pDate, pLocation],
-		lambda x,y,z : None if haveNone(x,y,z) else (utils.toDatetime(*y), utils.toDatetime(*y)+datetime.timedelta(days=1), *z)
+		lambda x,y,z : None if haveNone(x,y,z) else (utils.toDatetime(*y), utils.toDatetime(*y)+datetime.timedelta(days=1)-datetime
+		.timedelta(seconds=1), *z)
 	)
 	pQuery.appendSubPatternSeq(
 		['^查询', pDate],
-		lambda x,y : None if haveNone(x,y) else (utils.toDatetime(*y), utils.toDatetime(*y)+datetime.timedelta(days=1), None)
+		lambda x,y : None if haveNone(x,y) else (utils.toDatetime(*y), utils.toDatetime(*y)+datetime.timedelta(days=1)-datetime
+		.timedelta(seconds=1), None)
 	)
 	pQuery.appendSubPatternSeq(
 		['^查询', pLocation],

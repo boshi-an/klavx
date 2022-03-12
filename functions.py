@@ -294,7 +294,7 @@ def processQuery(start, end, roomName, userId = None) :
 		return '您查询的时间区间过长'
 
 	# 给定时间区间
-	if start is not None and end is not None :
+	if start != None and end != None :
 		for i in range((end.date() - start.date()).days+1) :
 			date = (start + datetime.timedelta(days=i)).date()
 			tmpReserve, tmpCourses = queryOccupations(utils.toDatetime(date), utils.toDatetime(date+datetime.timedelta(days=1)), getRoom(roomName))
@@ -304,12 +304,12 @@ def processQuery(start, end, roomName, userId = None) :
 			hasCourse = hasCourse or (len(tmpCourses)>0)
 		timeRepr = utils.formatDate(start) + '至' + utils.formatDate(end)
 	# 给定时间点
-	elif start is not None and end is None :
+	elif start != None and end == None :
 		tmpReserve, tmpCourses = queryOccupations(start, None, getRoom(roomName))
 		hasCourse = len(tmpCourses)>0
 		timeRepr = utils.formatDatetime(start)
 	# 给定用户名
-	elif userId is not None :
+	elif userId != None :
 		start = datetime.datetime.now()
 		thisUser = User.query.filter(User.openId == userId).first()
 		allReserve = thisUser.reservations.filter(db.and_(Reservation.start>=start)).all()
@@ -318,14 +318,14 @@ def processQuery(start, end, roomName, userId = None) :
 		timeRepr = '你：'
 
 	# 没有给定时间，默认当前时间
-	elif start is None and end is None :
+	elif start == None and end == None :
 		start = datetime.datetime.now()
 		tmpReserve, tmpCourses = queryOccupations(start, None, getRoom(roomName))
 		hasCourse = len(tmpCourses)>0
 		timeRepr = utils.formatDatetime(start)
 
 
-	if roomName is not None :
+	if roomName != None :
 		timeRepr += '的' + roomName
 
 	if len(matches) == 0:
