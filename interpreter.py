@@ -364,7 +364,8 @@ def initPatterns() :
 	)
 	pQuery.appendSubPatternSeq(
 		['^查询下*周'],
-		lambda x : None if x==None else (utils.toDatetime(nextMonday())+datetime.timedelta(days=7*(len(x)-4)), utils.toDatetime(nextMonday())+datetime.timedelta(days=7*(len(x)-3)), None)
+		lambda x : None if x==None else (utils.toDatetime(nextMonday())+datetime.timedelta(days=7*(len(x)-4)), utils.toDatetime(nextMonday())+datetime.timedelta(days=7*(len(x)-3))-datetime
+		.timedelta(seconds=1), None)
 	)
 	pQuery.appendSubPatternSeq(
 		['^查询我'],

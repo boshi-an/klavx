@@ -81479,3 +81479,11 @@ spawned uWSGI http 1 (pid: 4758)
 		15:30~16:30 文雯
 		19:00~21:00 张皓玥
 
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 4758)
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 5572)
+spawned uWSGI worker 1 (pid: 5573, cores: 1)
+spawned uWSGI http 1 (pid: 5574)
