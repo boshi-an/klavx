@@ -206,7 +206,7 @@ if __name__=='__main__':
 		fileName = 'perform.txt'
 		if len(sys.argv)==3 :
 			fileName = sys.argv[2]
-		with open(sys.argv[2], 'r') as file:
+		with open(fileName, 'r') as file:
 			while True:
 				line = file.readline()
 				if not line :

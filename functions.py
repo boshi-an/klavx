@@ -365,8 +365,14 @@ def refreshCourses(fileName):
 		weekday, startHour, endHour, teacherName = line.split()
 		print(weekday, startHour, endHour, teacherName)
 		weekday = '周一 周二 周三 周四 周五 周六 周日'.split().index(weekday)
-		startTime = datetime.time(hour=int(startHour))
-		endTime = datetime.time(hour=int(endHour))
+		startMinue = 0
+		endMinue = 0
+		if ':' in startHour :
+			startHour, startMinue = startHour.split(':')
+		if ':' in endHour :
+			endHour, endMinue = endHour.split(':')
+		startTime = datetime.time(hour=int(startHour), minute=int(startMinue))
+		endTime = datetime.time(hour=int(endHour), minute=int(endMinue))
 		teacher = getCreateUser(teacherName)
 		room = B250
 		course = Course(teacher=teacher, room=room, weekday=weekday,
