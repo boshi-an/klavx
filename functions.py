@@ -183,8 +183,9 @@ def processReservation(start, end, roomName):
 		result += '由于您没有给定结束时间，默认您的预约时常为1小时\n'
 		end = start + datetime.timedelta(hours=1)
 	# ???
-	if (start.month,start.day)==(6,4):
-		return randomEmoji()
+	# After 2020, rooms can be reserved in this day
+	# if (start.month,start.day)==(6,4):
+	# 	return randomEmoji()
 
 	# 活跃预约数不超过2
 	nActiveReservations = (Reservation.query.filter_by(user=g.user)
