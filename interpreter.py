@@ -162,7 +162,7 @@ def initPatterns() :
 		return '零一二三四五六七八九十'.index(s)
 	
 	def readChinese(s) :
-		
+
 		if len(s)==1 and s[0] in ['日','天'] :
 			return 7
 		elif s.isdigit() :
@@ -202,8 +202,16 @@ def initPatterns() :
 		[r'[零一二三四五六七八九十0-9]+'],
 		lambda x : None if x==None else (readChinese(x),)
 	)
+	pNumber.appendSubPatternSeq(
+		[r'[0-9]+'],
+		lambda x : None if x==None else (readChinese(x),)
+	)
 	pNumber_adj.appendSubPatternSeq(
-		[r'^[零一二三四五六七八九十0-9]+'],
+		[r'^[零一二三四五六七八九十]+'],
+		lambda x : None if x==None else (readChinese(x),)
+	)
+	pNumber_adj.appendSubPatternSeq(
+		[r'^[0-9]+'],
 		lambda x : None if x==None else (readChinese(x),)
 	)
 
