@@ -291,10 +291,6 @@ def initPatterns() :
 		lambda x1,y1,z1,_,x2,y2,z2 : None if haveNone(x1,y1,z1,_,x2,y2,z2) else (datetime.datetime.combine(*x1,moveTime(*z1,*y1)), datetime.datetime.combine(*x2,moveTime(*z2,*y2)))
 	)
 	pTime.appendSubPatternSeq(
-		[pDate, pClock, r'到|至|\-|\~|～|-|——', pDate, pClock],
-		lambda x1,z1,_,x2,z2 : None if haveNone(x1,z1,_,x2,z2) else (datetime.datetime.combine(*x1,*z1), datetime.datetime.combine(*x2,*z2))
-	)
-	pTime.appendSubPatternSeq(
 		[pDate, pSparseTime, pClock, r'到|至|\-|\~|～|-|——', pSparseTime, pClock],
 		lambda x,y1,z1,_,y2,z2 : None if haveNone(x,y1,z1,_,y2,z2) else (datetime.datetime.combine(*x,moveTime(*z1,*y1)), datetime.datetime.combine(*x,moveTime(*z2,*y2)))
 	)
@@ -305,6 +301,10 @@ def initPatterns() :
 	pTime.appendSubPatternSeq(
 		[pDate, pSparseTime, pClock],
 		lambda x,y,z : None if haveNone(x,y,z) else (datetime.datetime.combine(*x,moveTime(*z,*y)), None)
+	)
+	pTime.appendSubPatternSeq(
+		[pDate, pClock, r'到|至|\-|\~|～|-|——', pDate, pClock],
+		lambda x1,z1,_,x2,z2 : None if haveNone(x1,z1,_,x2,z2) else (datetime.datetime.combine(*x1,*z1), datetime.datetime.combine(*x2,*z2))
 	)
 	pTime.appendSubPatternSeq(
 		[pDate, pClock, r'到|至|\-|\~|～|-|——', pClock],
@@ -319,6 +319,10 @@ def initPatterns() :
 	# reserve = when and where
 	pReserve.appendSubPatternSeq(
 		['^预约', pTime, pLocation],
+		lambda x,y,z : None if haveNone(x,y,z) else (*y, *z)
+	)
+	pReserve.appendSubPatternSeq(
+		['^预约', pTime, r'的| ', pLocation],
 		lambda x,y,z : None if haveNone(x,y,z) else (*y, *z)
 	)
 	pReserve.appendSubPatternSeq(
