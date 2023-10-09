@@ -333,7 +333,7 @@ sudo adduser 新用户名
 
    *经过上面的教学你一定已经学会了！请发挥你的聪明才智！*
 
-2. 修改当前目录下的 `main.py` 的 `refreshCourses` 函数，将其中的 `startDate` 和 `endDate` 变量修改为本学期钢琴课的起止日期
+2. 修改当前目录下的 `functions.py` 的 `refreshCourses` 函数，将其中的 `startDate` 和 `endDate` 变量修改为本学期钢琴课的起止日期
 
    *不会的话问问身边会Python的大佬*
 
@@ -346,7 +346,7 @@ sudo adduser 新用户名
 5. 刷新
 
    ```bash
-   sudo python3 main.py refreshcourses
+   python3 main.py refreshcourses
    ```
 
    该操作会显示：”Old courses will be deleted, are you sure? ” 
